@@ -1,113 +1,555 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DataDashOS — The operating system for business performance</title>
-<meta name="description" content="DataDashOS turns business data into KPIs, weekly reviews and AI-guided decisions for small and mid-sized companies.">
-<style>
-:root{--bg:#0b1220;--panel:#121b2e;--text:#e6edf7;--muted:#9fb0c8;--accent:#38bdf8;--accent2:#22c55e}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-a{color:var(--accent);text-decoration:none}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-nav .logo{font-weight:800;font-size:1.3rem}
-nav .logo span{color:var(--accent)}
-nav a.btn{padding:8px 16px}
-.hero{padding:80px 0 60px;text-align:center}
-.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin-bottom:20px}
-.hero p{color:var(--muted);font-size:1.2rem;max-width:720px;margin:0 auto 32px}
-.btn{display:inline-block;background:var(--accent);color:#04111d;font-weight:700;padding:14px 28px;border-radius:10px}
-.btn.ghost{background:transparent;color:var(--text);border:1px solid #2a3a57;margin-left:12px}
-section{padding:60px 0}
-h2{font-size:2rem;margin-bottom:12px;text-align:center}
-.sub{color:var(--muted);text-align:center;max-width:700px;margin:0 auto 40px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.card{background:var(--panel);border:1px solid #1f2b44;border-radius:14px;padding:24px}
-.card h3{margin-bottom:8px;color:var(--accent)}
-.card p,.card li{color:var(--muted)}
-.card ul{padding-left:18px}
-.shots img{width:100%;border-radius:12px;border:1px solid #1f2b44}
-.caption{font-size:.85rem;color:var(--muted);text-align:center;margin-top:8px}
-.steps{counter-reset:s}
-.steps .card::before{counter-increment:s;content:counter(s);display:inline-block;width:32px;height:32px;border-radius:50%;background:var(--accent2);color:#04111d;font-weight:800;text-align:center;line-height:32px;margin-bottom:10px}
-.cta{text-align:center;background:linear-gradient(135deg,#0f2a44,#123b2c);border-radius:20px;padding:60px 24px}
-footer{color:var(--muted);text-align:center;padding:40px 0;font-size:.9rem}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataDashOS — KPI dashboard &amp; AI business coach for SMBs</title>
+  <meta name="description" content="DataDashOS is the operating system for business performance: connect your tools, track KPIs, run AI-written weekly reviews, and turn recommendations into action.">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+  <meta name="author" content="Simmitri, Inc.">
+  <meta name="theme-color" content="#0B1B33">
+  <link rel="canonical" href="https://simmitri-inc.github.io/datadashos-site/">
+  <link rel="alternate" type="application/rss+xml" title="DataDashOS updates" href="./rss.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DataDashOS">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://simmitri-inc.github.io/datadashos-site/">
+  <meta property="og:title" content="DataDashOS — From scattered numbers to clear weekly decisions">
+  <meta property="og:description" content="KPI dashboards, weekly AI reviews, and an executive coach built for owner-led small and mid-sized companies.">
+  <meta property="og:image" content="https://simmitri-inc.github.io/datadashos-site/assets/og/og-cover.png">
+  <meta property="og:image:alt" content="DataDashOS product illustration — executive KPI dashboard">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DataDashOS — The operating system for business performance">
+  <meta name="twitter:description" content="Connect tools, measure KPIs, review every week, and act with AI-guided recommendations.">
+  <meta name="twitter:image" content="https://simmitri-inc.github.io/datadashos-site/assets/og/og-cover.png">
+
+  <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,650&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://simmitri-inc.github.io/datadashos-site/#organization",
+        "name": "Simmitri, Inc.",
+        "url": "https://simmitri.com",
+        "logo": "https://simmitri-inc.github.io/datadashos-site/assets/img/favicon.svg",
+        "foundingDate": "1993",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Northern California",
+          "addressRegion": "CA",
+          "addressCountry": "US"
+        },
+        "areaServed": ["US"],
+        "sameAs": [
+          "https://github.com/Simmitri-Inc",
+          "https://simmitri.com"
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://simmitri-inc.github.io/datadashos-site/#product",
+        "name": "DataDashOS",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "KPI dashboard and AI business coach that helps owners of small and mid-sized companies see performance in one place, review it weekly, and act on what matters.",
+        "url": "https://simmitri-inc.github.io/datadashos-site/",
+        "image": "https://simmitri-inc.github.io/datadashos-site/assets/img/dashboard.svg",
+        "creator": { "@id": "https://simmitri-inc.github.io/datadashos-site/#organization" },
+        "publisher": { "@id": "https://simmitri-inc.github.io/datadashos-site/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/PreOrder",
+          "priceCurrency": "USD",
+          "description": "Pre-seed product; investor inquiries welcome."
+        },
+        "featureList": [
+          "Analytics dashboards",
+          "KPI scorecards and targets",
+          "AI-written weekly reviews",
+          "Executive AI coach",
+          "Integrations with QuickBooks Online, GoHighLevel, and Google Ads"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://simmitri-inc.github.io/datadashos-site/#website",
+        "url": "https://simmitri-inc.github.io/datadashos-site/",
+        "name": "DataDashOS",
+        "description": "The operating system for business performance.",
+        "publisher": { "@id": "https://simmitri-inc.github.io/datadashos-site/#organization" },
+        "inLanguage": "en-US"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://simmitri-inc.github.io/datadashos-site/#webpage",
+        "url": "https://simmitri-inc.github.io/datadashos-site/",
+        "name": "DataDashOS — KPI dashboard & AI business coach for SMBs",
+        "isPartOf": { "@id": "https://simmitri-inc.github.io/datadashos-site/#website" },
+        "about": { "@id": "https://simmitri-inc.github.io/datadashos-site/#product" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://simmitri-inc.github.io/datadashos-site/assets/img/dashboard.svg"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".answer-capsule p", ".hero-lede"]
+        },
+        "dateModified": "2026-11-18"
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://simmitri-inc.github.io/datadashos-site/#howto",
+        "name": "How DataDashOS works",
+        "description": "Four steps from connected tools to weekly executive action.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "position": 1,
+            "name": "Connect",
+            "text": "Link QuickBooks Online, GoHighLevel, Google Ads, or import a CSV."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 2,
+            "name": "Measure",
+            "text": "Track industry-ready KPIs with targets, trends, and scorecards."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 3,
+            "name": "Review",
+            "text": "Receive an AI-written weekly review of what changed and why it matters."
+          },
+          {
+            "@type": "HowToStep",
+            "position": 4,
+            "name": "Act",
+            "text": "Turn recommendations into owned action items with notifications and branded reports."
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://simmitri-inc.github.io/datadashos-site/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is DataDashOS?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DataDashOS is a KPI dashboard and AI business coach for small and mid-sized companies. It unifies performance data, produces weekly reviews, and guides owners on what to do next."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is DataDashOS built for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Owner-led SMBs that already use tools like QuickBooks, a CRM, and ads platforms, but lack a single weekly operating rhythm for decisions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which tools does DataDashOS connect to?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DataDashOS is built for QuickBooks Online, GoHighLevel, and Google Ads, with CSV import and a privacy-safe demo data mode."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is DataDashOS different from a BI dashboard?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Besides charts, DataDashOS adds industry KPI blueprints, AI weekly summaries, an executive coach grounded in your numbers, and an execution loop that turns insights into owned tasks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Where is DataDashOS based?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "DataDashOS is built by Simmitri, Inc., a Northern California solar and roofing operator with 32 years in business. The product was forged running a real company before being offered to other owner-led businesses."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-<div class="wrap">
-<nav>
-  <div class="logo">DataDash<span>OS</span></div>
-  <a class="btn" href="#contact">Investor contact</a>
-</nav>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-<header class="hero">
-  <h1>From scattered numbers to clear weekly decisions</h1>
-  <p>DataDashOS is a KPI dashboard and AI business coach that helps owners of small and mid-sized companies see performance in one place, review it every week, and act on what matters.</p>
-  <a class="btn" href="#contact">Request the pitch deck</a>
-  <a class="btn ghost" href="#product">See the product</a>
-</header>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="./" aria-label="DataDashOS home">DataDash<span>OS</span></a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <a href="#product">Product</a>
+        <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
+        <a href="./about.html">About</a>
+        <a class="btn btn-shimmer" href="#contact">Investor contact <span class="arrow" aria-hidden="true">→</span></a>
+      </nav>
+    </div>
+  </header>
 
-<section>
-  <h2>The problem</h2>
-  <p class="sub">Owners juggle accounting, CRM, marketing and project data across separate tools. Reporting is manual, late and rarely turns into action.</p>
-  <div class="grid">
-    <div class="card"><h3>Data lives in silos</h3><p>Revenue in accounting, leads in the CRM, ad spend in marketing platforms — no single view.</p></div>
-    <div class="card"><h3>Metrics without meaning</h3><p>Dashboards show numbers but don't explain what changed or what to do next.</p></div>
-    <div class="card"><h3>No operating rhythm</h3><p>Without a weekly review habit, problems surface weeks too late.</p></div>
+  <main id="main">
+    <section class="hero" aria-label="Hero">
+      <div class="hero-stage" aria-hidden="true">
+        <div class="aurora aurora-a"></div>
+        <div class="aurora aurora-b"></div>
+        <svg class="orbital" viewBox="0 0 560 560">
+          <circle class="ring-a" cx="280" cy="280" r="210" stroke-dasharray="4 10"/>
+          <circle class="ring-b" cx="280" cy="280" r="160" stroke-dasharray="2 14"/>
+          <circle cx="280" cy="280" r="110" stroke-dasharray="1 18"/>
+          <circle class="star" cx="280" cy="70" r="3"/>
+          <circle class="star" cx="470" cy="280" r="2.5"/>
+          <circle class="star" cx="120" cy="180" r="2"/>
+          <circle class="star" cx="400" cy="420" r="2.5"/>
+        </svg>
+      </div>
+
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="brand-mark mask-reveal">DataDash<span>OS</span></p>
+          <h1 class="mask-reveal">From scattered numbers to <span class="gold-word">clear weekly decisions</span></h1>
+          <p class="hero-lede">The operating system for business performance — KPIs, weekly reviews, and an AI coach built for owner-led companies.</p>
+
+          <aside class="answer-capsule" aria-label="Direct answer">
+            <div class="label">Answer</div>
+            <p>DataDashOS turns siloed accounting, CRM, and marketing data into one KPI view, an AI-written weekly review, and next-step actions for SMB owners.</p>
+          </aside>
+
+          <div class="cta-group">
+            <a class="btn btn-shimmer" href="#contact">Request the pitch deck <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-ghost" href="#product">See the product</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="float-chip a"><span class="dot" aria-hidden="true"></span> Live weekly review</div>
+          <div class="float-chip b">AI coach · 9 specialist roles</div>
+          <div class="product-frame">
+            <div class="ken-burns">
+              <img src="./assets/img/dashboard.svg" width="720" height="460" alt="Illustrated DataDashOS executive dashboard with revenue KPIs, weekly performance chart, and AI brief" fetchpriority="high" decoding="async">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <span class="rail"></span>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section id="problem" aria-labelledby="problem-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">The problem</p>
+          <h2 id="problem-title">Owners drown in tools and still fly blind</h2>
+          <p>Accounting, CRM, marketing, and projects live apart. Reporting is manual, late, and rarely becomes action.</p>
+        </div>
+        <div class="tile-grid">
+          <article class="tile reveal reveal-delay-1">
+            <div class="tile-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h6v13H4zM14 4h6v16h-6zM10 11h4v9h-4z"/></svg>
+            </div>
+            <h3>Data lives in silos</h3>
+            <p>Revenue in accounting, leads in the CRM, ad spend in marketing platforms — no single trustworthy view.</p>
+          </article>
+          <article class="tile reveal reveal-delay-2">
+            <div class="tile-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+            </div>
+            <h3>Metrics without meaning</h3>
+            <p>Most dashboards show numbers. Few explain what changed, why it matters, or what to do this week.</p>
+          </article>
+          <article class="tile reveal reveal-delay-3 featured">
+            <div class="tile-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19h16M7 16V9m5 7V5m5 11v-4"/></svg>
+            </div>
+            <h3>No operating rhythm</h3>
+            <p>Without a weekly review habit, problems surface weeks too late — after cash and momentum are already gone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="proof-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Operator-built proof</p>
+          <h2 id="proof-title">Forged inside a real company</h2>
+          <p>Not a theory deck — DataDashOS grew from running Simmitri day to day.</p>
+        </div>
+        <div class="stats">
+          <div class="stat reveal">
+            <div class="num"><span data-count="32" data-suffix="+">0</span></div>
+            <div class="label">Years operating Simmitri</div>
+            <div class="stat-bar" style="--w:92%"><i></i></div>
+          </div>
+          <div class="stat reveal reveal-delay-1">
+            <div class="num"><span data-count="6">0</span></div>
+            <div class="label">Integrated product modules</div>
+            <div class="stat-bar" style="--w:78%"><i></i></div>
+          </div>
+          <div class="stat reveal reveal-delay-2">
+            <div class="num"><span data-count="9">0</span></div>
+            <div class="label">AI specialist coach roles</div>
+            <div class="stat-bar" style="--w:84%"><i></i></div>
+          </div>
+          <div class="stat reveal reveal-delay-3">
+            <div class="num"><em>CA</em></div>
+            <div class="label">Built in Northern California</div>
+            <div class="stat-bar" style="--w:70%"><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="product" aria-labelledby="product-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Product</p>
+          <h2 id="product-title">Six modules. One business operating system.</h2>
+          <p>Analytics, KPIs, weekly execution, and an executive AI coach — designed to work as a single loop.</p>
+        </div>
+        <div class="modules">
+          <article class="module reveal">
+            <div class="module-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="11" width="7" height="10" rx="1.5"/><rect x="3" y="15" width="7" height="6" rx="1.5"/></svg>
+            </div>
+            <div>
+              <h3>Analytics dashboards</h3>
+              <p>Executive, marketing, sales, and operations views with prior-period and year-over-year comparisons, templates, and dark/light mode.</p>
+            </div>
+          </article>
+          <article class="module reveal reveal-delay-1">
+            <div class="module-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 19V5m0 14h16"/><path d="M8 15l3-4 3 2 4-6"/></svg>
+            </div>
+            <div>
+              <h3>Business OS &amp; KPIs</h3>
+              <p>Guided onboarding with industry blueprints, scorecards, targets, trends, CSV import, notes, and AI forecasts.</p>
+            </div>
+          </article>
+          <article class="module reveal reveal-delay-2">
+            <div class="module-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></svg>
+            </div>
+            <div>
+              <h3>Weekly reviews &amp; execution</h3>
+              <p>AI-written weekly summaries, recommendations turned into action items, notifications, and branded reports.</p>
+            </div>
+          </article>
+          <article class="module reveal reveal-delay-3">
+            <div class="module-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3a7 7 0 017 7c0 4-3 6-5 8H10c-2-2-5-4-5-8a7 7 0 017-7z"/><path d="M9 21h6"/></svg>
+            </div>
+            <div>
+              <h3>Executive AI coach</h3>
+              <p>CEO scorecard, decision briefs, and coach chat grounded in your KPIs — with nine specialist roles from finance to safety.</p>
+            </div>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M7 8h10M7 12h6"/><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 16h3"/></svg>
+            </div>
+            <div>
+              <h3>Data connections</h3>
+              <p>Built for QuickBooks Online, GoHighLevel, and Google Ads, with connection status, sync logs, and privacy-safe demo mode.</p>
+            </div>
+          </article>
+          <article class="module reveal reveal-delay-1">
+            <div class="module-ico" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="9" cy="9" r="3"/><circle cx="16" cy="15" r="3"/><path d="M12 9h2a3 3 0 013 3v0M8 12v0a3 3 0 00-3 3"/></svg>
+            </div>
+            <div>
+              <h3>Teams &amp; administration</h3>
+              <p>Workspaces, invitations, roles, admin controls, audit logs, and white-label branding per workspace.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title">Connect. Measure. Review. Act.</h2>
+          <p>A four-step operating rhythm that replaces spreadsheet archaeology with weekly clarity.</p>
+        </div>
+        <div class="timeline reveal" id="howto-timeline">
+          <div class="step" data-step="01">
+            <h3>Connect</h3>
+            <p>Link your business tools or import a CSV. Status and sync logs keep the pipeline trustworthy.</p>
+          </div>
+          <div class="step" data-step="02">
+            <h3>Measure</h3>
+            <p>Track the KPIs that matter for your industry with targets, trends, and scorecards.</p>
+          </div>
+          <div class="step" data-step="03">
+            <h3>Review</h3>
+            <p>Get an AI-written weekly review of what changed — speakable, shareable, and grounded in your data.</p>
+          </div>
+          <div class="step" data-step="04">
+            <h3>Act</h3>
+            <p>Turn recommendations into owned action items with notifications and branded reports.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="origin-title">
+      <div class="wrap origin">
+        <div class="origin-panel reveal">
+          <p class="eyebrow">Origin story</p>
+          <h2 id="origin-title">Built by operators, not spectators</h2>
+          <p>DataDashOS grew out of running Simmitri, Inc., a Northern California solar and roofing company with 32 years in business. We built the tool we needed to run our own company — and we are bringing it to other owner-led businesses.</p>
+          <p>That operator DNA shapes every module: practical KPIs, a weekly cadence, and coaching that respects how owners actually decide.</p>
+          <div class="cred-rail" aria-label="Company credentials">
+            <span class="cred">Simmitri, Inc.</span>
+            <span class="cred">Est. 1993</span>
+            <span class="cred">Northern California</span>
+            <span class="cred">Pre-seed</span>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <p class="eyebrow">Geographic roots</p>
+          <h2 style="font-family:var(--font-display);font-size:1.8rem;letter-spacing:-0.03em;margin-bottom:12px;color:var(--navy)">Grounded in California operations</h2>
+          <p class="lede" style="margin-bottom:18px">While DataDashOS serves owner-led businesses nationally, its product judgment comes from decades of field operations, permitting realities, and cash-flow discipline in Northern California markets.</p>
+          <ul style="color:var(--muted);padding-left:1.1rem;display:grid;gap:8px">
+            <li>Designed around real SMB tool stacks used in home-services and related trades</li>
+            <li>Weekly review cadence matches how operators already run job-cost and pipeline meetings</li>
+            <li>Entity-backed company story for search and AI assistants citing who built the product</li>
+          </ul>
+          <p style="margin-top:20px"><a class="btn btn-ghost" href="./about.html">Read the full company story <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title">Answers investors and owners ask first</h2>
+          <p>Short, citable answers designed for humans, search snippets, and AI overviews.</p>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>What is DataDashOS? <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="answer">DataDashOS is a KPI dashboard and AI business coach for small and mid-sized companies. It unifies performance data, produces weekly reviews, and guides owners on what to do next.</div>
+          </details>
+          <details class="faq-item reveal reveal-delay-1">
+            <summary>Who is DataDashOS built for? <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="answer">Owner-led SMBs that already use tools like QuickBooks, a CRM, and ads platforms, but lack a single weekly operating rhythm for decisions.</div>
+          </details>
+          <details class="faq-item reveal reveal-delay-2">
+            <summary>Which tools does DataDashOS connect to? <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="answer">DataDashOS is built for QuickBooks Online, GoHighLevel, and Google Ads, with CSV import and a privacy-safe demo data mode.</div>
+          </details>
+          <details class="faq-item reveal">
+            <summary>How is DataDashOS different from a BI dashboard? <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="answer">Besides charts, DataDashOS adds industry KPI blueprints, AI weekly summaries, an executive coach grounded in your numbers, and an execution loop that turns insights into owned tasks.</div>
+          </details>
+          <details class="faq-item reveal reveal-delay-1">
+            <summary>Where is DataDashOS based? <span class="chev" aria-hidden="true">▾</span></summary>
+            <div class="answer">DataDashOS is built by Simmitri, Inc., a Northern California solar and roofing operator with 32 years in business. The product was forged running a real company before being offered to other owner-led businesses.</div>
+          </details>
+        </div>
+        <p style="text-align:center;margin-top:24px" class="reveal"><a href="./faq.html">Browse the full FAQ →</a></p>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <h2 id="contact-title">Raising our pre-seed round</h2>
+          <p>We are speaking with early investors who back operator-built software for small business. Request the deck or send a short note — we respond quickly.</p>
+
+          <form class="lead-form" id="investor-form" novalidate>
+            <div class="hp" aria-hidden="true">
+              <label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
+            </div>
+            <div class="field">
+              <input id="name" name="name" type="text" required placeholder=" " autocomplete="name">
+              <label for="name">Full name</label>
+              <div class="error">Please enter your name.</div>
+            </div>
+            <div class="field">
+              <input id="email" name="email" type="email" required placeholder=" " autocomplete="email">
+              <label for="email">Work email</label>
+              <div class="error">Enter a valid email.</div>
+            </div>
+            <div class="field">
+              <input id="firm" name="firm" type="text" placeholder=" " autocomplete="organization">
+              <label for="firm">Firm (optional)</label>
+            </div>
+            <div class="field">
+              <textarea id="note" name="note" placeholder=" " rows="4"></textarea>
+              <label for="note">What should we know?</label>
+            </div>
+            <button class="btn btn-shimmer" type="submit" style="width:100%">Get in touch <span class="arrow" aria-hidden="true">→</span></button>
+            <p class="form-note">Opens your email client to investors@simmitri.com · No spam puzzles · Operator-built in California</p>
+            <div class="form-success" role="status">Thanks — your email draft is ready. If it did not open, write us at investors@simmitri.com.</div>
+          </form>
+
+          <p class="trust-near-cta">Simmitri, Inc. · 32 years operating · Northern California · Pre-seed conversations</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">DataDash<span>OS</span></div>
+          <p>The operating system for business performance. Built by Simmitri, Inc.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#product">Modules</a>
+          <a href="#how">How it works</a>
+          <a href="#faq">FAQ</a>
+          <a href="./llms.txt">llms.txt</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="./about.html">About</a>
+          <a href="./faq.html">Help center</a>
+          <a href="#contact">Investors</a>
+          <a href="https://simmitri.com" rel="noopener">Simmitri.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> DataDashOS · Simmitri, Inc. Product screens show sample data.</span>
+        <span>SEO · AEO · GEO ready</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-cta">
+    <a class="btn btn-shimmer" href="#contact">Request the pitch deck</a>
   </div>
-</section>
 
-<section id="product">
-  <h2>Product overview</h2>
-  <p class="sub">Six modules that work together as a business operating system.</p>
-  <div class="grid">
-    <div class="card"><h3>Analytics dashboards</h3><ul><li>Executive, marketing, sales and operations views</li><li>Prior-period and year-over-year comparisons</li><li>Custom layouts, templates and dark/light mode</li></ul></div>
-    <div class="card"><h3>Business OS &amp; KPIs</h3><ul><li>Guided onboarding with industry blueprints</li><li>KPI scorecards, targets and trends</li><li>CSV import, notes and AI forecasts</li></ul></div>
-    <div class="card"><h3>Weekly reviews &amp; execution</h3><ul><li>AI-written weekly summaries</li><li>Recommendations turned into action items</li><li>Notifications and branded reports</li></ul></div>
-    <div class="card"><h3>Executive AI coach</h3><ul><li>CEO scorecard and decision briefs</li><li>Coach chat grounded in your KPIs and reviews</li><li>Nine specialist roles, from finance to safety</li></ul></div>
-    <div class="card"><h3>Data connections</h3><ul><li>Built for QuickBooks Online, GoHighLevel and Google Ads</li><li>Connection status and sync logs</li><li>Privacy-safe demo data mode</li></ul></div>
-    <div class="card"><h3>Teams &amp; administration</h3><ul><li>Workspaces, invitations and roles</li><li>Admin controls and audit logs</li><li>White-label branding per workspace</li></ul></div>
-  </div>
-</section>
-
-<section class="shots">
-  <h2>A look inside</h2>
-  <p class="sub">Screens shown use sample data for illustration.</p>
-  <div class="grid">
-    <div><img src="screenshots/01-executive-dashboard.png" alt="Executive dashboard" onerror="this.parentElement.style.display='none'"><p class="caption">Executive dashboard (sample data)</p></div>
-    <div><img src="screenshots/02-marketing-dashboard.png" alt="Marketing dashboard" onerror="this.parentElement.style.display='none'"><p class="caption">Marketing dashboard (sample data)</p></div>
-    <div><img src="screenshots/03-sales-dashboard.png" alt="Sales dashboard" onerror="this.parentElement.style.display='none'"><p class="caption">Sales dashboard (sample data)</p></div>
-  </div>
-</section>
-
-<section>
-  <h2>How it works</h2>
-  <div class="grid steps">
-    <div class="card"><h3>Connect</h3><p>Link your business tools or import a CSV.</p></div>
-    <div class="card"><h3>Measure</h3><p>Track the KPIs that matter for your industry.</p></div>
-    <div class="card"><h3>Review</h3><p>Get an AI-written weekly review of what changed.</p></div>
-    <div class="card"><h3>Act</h3><p>Turn recommendations into owned action items.</p></div>
-  </div>
-</section>
-
-<section>
-  <h2>Built by operators</h2>
-  <p class="sub">DataDashOS grew out of running Simmitri, Inc., a Northern California solar and roofing company with 32 years in business. We built the tool we needed to run our own company, and we're now bringing it to other owner-led businesses.</p>
-</section>
-
-<section id="contact">
-  <div class="cta">
-    <h2>Raising our pre-seed round</h2>
-    <p class="sub">We're speaking with early investors who back operator-built software for small business.</p>
-    <a class="btn" href="mailto:YOUR-EMAIL@example.com?subject=DataDashOS%20investor%20inquiry">Get in touch</a>
-  </div>
-</section>
-
-<footer>© 2026 DataDashOS. Product screens show sample data.</footer>
-</div>
+  <script src="./assets/js/main.js" defer></script>
 </body>
 </html>
-```

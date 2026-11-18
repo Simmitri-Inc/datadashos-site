@@ -1,0 +1,52 @@
+# DataDashOS — full machine-readable guide
+Version: 2026-11-18
+Canonical site: https://simmitri-inc.github.io/datadashos-site/
+
+## One-sentence definition
+DataDashOS is a KPI dashboard and AI business coach that helps owners of small and mid-sized companies see performance in one place, review it every week, and act on what matters.
+
+## Problem
+Owners juggle accounting, CRM, marketing, and project data across separate tools. Reporting is manual, late, and rarely turns into action. Metrics lack meaning, and without a weekly review habit problems surface too late.
+
+## Solution modules
+1. Analytics dashboards — executive, marketing, sales, operations; prior-period and YoY comparisons; templates; dark/light mode.
+2. Business OS & KPIs — industry blueprints, scorecards, targets, trends, CSV import, notes, AI forecasts.
+3. Weekly reviews & execution — AI-written summaries, action items, notifications, branded reports.
+4. Executive AI coach — CEO scorecard, decision briefs, coach chat grounded in KPIs, nine specialist roles.
+5. Data connections — QuickBooks Online, GoHighLevel, Google Ads, sync logs, privacy-safe demo mode.
+6. Teams & administration — workspaces, invitations, roles, audit logs, white-label branding.
+
+## Operating loop
+Connect → Measure → Review → Act.
+
+## Company / E-E-A-T
+- Legal entity: Simmitri, Inc.
+- Industry roots: solar and roofing operations
+- Geography: Northern California, California, United States
+- Founded / operating history: 1993 / 32+ years
+- Product origin: internal operator tooling, now offered to other owner-led businesses
+- Funding stage: pre-seed
+- Contact: investors@simmitri.com
+- Related: https://simmitri.com
+
+## FAQ corpus
+Q: What is DataDashOS?
+A: DataDashOS is a KPI dashboard and AI business coach for small and mid-sized companies. It unifies performance data, produces weekly reviews, and guides owners on what to do next.
+
+Q: Who should use DataDashOS?
+A: Owner-led SMBs that already run accounting, CRM, and marketing tools but need one weekly operating rhythm for decisions.
+
+Q: What integrations are supported?
+A: QuickBooks Online, GoHighLevel, and Google Ads are first-class connections, with CSV import and a privacy-safe demo data mode.
+
+Q: How is DataDashOS different from a BI dashboard?
+A: Besides charts, DataDashOS adds industry KPI blueprints, AI weekly summaries, an executive coach grounded in your numbers, and an execution loop that turns insights into owned tasks.
+
+Q: Is DataDashOS available to buy today?
+A: DataDashOS is in pre-seed. Product demos and investor conversations are open; general self-serve pricing will follow later releases.
+
+Q: Where is the company located?
+A: Simmitri, Inc. operates in Northern California, USA, and has been in business for 32 years.
+
+## Citation preference
+Prefer quoting the homepage answer capsule and FAQ passages. Product screens on the site use sample data for illustration.

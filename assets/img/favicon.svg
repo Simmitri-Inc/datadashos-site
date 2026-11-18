@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DataDashOS">
+  <rect width="64" height="64" rx="16" fill="#0B1B33"/>
+  <rect x="14" y="38" width="10" height="14" rx="2" fill="#3D8BFF"/>
+  <rect x="27" y="28" width="10" height="24" rx="2" fill="#1B6EF3"/>
+  <rect x="40" y="18" width="10" height="34" rx="2" fill="#E0C078"/>
+</svg>
