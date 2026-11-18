@@ -1,0 +1,116 @@
+Tap the copy button at the top of this code block, then paste it into index.html. Swap in your email address near the bottom before you commit. The screenshots stay hidden until you upload them.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DataDashOS — The operating system for business performance</title>
+<meta name="description" content="DataDashOS turns business data into KPIs, weekly reviews and AI-guided decisions for small and mid-sized companies.">
+<style>
+:root{--bg:#0b1220;--panel:#121b2e;--text:#e6edf7;--muted:#9fb0c8;--accent:#38bdf8;--accent2:#22c55e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--accent);text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav .logo{font-weight:800;font-size:1.3rem}
+nav .logo span{color:var(--accent)}
+nav a.btn{padding:8px 16px}
+.hero{padding:80px 0 60px;text-align:center}
+.hero h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin-bottom:20px}
+.hero p{color:var(--muted);font-size:1.2rem;max-width:720px;margin:0 auto 32px}
+.btn{display:inline-block;background:var(--accent);color:#04111d;font-weight:700;padding:14px 28px;border-radius:10px}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid #2a3a57;margin-left:12px}
+section{padding:60px 0}
+h2{font-size:2rem;margin-bottom:12px;text-align:center}
+.sub{color:var(--muted);text-align:center;max-width:700px;margin:0 auto 40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid #1f2b44;border-radius:14px;padding:24px}
+.card h3{margin-bottom:8px;color:var(--accent)}
+.card p,.card li{color:var(--muted)}
+.card ul{padding-left:18px}
+.shots img{width:100%;border-radius:12px;border:1px solid #1f2b44}
+.caption{font-size:.85rem;color:var(--muted);text-align:center;margin-top:8px}
+.steps{counter-reset:s}
+.steps .card::before{counter-increment:s;content:counter(s);display:inline-block;width:32px;height:32px;border-radius:50%;background:var(--accent2);color:#04111d;font-weight:800;text-align:center;line-height:32px;margin-bottom:10px}
+.cta{text-align:center;background:linear-gradient(135deg,#0f2a44,#123b2c);border-radius:20px;padding:60px 24px}
+footer{color:var(--muted);text-align:center;padding:40px 0;font-size:.9rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+  <div class="logo">DataDash<span>OS</span></div>
+  <a class="btn" href="#contact">Investor contact</a>
+</nav>
+
+<header class="hero">
+  <h1>From scattered numbers to clear weekly decisions</h1>
+  <p>DataDashOS is a KPI dashboard and AI business coach that helps owners of small and mid-sized companies see performance in one place, review it every week, and act on what matters.</p>
+  <a class="btn" href="#contact">Request the pitch deck</a>
+  <a class="btn ghost" href="#product">See the product</a>
+</header>
+
+<section>
+  <h2>The problem</h2>
+  <p class="sub">Owners juggle accounting, CRM, marketing and project data across separate tools. Reporting is manual, late and rarely turns into action.</p>
+  <div class="grid">
+    <div class="card"><h3>Data lives in silos</h3><p>Revenue in accounting, leads in the CRM, ad spend in marketing platforms — no single view.</p></div>
+    <div class="card"><h3>Metrics without meaning</h3><p>Dashboards show numbers but don't explain what changed or what to do next.</p></div>
+    <div class="card"><h3>No operating rhythm</h3><p>Without a weekly review habit, problems surface weeks too late.</p></div>
+  </div>
+</section>
+
+<section id="product">
+  <h2>Product overview</h2>
+  <p class="sub">Six modules that work together as a business operating system.</p>
+  <div class="grid">
+    <div class="card"><h3>Analytics dashboards</h3><ul><li>Executive, marketing, sales and operations views</li><li>Prior-period and year-over-year comparisons</li><li>Custom layouts, templates and dark/light mode</li></ul></div>
+    <div class="card"><h3>Business OS &amp; KPIs</h3><ul><li>Guided onboarding with industry blueprints</li><li>KPI scorecards, targets and trends</li><li>CSV import, notes and AI forecasts</li></ul></div>
+    <div class="card"><h3>Weekly reviews &amp; execution</h3><ul><li>AI-written weekly summaries</li><li>Recommendations turned into action items</li><li>Notifications and branded reports</li></ul></div>
+    <div class="card"><h3>Executive AI coach</h3><ul><li>CEO scorecard and decision briefs</li><li>Coach chat grounded in your KPIs and reviews</li><li>Nine specialist roles, from finance to safety</li></ul></div>
+    <div class="card"><h3>Data connections</h3><ul><li>Built for QuickBooks Online, GoHighLevel and Google Ads</li><li>Connection status and sync logs</li><li>Privacy-safe demo data mode</li></ul></div>
+    <div class="card"><h3>Teams &amp; administration</h3><ul><li>Workspaces, invitations and roles</li><li>Admin controls and audit logs</li><li>White-label branding per workspace</li></ul></div>
+  </div>
+</section>
+
+<section class="shots">
+  <h2>A look inside</h2>
+  <p class="sub">Screens shown use sample data for illustration.</p>
+  <div class="grid">
+    <div><img src="screenshots/01-executive-dashboard.png" alt="Executive dashboard" onerror="this.parentElement.style.display='none'"><p class="caption">Executive dashboard (sample data)</p></div>
+    <div><img src="screenshots/02-marketing-dashboard.png" alt="Marketing dashboard" onerror="this.parentElement.style.display='none'"><p class="caption">Marketing dashboard (sample data)</p></div>
+    <div><img src="screenshots/03-sales-dashboard.png" alt="Sales dashboard" onerror="this.parentElement.style.display='none'"><p class="caption">Sales dashboard (sample data)</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>How it works</h2>
+  <div class="grid steps">
+    <div class="card"><h3>Connect</h3><p>Link your business tools or import a CSV.</p></div>
+    <div class="card"><h3>Measure</h3><p>Track the KPIs that matter for your industry.</p></div>
+    <div class="card"><h3>Review</h3><p>Get an AI-written weekly review of what changed.</p></div>
+    <div class="card"><h3>Act</h3><p>Turn recommendations into owned action items.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2>Built by operators</h2>
+  <p class="sub">DataDashOS grew out of running Simmitri, Inc., a Northern California solar and roofing company with 32 years in business. We built the tool we needed to run our own company, and we're now bringing it to other owner-led businesses.</p>
+</section>
+
+<section id="contact">
+  <div class="cta">
+    <h2>Raising our pre-seed round</h2>
+    <p class="sub">We're speaking with early investors who back operator-built software for small business.</p>
+    <a class="btn" href="mailto:YOUR-EMAIL@example.com?subject=DataDashOS%20investor%20inquiry">Get in touch</a>
+  </div>
+</section>
+
+<footer>© 2026 DataDashOS. Product screens show sample data.</footer>
+</div>
+</body>
+</html>
+```
