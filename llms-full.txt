@@ -25,8 +25,7 @@ Connect → Measure → Review → Act.
 - Geography: Northern California, California, United States
 - Founded / operating history: 1993 / 32+ years
 - Product origin: internal operator tooling, now offered to other owner-led businesses
-- Funding stage: pre-seed
-- Contact: investors@simmitri.com
+- Contact: hello@simmitri.com
 - Related: https://simmitri.com
 
 ## FAQ corpus
@@ -43,7 +42,7 @@ Q: How is DataDashOS different from a BI dashboard?
 A: Besides charts, DataDashOS adds industry KPI blueprints, AI weekly summaries, an executive coach grounded in your numbers, and an execution loop that turns insights into owned tasks.
 
 Q: Is DataDashOS available to buy today?
-A: DataDashOS is in pre-seed. Product demos and investor conversations are open; general self-serve pricing will follow later releases.
+A: Early access demos are open now. General self-serve pricing will follow later releases.
 
 Q: Where is the company located?
 A: Simmitri, Inc. operates in Northern California, USA, and has been in business for 32 years.
