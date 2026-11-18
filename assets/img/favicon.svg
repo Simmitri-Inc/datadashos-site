@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="DataDashOS">
-  <rect width="64" height="64" rx="16" fill="#071528"/>
+  <rect width="64" height="64" rx="16" fill="#0B1B33"/>
   <rect x="14" y="38" width="10" height="14" rx="2" fill="#2F6BFF"/>
-  <rect x="27" y="28" width="10" height="24" rx="2" fill="#4D84FF"/>
-  <rect x="40" y="18" width="10" height="34" rx="2" fill="#2FE3B0"/>
+  <rect x="27" y="28" width="10" height="24" rx="2" fill="#3D8BFF"/>
+  <rect x="40" y="18" width="10" height="34" rx="2" fill="#C4A35A"/>
 </svg>
