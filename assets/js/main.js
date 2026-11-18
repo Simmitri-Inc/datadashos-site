@@ -2,7 +2,7 @@
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
-  const form = document.querySelector("#contact-form");
+  const form = document.querySelector("#waitlist-form");
   const yearEls = document.querySelectorAll("[data-year]");
 
   yearEls.forEach((el) => {
@@ -96,7 +96,7 @@
     }
   });
 
-  // Contact form with honeypot + client validation
+  // Waitlist form with honeypot + client validation
   if (form) {
     const started = Date.now();
     form.addEventListener("submit", (e) => {
@@ -114,13 +114,11 @@
       });
       if (!valid) return;
 
-      const name = form.querySelector("#name")?.value?.trim() || "";
-      const email = form.querySelector("#email")?.value?.trim() || "";
-      const company = form.querySelector("#company")?.value?.trim() || "";
-      const note = form.querySelector("#note")?.value?.trim() || "";
-      const subject = encodeURIComponent("DataDashOS demo request");
+      const name = form.querySelector("#waitlist-name")?.value?.trim() || "";
+      const email = form.querySelector("#waitlist-email")?.value?.trim() || "";
+      const subject = encodeURIComponent("DataDashOS waitlist signup");
       const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\n${note}`
+        `Waitlist signup\n\nName: ${name}\nEmail: ${email}`
       );
       const success = form.querySelector(".form-success");
       if (success) success.classList.add("is-visible");

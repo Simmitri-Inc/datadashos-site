@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-labelledby="dashTitle dashDesc">
   <title id="dashTitle">DataDashOS executive dashboard</title>
-  <desc id="dashDesc">Illustrated KPI dashboard showing revenue, pipeline health, weekly review summary and AI coach recommendations.</desc>
+  <desc id="dashDesc">Illustrated KPI dashboard with hybrid brand colors — navy surfaces, blue chart, gold actions, deep green gains.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0B1B33"/>
@@ -13,7 +13,7 @@
     </linearGradient>
     <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#3D8BFF"/>
-      <stop offset="100%" stop-color="#1B6EF3"/>
+      <stop offset="100%" stop-color="#2F6BFF"/>
     </linearGradient>
     <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0%" stop-color="#E0C078"/>
@@ -27,77 +27,57 @@
       <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
     </filter>
   </defs>
-
   <rect width="720" height="460" rx="22" fill="url(#bg)"/>
-
-  <!-- sidebar -->
   <rect x="16" y="16" width="72" height="428" rx="16" fill="#0A1628" opacity="0.85"/>
   <circle cx="52" cy="48" r="14" fill="url(#gold)"/>
-  <rect x="36" y="90" width="32" height="8" rx="4" fill="#3D8BFF" opacity="0.9"/>
+  <rect x="36" y="90" width="32" height="8" rx="4" fill="#2F6BFF" opacity="0.95"/>
   <rect x="36" y="114" width="32" height="8" rx="4" fill="#7A8BA3" opacity="0.45"/>
   <rect x="36" y="138" width="32" height="8" rx="4" fill="#7A8BA3" opacity="0.45"/>
   <rect x="36" y="162" width="32" height="8" rx="4" fill="#7A8BA3" opacity="0.45"/>
   <rect x="36" y="186" width="32" height="8" rx="4" fill="#7A8BA3" opacity="0.45"/>
-  <rect x="36" y="400" width="32" height="8" rx="4" fill="#C4A35A" opacity="0.7"/>
-
-  <!-- top bar -->
+  <rect x="36" y="400" width="32" height="8" rx="4" fill="#C4A35A" opacity="0.85"/>
   <text x="110" y="48" fill="#E8EEF8" font-family="Manrope, Arial, sans-serif" font-size="16" font-weight="700">Executive scorecard</text>
   <text x="110" y="68" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="11">Week of Nov 10 · Sample data</text>
-  <rect x="520" y="34" width="84" height="28" rx="14" fill="#1B6EF3" opacity="0.2" stroke="#3D8BFF" stroke-width="1"/>
+  <rect x="520" y="34" width="84" height="28" rx="14" fill="#2F6BFF" opacity="0.22" stroke="#3D8BFF" stroke-width="1"/>
   <text x="534" y="52" fill="#B8D4FF" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700">AI Coach</text>
   <circle cx="640" cy="48" r="14" fill="#223854"/>
   <circle cx="672" cy="48" r="14" fill="#223854"/>
-
-  <!-- KPI cards -->
   <g filter="url(#soft)">
     <rect x="110" y="92" width="140" height="86" rx="14" fill="url(#card)"/>
     <text x="126" y="116" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="11">Revenue</text>
-    <text x="126" y="146" fill="#FFFFFF" font-family="Fraunces, Georgia, serif" font-size="28" font-weight="600">$248k</text>
-    <text x="126" y="166" fill="#4ADE80" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700">▲ 12.4% WoW</text>
-
+    <text x="126" y="146" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">$248k</text>
+    <text x="126" y="166" fill="#157A5C" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700">▲ 12.4% WoW</text>
     <rect x="266" y="92" width="140" height="86" rx="14" fill="url(#card)"/>
     <text x="282" y="116" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="11">Pipeline</text>
-    <text x="282" y="146" fill="#FFFFFF" font-family="Fraunces, Georgia, serif" font-size="28" font-weight="600">$1.1M</text>
-    <text x="282" y="166" fill="#4ADE80" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700">▲ 6.1% WoW</text>
-
+    <text x="282" y="146" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">$1.1M</text>
+    <text x="282" y="166" fill="#157A5C" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700">▲ 6.1% WoW</text>
     <rect x="422" y="92" width="140" height="86" rx="14" fill="url(#card)"/>
     <text x="438" y="116" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="11">Close rate</text>
-    <text x="438" y="146" fill="#FFFFFF" font-family="Fraunces, Georgia, serif" font-size="28" font-weight="600">31%</text>
-    <text x="438" y="166" fill="#FBBF24" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700">● On target</text>
-
+    <text x="438" y="146" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">31%</text>
+    <text x="438" y="166" fill="#C4A35A" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700">● On target</text>
     <rect x="578" y="92" width="118" height="86" rx="14" fill="url(#card)"/>
     <text x="594" y="116" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="11">NPS</text>
-    <text x="594" y="146" fill="#FFFFFF" font-family="Fraunces, Georgia, serif" font-size="28" font-weight="600">64</text>
-    <text x="594" y="166" fill="#4ADE80" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700">▲ +3</text>
+    <text x="594" y="146" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="28" font-weight="700">64</text>
+    <text x="594" y="166" fill="#157A5C" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="700">▲ +3</text>
   </g>
-
-  <!-- Chart panel -->
   <rect x="110" y="196" width="360" height="230" rx="16" fill="url(#card)"/>
   <text x="128" y="224" fill="#E8EEF8" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="700">Weekly performance</text>
   <text x="128" y="242" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="10">Revenue vs prior period</text>
-
   <path d="M140 380 L140 270 L460 270" fill="none" stroke="#2A3F5F" stroke-width="1"/>
-  <path d="M140 360 C180 350, 200 300, 240 310 C280 320, 300 280, 340 270 C380 260, 400 290, 450 250"
-        fill="none" stroke="url(#blue)" stroke-width="3" stroke-linecap="round"/>
-  <path d="M140 360 C180 350, 200 300, 240 310 C280 320, 300 280, 340 270 C380 260, 400 290, 450 250 L450 380 L140 380 Z"
-        fill="url(#chart)"/>
-  <circle cx="450" cy="250" r="5" fill="#E0C078"/>
-  <circle cx="450" cy="250" r="9" fill="#E0C078" opacity="0.25"/>
-
-  <!-- AI coach panel -->
+  <path d="M140 360 C180 350, 200 300, 240 310 C280 320, 300 280, 340 270 C380 260, 400 290, 450 250" fill="none" stroke="url(#blue)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M140 360 C180 350, 200 300, 240 310 C280 320, 300 280, 340 270 C380 260, 400 290, 450 250 L450 380 L140 380 Z" fill="url(#chart)"/>
+  <circle cx="450" cy="250" r="5" fill="#C4A35A"/>
+  <circle cx="450" cy="250" r="9" fill="#C4A35A" opacity="0.25"/>
   <rect x="486" y="196" width="210" height="230" rx="16" fill="url(#card)"/>
   <rect x="486" y="196" width="210" height="42" rx="16" fill="#102038"/>
   <rect x="486" y="220" width="210" height="18" fill="#102038"/>
   <text x="504" y="222" fill="#E0C078" font-family="Manrope, Arial, sans-serif" font-size="12" font-weight="700">Weekly AI brief</text>
-
   <rect x="504" y="256" width="174" height="48" rx="10" fill="#0F2036" stroke="#2A3F5F"/>
   <text x="516" y="276" fill="#B8D4FF" font-family="Manrope, Arial, sans-serif" font-size="10" font-weight="700">What changed</text>
   <text x="516" y="292" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="10">Paid lead cost rose 9%</text>
-
   <rect x="504" y="316" width="174" height="48" rx="10" fill="#0F2036" stroke="#2A3F5F"/>
   <text x="516" y="336" fill="#E0C078" font-family="Manrope, Arial, sans-serif" font-size="10" font-weight="700">Recommended action</text>
   <text x="516" y="352" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="10">Pause 2 underperforming ads</text>
-
   <rect x="504" y="376" width="120" height="28" rx="8" fill="url(#gold)"/>
   <text x="520" y="394" fill="#0B1B33" font-family="Manrope, Arial, sans-serif" font-size="11" font-weight="800">Create task</text>
 </svg>
