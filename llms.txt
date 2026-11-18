@@ -1,22 +1,21 @@
 # DataDashOS
-> KPI dashboard and AI business coach for owner-led small and mid-sized companies. Built by Simmitri, Inc. (Northern California, est. 1993).
+> The KPI intelligence and AI orchestration layer for contractor businesses. Built with Simmitri Holdings (Northern California).
 
-DataDashOS turns siloed accounting, CRM, and marketing data into one KPI view, an AI-written weekly review, and next-step actions.
+DataDashOS unifies performance across existing tools into shared KPIs, weekly AI reviews, and owned actions — without replacing the software contractors already run.
 
 ## Primary pages
-- [Home](https://simmitri-inc.github.io/datadashos-site/): Product overview, how it works, demo contact
-- [About](https://simmitri-inc.github.io/datadashos-site/about.html): Operator story, E-E-A-T entity details, geographic roots
+- [Home](https://simmitri-inc.github.io/datadashos-site/): Product overview, screenshots, how it works, demo contact
+- [About](https://simmitri-inc.github.io/datadashos-site/about.html): Operator story and geographic roots
 - [FAQ](https://simmitri-inc.github.io/datadashos-site/faq.html): Citable Q&A for owners
 
 ## Key facts
 - Product: DataDashOS (SoftwareApplication / BusinessApplication)
-- Company: Simmitri, Inc.
-- Location: Northern California, USA
-- Operating history: 32+ years
+- Positioning: Unify performance, not software
+- Tagline: Build with clarity. Scale with control.
+- First market: Contractor trades and contractor portfolios
 - Integrations: QuickBooks Online, GoHighLevel, Google Ads, CSV import
 - Contact: hello@simmitri.com
 
 ## Optional
-- [llms-full.txt](https://simmitri-inc.github.io/datadashos-site/llms-full.txt): Expanded product and FAQ corpus
+- [llms-full.txt](https://simmitri-inc.github.io/datadashos-site/llms-full.txt)
 - [sitemap.xml](https://simmitri-inc.github.io/datadashos-site/sitemap.xml)
-- [rss.xml](https://simmitri-inc.github.io/datadashos-site/rss.xml)
