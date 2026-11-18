@@ -1,0 +1,23 @@
+# DataDashOS
+> KPI dashboard and AI business coach for owner-led small and mid-sized companies. Built by Simmitri, Inc. (Northern California, est. 1993).
+
+DataDashOS turns siloed accounting, CRM, and marketing data into one KPI view, an AI-written weekly review, and next-step actions.
+
+## Primary pages
+- [Home](https://simmitri-inc.github.io/datadashos-site/): Product overview, how it works, investor contact
+- [About](https://simmitri-inc.github.io/datadashos-site/about.html): Operator story, E-E-A-T entity details, geographic roots
+- [FAQ](https://simmitri-inc.github.io/datadashos-site/faq.html): Citable Q&A for owners and investors
+
+## Key facts
+- Product: DataDashOS (SoftwareApplication / BusinessApplication)
+- Company: Simmitri, Inc.
+- Location: Northern California, USA
+- Operating history: 32+ years
+- Stage: Pre-seed
+- Integrations: QuickBooks Online, GoHighLevel, Google Ads, CSV import
+- Contact: investors@simmitri.com
+
+## Optional
+- [llms-full.txt](https://simmitri-inc.github.io/datadashos-site/llms-full.txt): Expanded product and FAQ corpus
+- [sitemap.xml](https://simmitri-inc.github.io/datadashos-site/sitemap.xml)
+- [rss.xml](https://simmitri-inc.github.io/datadashos-site/rss.xml)
