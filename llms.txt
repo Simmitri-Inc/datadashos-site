@@ -4,18 +4,17 @@
 DataDashOS turns siloed accounting, CRM, and marketing data into one KPI view, an AI-written weekly review, and next-step actions.
 
 ## Primary pages
-- [Home](https://simmitri-inc.github.io/datadashos-site/): Product overview, how it works, investor contact
+- [Home](https://simmitri-inc.github.io/datadashos-site/): Product overview, how it works, demo contact
 - [About](https://simmitri-inc.github.io/datadashos-site/about.html): Operator story, E-E-A-T entity details, geographic roots
-- [FAQ](https://simmitri-inc.github.io/datadashos-site/faq.html): Citable Q&A for owners and investors
+- [FAQ](https://simmitri-inc.github.io/datadashos-site/faq.html): Citable Q&A for owners
 
 ## Key facts
 - Product: DataDashOS (SoftwareApplication / BusinessApplication)
 - Company: Simmitri, Inc.
 - Location: Northern California, USA
 - Operating history: 32+ years
-- Stage: Pre-seed
 - Integrations: QuickBooks Online, GoHighLevel, Google Ads, CSV import
-- Contact: investors@simmitri.com
+- Contact: hello@simmitri.com
 
 ## Optional
 - [llms-full.txt](https://simmitri-inc.github.io/datadashos-site/llms-full.txt): Expanded product and FAQ corpus

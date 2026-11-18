@@ -2,7 +2,7 @@
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
-  const form = document.querySelector("#investor-form");
+  const form = document.querySelector("#contact-form");
   const yearEls = document.querySelectorAll("[data-year]");
 
   yearEls.forEach((el) => {
@@ -96,7 +96,7 @@
     }
   });
 
-  // Investor form with honeypot + client validation
+  // Contact form with honeypot + client validation
   if (form) {
     const started = Date.now();
     form.addEventListener("submit", (e) => {
@@ -116,15 +116,15 @@
 
       const name = form.querySelector("#name")?.value?.trim() || "";
       const email = form.querySelector("#email")?.value?.trim() || "";
-      const firm = form.querySelector("#firm")?.value?.trim() || "";
+      const company = form.querySelector("#company")?.value?.trim() || "";
       const note = form.querySelector("#note")?.value?.trim() || "";
-      const subject = encodeURIComponent("DataDashOS investor inquiry");
+      const subject = encodeURIComponent("DataDashOS demo request");
       const body = encodeURIComponent(
-        `Name: ${name}\nEmail: ${email}\nFirm: ${firm}\n\n${note}`
+        `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\n${note}`
       );
       const success = form.querySelector(".form-success");
       if (success) success.classList.add("is-visible");
-      window.location.href = `mailto:investors@simmitri.com?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:hello@simmitri.com?subject=${subject}&body=${body}`;
     });
   }
 })();
