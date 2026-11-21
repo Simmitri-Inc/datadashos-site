@@ -7,12 +7,14 @@
     "build": "node scripts/build.mjs",
     "check:copy": "node scripts/check-copy.mjs",
     "serve": "python3 -m http.server 8080 --bind 127.0.0.1",
-    "images": "node scripts/images.mjs"
+    "images": "node scripts/images.mjs",
+    "og": "node scripts/og-images.mjs"
   },
   "engines": {
     "node": ">=20"
   },
   "devDependencies": {
+    "playwright-core": "^1.49.1",
     "sharp": "^0.33.5"
   }
 }

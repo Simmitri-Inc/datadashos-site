@@ -34,7 +34,6 @@ export default {
   title: "DataDashOS — The KPI-first operating system for your business",
   description: "DataDashOS defines the KPIs your business should run on, tracks them, helps you hit them, and adapts them as you grow.",
   ogTitle: "KPIs first. Everything else follows.",
-  ogImage: "assets/og/home.png",
   scripts: ["assets/js/kpi-blueprints.js", "assets/js/kpi-demo.js", "assets/js/forms.js"],
   styles: ["assets/css/kpi-demo.css"],
   jsonld: [

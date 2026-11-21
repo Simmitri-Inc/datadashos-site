@@ -18,7 +18,6 @@ const hub = {
   title: "KPI Library — The KPIs Every Business Should Track, by Industry | DataDashOS",
   description:
     "Free guides to the KPIs that matter most in your industry, with real-world use cases. Find your industry and see your sample scorecard.",
-  ogImage: "assets/og/kpi-library.png",
   breadcrumbs: HUB_CRUMBS,
   jsonld: [
     {
@@ -71,8 +70,7 @@ function industryPage(ind, index) {
     out: `kpi-library/${ind.slug}/index.html`,
     nav: "kpi",
     title: `KPIs for ${ind.name} | DataDashOS KPI Library`,
-    description: `${ind.pain} The core KPIs for ${ind.name.toLowerCase()}, what each one tells you, and an example scenario.`,
-    ogImage: `assets/og/kpi-${ind.slug}.png`,
+    description: `${ind.pain} See the core KPIs to track and an example scenario.`,
     breadcrumbs: crumbs,
     body: ({ P }) => `
     <section class="hero page-hero-section kpi-hero" aria-labelledby="kpi-title">

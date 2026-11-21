@@ -98,6 +98,13 @@ ${crumbs
           </ol>
         </nav>`;
 
+/** "kpi-library/healthcare/index.html" -> "assets/og/kpi-library-healthcare.png"; "index.html" -> "assets/og/home.png". */
+export function ogImageFor(page) {
+  if (page.ogImage) return page.ogImage;
+  const slug = page.out.replace(/(^|\/)index\.html$/, "").replace(/\.html$/, "").replace(/\/+$/, "").replace(/\//g, "-");
+  return `assets/og/${slug || "home"}.png`;
+}
+
 export function renderPage(page) {
   const P = prefixFor(page.out);
   const urlPath = urlPathFor(page.out);
@@ -109,7 +116,7 @@ export function renderPage(page) {
   };
   page.waitlistHref = ctx.waitlistHref;
   const body = page.body(ctx);
-  const ogImage = absUrl(page.ogImage || "assets/og/og-cover.png");
+  const ogImage = absUrl(ogImageFor(page));
   const robots = page.noindex ? "noindex, follow" : "index, follow, max-image-preview:large, max-snippet:-1";
 
   const graph = [];
@@ -125,9 +132,14 @@ ${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 2)
   </script>`
     : "";
 
-  const scripts = ["assets/js/config.js", "assets/js/main.js", ...(page.scripts || [])]
-    .map((s) => `  <script src="${P}${s}" defer></script>`)
-    .join("\n");
+  const a = config.analytics;
+  const analyticsTag = a.enabled
+    ? `\n  <script defer data-domain="${esc(a.domain)}"${
+        new URL(a.apiHost).host === "plausible.io" ? "" : ` data-api="${esc(a.apiHost.replace(/\/+$/, ""))}/api/event"`
+      } src="${esc(a.scriptSrc)}"></script>`
+    : "";
+  const local = ["assets/js/config.js", ...(a.enabled ? ["assets/js/analytics.js"] : []), "assets/js/main.js", ...(page.scripts || [])];
+  const scripts = local.map((s) => `  <script src="${P}${s}" defer></script>`).join("\n") + analyticsTag;
   const styles = ["assets/css/styles.css", ...(page.styles || [])]
     .map((s) => `  <link rel="stylesheet" href="${P}${s}">`)
     .join("\n");

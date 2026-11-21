@@ -49,6 +49,51 @@
             "item": "https://datadashos.com/enterprise.html"
           }
         ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Where does my data live?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "On your own servers or private cloud. DataDashOS's KPI layer only sees structured KPI data, never your raw records."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who can see it?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only the people you authorise. Role-based access controls who sees which KPIs, and every action is logged."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can we use our own AI model?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Connect AI models running on your own servers, outside models, or both."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do outside AI providers see our data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Only the KPI summaries you choose to send. No customer details, financials or raw files."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens if we leave?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your data never left your environment, so there's nothing to extract. Your KPI definitions and history can be exported."
+            }
+          }
+        ]
       }
     ]
   }
@@ -473,7 +518,9 @@
   <div class="mobile-cta"><a class="btn btn-shimmer" href="./#waitlist">Join the waitlist</a></div>
 
   <script src="./assets/js/config.js" defer></script>
+  <script src="./assets/js/analytics.js" defer></script>
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/forms.js" defer></script>
+  <script defer data-domain="datadashos.com" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>

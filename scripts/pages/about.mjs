@@ -6,7 +6,6 @@ export default {
   nav: "about",
   title: "About DataDashOS — Built by operators, for operators",
   description: "DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs.",
-  ogImage: "assets/og/about.png",
   breadcrumbs: [
     { name: "Home", path: "" },
     { name: "About", path: "about.html" },

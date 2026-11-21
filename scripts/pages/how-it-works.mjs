@@ -22,7 +22,6 @@ export default {
   nav: "how",
   title: "How DataDashOS Works — Define, Track, Manage, Adapt",
   description: "See how DataDashOS defines your KPIs, tracks them in one scorecard, turns weekly reviews into action, and adapts your KPIs as you grow.",
-  ogImage: "assets/og/how-it-works.png",
   breadcrumbs: [
     { name: "Home", path: "" },
     { name: "How it works", path: "how-it-works.html" },

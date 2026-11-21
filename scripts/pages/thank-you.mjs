@@ -8,7 +8,6 @@ export default {
   title: "You're on the list — DataDashOS",
   description: "Thanks for joining the DataDashOS waitlist. We're opening early access in waves, and we'll email you as soon as your spot is ready.",
   noindex: true,
-  ogImage: "assets/og/thank-you.png",
   body: ({ P }) => `
     <section class="hero page-hero-section" aria-labelledby="thanks-title">
       <div class="wrap narrow">

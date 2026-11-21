@@ -1,4 +1,4 @@
-import { arrow, faqList } from "../lib/components.mjs";
+import { arrow, faqList, faqJsonLd } from "../lib/components.mjs";
 import { enterpriseForm } from "../lib/forms.mjs";
 import { dataFlowDiagram } from "../lib/data-flow-diagram.mjs";
 
@@ -24,8 +24,8 @@ export default {
   nav: "enterprise",
   title: "DataDashOS Enterprise — Private AI, governed by your KPIs",
   description: "Run AI on your own servers, use outside AI models without sharing your data, and govern it all through one KPI-first layer. Request early access.",
-  ogImage: "assets/og/enterprise.png",
   scripts: ["assets/js/forms.js"],
+  jsonld: [faqJsonLd(SECURITY_FAQ)],
   breadcrumbs: [
     { name: "Home", path: "" },
     { name: "Enterprise", path: "enterprise.html" },

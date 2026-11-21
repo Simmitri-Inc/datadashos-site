@@ -6,7 +6,6 @@ export default {
   nav: "faq",
   title: "FAQ — DataDashOS, the KPI-first operating system",
   description: "Answers to common questions about DataDashOS: what it is, who it's for, how it works with your software, how the AI coach uses your data, and how to get early access.",
-  ogImage: "assets/og/faq.png",
   breadcrumbs: [
     { name: "Home", path: "" },
     { name: "FAQ", path: "faq.html" },
