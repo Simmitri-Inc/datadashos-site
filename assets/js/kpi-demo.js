@@ -216,5 +216,15 @@
         renderResults(answers, { moveFocus: false });
       }
     });
+
+    const preset = new URLSearchParams(window.location.search).get("industry");
+    if (preset && Object.prototype.hasOwnProperty.call(B.INDUSTRIES, preset)) {
+      const radio = form.querySelector(`input[name="industry"][value="${preset}"]`);
+      if (radio) radio.checked = true;
+      if (window.location.hash === "#kpi-demo") {
+        const section = document.getElementById("kpi-demo");
+        if (section) section.scrollIntoView();
+      }
+    }
   });
 })();
