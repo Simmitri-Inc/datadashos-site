@@ -36,4 +36,4 @@ Q: Can I use it today?
 A: Early access opens in waves. Join the waitlist.
 
 ## Integrity
-Product screens show sample data and are never presented as customer results.
+Product screens are illustrations and are never presented as customer results.
