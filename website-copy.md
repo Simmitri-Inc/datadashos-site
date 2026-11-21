@@ -27,8 +27,18 @@ Last updated from site content dated 2026-11-18.
 - **Headline:** Track what matters before it matters too late
 - **Lede:** Hard work without a shared scorecard is just a hamster wheel. DataDash identifies which KPIs your contracting business should track, tracks them for you, and helps you implement the changes to hit them — so the business aligns to what actually matters.
 - **Answer capsule:** DataDash is the AI coach that finds the contractor KPIs that matter, watches them every week, and turns the review into owned actions across the tools you already use.
-- **CTAs:** Join the waitlist → · See the product
+- **CTAs:** Build my KPI scorecard → (scrolls to the Try it demo) · See the product
 - **Float chips:** Live weekly review · AI coach · 9 specialist roles
+
+### Try it — KPI demo
+- **Eyebrow:** Try it
+- **Headline:** See your KPIs in 30 seconds.
+- **Body:** Tell us a little about your business and we'll show you the KPIs a business like yours should run on.
+- **Questions:** Industry (Construction & trades · Home services · Professional services · Retail & e-commerce · Healthcare · Manufacturing · Technology · Other) · Number of employees (1–10 · 11–50 · 51–200 · 201–500 · 500+) · Top goal (Grow revenue · Improve profit · Win more customers · Run operations smoother)
+- **Button:** Show my KPIs →
+- **Results heading:** Your sample KPI scorecard
+- **Disclaimer:** Sample KPIs based on your answers. Your full scorecard is tailored to your actual data.
+- **CTA:** Get my full scorecard — join the waitlist →
 
 ### The problem
 - **Eyebrow:** The problem
@@ -125,12 +135,14 @@ Last updated from site content dated 2026-11-18.
 ### Waitlist / Early access
 - **Eyebrow:** Early access
 - **Headline:** Join the waitlist
-- **Body:** Be first to run shared KPIs, weekly AI reviews, and owned actions on your contractor data. Name and email only — we will reach out when your spot opens.
-- **Form fields:** Full name · Work email
+- **Body:** Be first to run shared KPIs, weekly AI reviews, and owned actions on your contractor data. Only name and email are required — we will reach out when your spot opens.
+- **Form fields:** Full name · Work email · Industry (optional) · Number of employees (optional)
 - **Form errors:** Please enter your name. · Enter a valid email.
 - **Submit:** Join the waitlist →
 - **Form note:** Opens your email client to hello@simmitri.com · No spam puzzles · Operator-built in California
 - **Success:** You are on the list — your email draft is ready. If it did not open, write us at hello@simmitri.com.
+- **Note / success once a waitlist endpoint is configured:** No spam puzzles · Operator-built in California / You are on the list — we will reach out when your spot opens.
+- **Error (endpoint mode):** Something went wrong — please try again, or email hello@simmitri.com.
 - **Trust line:** Simmitri Holdings · 32 years operating · Northern California
 
 ### Footer
