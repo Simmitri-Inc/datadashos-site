@@ -2,9 +2,8 @@
  * Read-only KPI blueprint adapter for the homepage "Try it" demo.
  *
  * KPI definitions are copied verbatim from the DataDashOS app's Service Business
- * KPI Pack and INDUSTRY_KPIS (Simmitri-Inc/datadashos:
- * src/services/business-os/kpiLibrary.ts) and industry medians (p50) from
- * src/services/business-os/industryBenchmarks.ts.
+ * KPI Pack and INDUSTRY_KPIS (datadashos app: src/services/business-os/kpiLibrary.ts)
+ * and industry medians (p50) from src/services/business-os/industryBenchmarks.ts.
  * Keep these in sync with the app when those files change.
  *
  * Pure client-side lookup: no storage, no network, no AI.

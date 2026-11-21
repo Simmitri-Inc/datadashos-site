@@ -6,6 +6,7 @@
  *   data-waitlist          selector of the section to scroll to (default "#waitlist")
  *   data-prefill-industry  selector of the waitlist industry <select>
  *   data-prefill-employees selector of the waitlist employees <select>
+ *   data-prefill-goal      selector of a hidden/demo goal field
  *   data-prefill-focus     selector of the field to focus after scrolling
  */
 (() => {
@@ -106,6 +107,10 @@
       const heading = el("h3", { id: headingId, className: "kpi-results-title", tabindex: "-1", text: "Your sample KPI scorecard" });
       const summary = el("p", {
         className: "kpi-results-summary",
+        text: "Here are five KPIs businesses like yours use to measure success, with a typical target for each.",
+      });
+      const context = el("p", {
+        className: "kpi-results-context",
         text: `${result.industryLabel} · ${result.employeesLabel} employees · Goal: ${result.goalLabel}`,
       });
 
@@ -143,6 +148,7 @@
       results.replaceChildren(
         heading,
         summary,
+        context,
         list,
         el("p", { className: "kpi-results-disclaimer", text: "Sample KPIs based on your answers. Your full scorecard is tailored to your actual data." }),
         el("div", { className: "kpi-results-actions" }, cta)
@@ -169,6 +175,17 @@
       };
       setSelect(mount.dataset.prefillIndustry, answers.industry);
       setSelect(mount.dataset.prefillEmployees, answers.employees);
+
+      const setValue = (selector, value) => {
+        const field = selector && document.querySelector(selector);
+        if (!field || value == null) return;
+        field.value = value;
+        field.dispatchEvent(new Event("change", { bubbles: true }));
+      };
+      setValue(mount.dataset.prefillGoal, answers.goal);
+      setValue("#demo-industry", answers.industry);
+      setValue("#demo-employees", answers.employees);
+      setValue("#demo-goal", answers.goal);
 
       if (!target) return;
       target.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth", block: "start" });

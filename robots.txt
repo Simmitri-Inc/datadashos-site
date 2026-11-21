@@ -1,7 +1,8 @@
-# DataDashOS crawl policy — AI crawlers explicitly welcomed for AEO/GEO.
+# DataDashOS crawl policy
 User-agent: *
 Allow: /
 Disallow: /assets/js/
+Disallow: /thank-you.html
 
 # OpenAI
 User-agent: GPTBot
