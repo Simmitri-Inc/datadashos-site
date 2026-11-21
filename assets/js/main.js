@@ -96,10 +96,25 @@
     }
   });
 
-  // Waitlist form with honeypot + client validation
+  // Waitlist form with honeypot + client validation.
+  // POSTs JSON to data-endpoint when set; otherwise falls back to a mailto draft.
   if (form) {
     const started = Date.now();
-    form.addEventListener("submit", (e) => {
+    const endpoint = (form.dataset.endpoint || "").trim();
+    const success = form.querySelector(".form-success");
+    const failure = form.querySelector(".form-error");
+    const note = form.querySelector(".form-note");
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    if (endpoint) {
+      if (note && note.dataset.noteEndpoint) note.textContent = note.dataset.noteEndpoint;
+      if (success && success.dataset.successEndpoint) success.textContent = success.dataset.successEndpoint;
+    }
+
+    const selectedLabel = (select) =>
+      select && select.value ? select.options[select.selectedIndex].text : "";
+
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const hp = form.querySelector('input[name="company_website"]');
       if (hp && hp.value) return;
@@ -114,15 +129,45 @@
       });
       if (!valid) return;
 
-      const name = form.querySelector("#waitlist-name")?.value?.trim() || "";
-      const email = form.querySelector("#waitlist-email")?.value?.trim() || "";
-      const subject = encodeURIComponent("DataDashOS waitlist signup");
-      const body = encodeURIComponent(
-        `Waitlist signup\n\nName: ${name}\nEmail: ${email}`
-      );
-      const success = form.querySelector(".form-success");
-      if (success) success.classList.add("is-visible");
-      window.location.href = `mailto:hello@simmitri.com?subject=${subject}&body=${body}`;
+      const industrySelect = form.querySelector("#waitlist-industry");
+      const employeesSelect = form.querySelector("#waitlist-employees");
+      const payload = {
+        name: form.querySelector("#waitlist-name")?.value?.trim() || "",
+        email: form.querySelector("#waitlist-email")?.value?.trim() || "",
+        industry: industrySelect?.value || "",
+        employees: employeesSelect?.value || "",
+        source: "homepage",
+      };
+
+      if (failure) failure.hidden = true;
+
+      if (!endpoint) {
+        const subject = encodeURIComponent("DataDashOS waitlist signup");
+        const body = encodeURIComponent(
+          `Waitlist signup\n\nName: ${payload.name}\nEmail: ${payload.email}` +
+            `\nIndustry: ${selectedLabel(industrySelect) || "—"}` +
+            `\nNumber of employees: ${selectedLabel(employeesSelect) || "—"}`
+        );
+        if (success) success.classList.add("is-visible");
+        window.location.href = `mailto:hello@simmitri.com?subject=${subject}&body=${body}`;
+        return;
+      }
+
+      if (submitBtn) submitBtn.disabled = true;
+      try {
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (!res.ok) throw new Error(`Waitlist request failed: ${res.status}`);
+        if (success) success.classList.add("is-visible");
+        form.reset();
+      } catch (err) {
+        if (failure) failure.hidden = false;
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 })();

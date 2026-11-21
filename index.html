@@ -30,6 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/kpi-demo.css">
 
   <script type="application/ld+json">
   {
@@ -240,7 +241,7 @@
           </aside>
 
           <div class="cta-group">
-            <a class="btn btn-shimmer" href="#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
+            <a class="btn btn-shimmer" href="#kpi-demo">Build my KPI scorecard <span class="arrow" aria-hidden="true">→</span></a>
             <a class="btn btn-ghost" href="#product">See the product</a>
           </div>
         </div>
@@ -259,6 +260,24 @@
       <div class="scroll-cue" aria-hidden="true">
         <span>Scroll</span>
         <span class="rail"></span>
+      </div>
+    </section>
+
+    <section id="kpi-demo" aria-labelledby="kpi-demo-title">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Try it</p>
+          <h2 id="kpi-demo-title">See your KPIs in 30 seconds.</h2>
+          <p>Tell us a little about your business and we'll show you the KPIs a business like yours should run on.</p>
+        </div>
+        <div class="kpi-demo"
+             data-kpi-demo
+             data-waitlist="#waitlist"
+             data-prefill-industry="#waitlist-industry"
+             data-prefill-employees="#waitlist-employees"
+             data-prefill-focus="#waitlist-name">
+          <noscript><p class="kpi-demo-noscript">Turn on JavaScript to try the KPI demo, or <a href="#waitlist">join the waitlist</a>.</p></noscript>
+        </div>
       </div>
     </section>
 
@@ -529,9 +548,10 @@
         <div class="cta-band reveal">
           <p class="eyebrow" style="color:var(--gold-bright);justify-content:center">Early access</p>
           <h2 id="waitlist-title">Join the waitlist</h2>
-          <p>Be first to run shared KPIs, weekly AI reviews, and owned actions on your contractor data. Name and email only — we will reach out when your spot opens.</p>
+          <p>Be first to run shared KPIs, weekly AI reviews, and owned actions on your contractor data. Only name and email are required — we will reach out when your spot opens.</p>
 
-          <form class="lead-form" id="waitlist-form" novalidate>
+          <!-- Set data-endpoint to the waitlist API URL (JSON POST). Empty = mailto fallback. -->
+          <form class="lead-form" id="waitlist-form" novalidate data-endpoint="">
             <div class="hp" aria-hidden="true">
               <label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
             </div>
@@ -545,9 +565,37 @@
               <label for="waitlist-email">Work email</label>
               <div class="error">Enter a valid email.</div>
             </div>
+            <div class="field-row">
+              <div class="field">
+                <select id="waitlist-industry" name="industry" autocomplete="off">
+                  <option value="">Select (optional)</option>
+                  <option value="construction_trades">Construction &amp; trades</option>
+                  <option value="home_services">Home services</option>
+                  <option value="professional_services">Professional services</option>
+                  <option value="retail_ecommerce">Retail &amp; e-commerce</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="technology">Technology</option>
+                  <option value="other">Other</option>
+                </select>
+                <label for="waitlist-industry">Industry</label>
+              </div>
+              <div class="field">
+                <select id="waitlist-employees" name="employees" autocomplete="off">
+                  <option value="">Select (optional)</option>
+                  <option value="1-10">1–10</option>
+                  <option value="11-50">11–50</option>
+                  <option value="51-200">51–200</option>
+                  <option value="201-500">201–500</option>
+                  <option value="500+">500+</option>
+                </select>
+                <label for="waitlist-employees">Number of employees</label>
+              </div>
+            </div>
             <button class="btn btn-shimmer" type="submit" style="width:100%">Join the waitlist <span class="arrow" aria-hidden="true">→</span></button>
-            <p class="form-note">Opens your email client to hello@simmitri.com · No spam puzzles · Operator-built in California</p>
-            <div class="form-success" role="status">You are on the list — your email draft is ready. If it did not open, write us at hello@simmitri.com.</div>
+            <p class="form-note" data-note-endpoint="No spam puzzles · Operator-built in California">Opens your email client to hello@simmitri.com · No spam puzzles · Operator-built in California</p>
+            <div class="form-error" role="alert" hidden>Something went wrong — please try again, or email hello@simmitri.com.</div>
+            <div class="form-success" role="status" data-success-endpoint="You are on the list — we will reach out when your spot opens.">You are on the list — your email draft is ready. If it did not open, write us at hello@simmitri.com.</div>
           </form>
 
           <p class="trust-near-cta">Simmitri Holdings · 32 years operating · Northern California</p>
@@ -590,5 +638,7 @@
   </div>
 
   <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/kpi-blueprints.js" defer></script>
+  <script src="./assets/js/kpi-demo.js" defer></script>
 </body>
 </html>
