@@ -1,15 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Sales dashboard sample">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Sales dashboard">
+
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0B1B33"/>
-      <stop offset="50%" stop-color="#122844"/>
-      <stop offset="100%" stop-color="#16375F"/>
+      <stop offset="48%" stop-color="#122844"/>
+      <stop offset="100%" stop-color="#183A63"/>
     </linearGradient>
     <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1A3050"/>
+      <stop offset="0%" stop-color="#1C3354"/>
       <stop offset="100%" stop-color="#13263F"/>
     </linearGradient>
     <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3D8BFF"/>
+      <stop offset="100%" stop-color="#2F6BFF"/>
+    </linearGradient>
+    <linearGradient id="blueV" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#3D8BFF"/>
       <stop offset="100%" stop-color="#2F6BFF"/>
     </linearGradient>
@@ -17,70 +22,66 @@
       <stop offset="0%" stop-color="#E0C078"/>
       <stop offset="100%" stop-color="#C4A35A"/>
     </linearGradient>
-    <filter id="cardShadow" x="-8%" y="-8%" width="116%" height="130%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
-    </filter>
   </defs>
 
+
   <rect width="1600" height="1000" rx="32" fill="url(#bg)"/>
-  <circle cx="1420" cy="90" r="220" fill="#3D8BFF" opacity="0.14"/>
-  <circle cx="140" cy="920" r="180" fill="#C4A35A" opacity="0.08"/>
+  <circle cx="1420" cy="80" r="210" fill="#3D8BFF" opacity="0.13"/>
+  <circle cx="130" cy="920" r="170" fill="#C4A35A" opacity="0.09"/>
+  <rect x="36" y="36" width="104" height="928" rx="24" fill="#0A1628"/>
+  <circle cx="88" cy="88" r="18" fill="url(#gold)"/>
+  <rect x="68" y="142" width="44" height="11" rx="5.5" fill="#3D8BFF"/>
+  <rect x="68" y="172" width="44" height="11" rx="5.5" fill="#7A8BA3" opacity="0.5"/>
+  <rect x="68" y="202" width="44" height="11" rx="5.5" fill="#7A8BA3" opacity="0.5"/>
+  <rect x="68" y="232" width="44" height="11" rx="5.5" fill="#7A8BA3" opacity="0.5"/>
+  <rect x="68" y="262" width="44" height="11" rx="5.5" fill="#7A8BA3" opacity="0.5"/>
+  <rect x="68" y="910" width="44" height="11" rx="5.5" fill="#C4A35A"/>
 
-  <rect x="36" y="36" width="100" height="928" rx="22" fill="#0A1628"/>
-  <circle cx="86" cy="86" r="18" fill="url(#gold)"/>
-  <rect x="66" y="140" width="40" height="10" rx="5" fill="#3D8BFF"/>
-  <rect x="66" y="170" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
-  <rect x="66" y="200" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
-  <rect x="66" y="230" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
-  <rect x="66" y="260" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
-  <rect x="66" y="910" width="40" height="10" rx="5" fill="#C4A35A"/>
 
-  <text x="176" y="88" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Sales</text>
-  <text x="176" y="122" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="16">Pipeline · win rate · cycle · Sample data</text>
-  <rect x="1360" y="64" width="140" height="36" rx="18" fill="rgba(61,139,255,0.16)" stroke="#3D8BFF" stroke-width="1.5"/>
-  <text x="1430" y="88" text-anchor="middle" fill="#B8D4FF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Sample data</text>
+  <text x="176" y="86" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Sales</text>
+  <text x="176" y="120" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="16">Pipeline · win rate · cycle · Sample data</text>
+  <rect x="1348" y="62" width="152" height="38" rx="19" fill="rgba(61,139,255,0.16)" stroke="#3D8BFF" stroke-width="1.5"/>
+  <text x="1424" y="87" text-anchor="middle" fill="#B8D4FF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Sample data</text>
 
-  <g filter="url(#cardShadow)">
-    <rect x="176" y="160" width="400" height="168" rx="22" fill="url(#card)"/>
-    <rect x="600" y="160" width="400" height="168" rx="22" fill="url(#card)"/>
-    <rect x="1024" y="160" width="376" height="168" rx="22" fill="url(#card)"/>
-  </g>
-  <text x="204" y="210" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15">Pipeline</text>
-  <text x="204" y="268" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">$1.14M</text>
-  <text x="204" y="302" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">▲ 6.1%</text>
 
-  <text x="628" y="210" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15">Win rate</text>
-  <text x="628" y="268" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">31%</text>
-  <text x="628" y="302" fill="#C4A35A" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">● On target</text>
+  <rect x="176" y="156" width="400" height="160" rx="22" fill="url(#card)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="204" y="198" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Pipeline</text>
+  <text x="204" y="254" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">$1.14M</text>
+  <text x="204" y="290" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">▲ 6.1%</text>
 
-  <text x="1052" y="210" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15">Cycle days</text>
-  <text x="1052" y="268" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">24</text>
-  <text x="1052" y="302" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">▼ −3 days</text>
 
-  <g filter="url(#cardShadow)">
-    <rect x="176" y="360" width="1224" height="560" rx="26" fill="url(#card)"/>
-  </g>
-  <text x="216" y="416" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Stage funnel</text>
-  <text x="216" y="448" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="14">Deals by stage · current quarter</text>
+  <rect x="600" y="156" width="400" height="160" rx="22" fill="url(#card)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="628" y="198" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Win rate</text>
+  <text x="628" y="254" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">31%</text>
+  <text x="628" y="290" fill="#C4A35A" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">● On target</text>
 
-  <!-- Funnel rows with values outside bars for crisp readability -->
-  <rect x="216" y="490" width="980" height="52" rx="14" fill="url(#blue)"/>
-  <text x="240" y="523" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Qualified</text>
-  <text x="1320" y="523" text-anchor="end" fill="#E8EEF8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">42</text>
 
-  <rect x="216" y="562" width="780" height="52" rx="14" fill="url(#blue)" opacity="0.88"/>
-  <text x="240" y="595" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Discovery</text>
-  <text x="1320" y="595" text-anchor="end" fill="#E8EEF8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">31</text>
+  <rect x="1024" y="156" width="376" height="160" rx="22" fill="url(#card)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="1052" y="198" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Cycle days</text>
+  <text x="1052" y="254" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">24</text>
+  <text x="1052" y="290" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">▼ −3 days</text>
 
-  <rect x="216" y="634" width="560" height="52" rx="14" fill="url(#blue)" opacity="0.76"/>
-  <text x="240" y="667" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Proposal</text>
-  <text x="1320" y="667" text-anchor="end" fill="#E8EEF8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">18</text>
+<rect x="176" y="348" width="1224" height="560" rx="26" fill="url(#card)" stroke="rgba(224,192,120,0.18)"/>
+  <text x="216" y="404" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Stage funnel</text>
+  <text x="216" y="434" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="14">Deals by stage · current quarter</text>
 
-  <rect x="216" y="706" width="360" height="52" rx="14" fill="url(#blue)" opacity="0.64"/>
-  <text x="240" y="739" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Negotiation</text>
-  <text x="1320" y="739" text-anchor="end" fill="#E8EEF8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">11</text>
+  <rect x="216" y="480" width="980" height="54" rx="14" fill="url(#blue)" opacity="0.95"/>
+  <text x="240" y="514" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Qualified</text>
+  <text x="1320" y="514" text-anchor="end" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">42</text>
 
-  <rect x="216" y="778" width="220" height="52" rx="14" fill="url(#gold)"/>
-  <text x="240" y="811" fill="#0B1B33" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Won</text>
-  <text x="1320" y="811" text-anchor="end" fill="#E0C078" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">7</text>
+  <rect x="216" y="552" width="780" height="54" rx="14" fill="url(#blue)" opacity="0.86"/>
+  <text x="240" y="586" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Discovery</text>
+  <text x="1320" y="586" text-anchor="end" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">31</text>
+
+  <rect x="216" y="624" width="560" height="54" rx="14" fill="url(#blue)" opacity="0.74"/>
+  <text x="240" y="658" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Proposal</text>
+  <text x="1320" y="658" text-anchor="end" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">18</text>
+
+  <rect x="216" y="696" width="360" height="54" rx="14" fill="url(#blue)" opacity="0.62"/>
+  <text x="240" y="730" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Negotiation</text>
+  <text x="1320" y="730" text-anchor="end" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">11</text>
+
+  <rect x="216" y="768" width="220" height="54" rx="14" fill="url(#gold)" opacity="1"/>
+  <text x="240" y="802" fill="#0B1B33" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Won</text>
+  <text x="1320" y="802" text-anchor="end" fill="#E0C078" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">7</text>
 </svg>

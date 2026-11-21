@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-labelledby="rhythmTitle rhythmDesc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="rhythmTitle rhythmDesc">
   <title id="rhythmTitle">KPI operating rhythm</title>
-  <desc id="rhythmDesc">Four connected steps: Define, Track, Manage, Adapt — the KPI-first loop.</desc>
+  <desc id="rhythmDesc">Four connected steps in a closed loop: Define, Track, Manage, Adapt.</desc>
   <defs>
     <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#E0C078"/>
@@ -14,49 +14,52 @@
       <stop offset="0%" stop-color="#1A3050"/>
       <stop offset="100%" stop-color="#12263F"/>
     </linearGradient>
-    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
-    </filter>
+    <marker id="arrowGold" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 1.5 L9 5 L0 8.5 Z" fill="#E0C078"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 1.5 L9 5 L0 8.5 Z" fill="#3D8BFF"/>
+    </marker>
   </defs>
-  <rect width="960" height="320" rx="24" fill="transparent"/>
-  <!-- connector -->
-  <path d="M130 120 H830" stroke="url(#gBlue)" stroke-width="3" stroke-dasharray="6 10" opacity="0.55"/>
-  <path d="M830 120 C860 120, 880 160, 860 200 C840 240, 780 250, 720 250" fill="none" stroke="url(#gGold)" stroke-width="3" opacity="0.7"/>
-  <path d="M720 250 H130" stroke="url(#gGold)" stroke-width="3" stroke-dasharray="6 10" opacity="0.45"/>
-  <path d="M130 250 C100 250, 90 200, 110 160 C120 135, 120 120, 130 120" fill="none" stroke="url(#gGold)" stroke-width="3" opacity="0.7"/>
+
+  <!-- Cards only — no drop-shadow on text -->
+  <rect x="48" y="56" width="220" height="168" rx="22" fill="url(#gCard)" stroke="#E0C078" stroke-width="1.5" stroke-opacity="0.45"/>
+  <rect x="342" y="56" width="220" height="168" rx="22" fill="url(#gCard)" stroke="#3D8BFF" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="636" y="56" width="220" height="168" rx="22" fill="url(#gCard)" stroke="#3D8BFF" stroke-width="1.5" stroke-opacity="0.4"/>
+  <rect x="930" y="56" width="220" height="168" rx="22" fill="url(#gCard)" stroke="#E0C078" stroke-width="1.5" stroke-opacity="0.55"/>
+
+  <!-- Forward connectors: card edge → card edge -->
+  <path d="M268 140 H334" fill="none" stroke="url(#gBlue)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M562 140 H628" fill="none" stroke="url(#gBlue)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M856 140 H922" fill="none" stroke="url(#gBlue)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+
+  <!-- Return loop: Adapt bottom → under row → Define bottom (fully connected) -->
+  <path d="M1040 224 V300 H158 V224" fill="none" stroke="url(#gGold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowGold)"/>
 
   <!-- Define -->
-  <g filter="url(#soft)">
-    <rect x="40" y="48" width="180" height="144" rx="20" fill="url(#gCard)" stroke="rgba(224,192,120,0.35)"/>
-    <circle cx="130" cy="96" r="22" fill="url(#gGold)"/>
-    <text x="130" y="102" text-anchor="middle" fill="#0B1B33" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800">01</text>
-    <text x="130" y="144" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800">Define</text>
-    <text x="130" y="168" text-anchor="middle" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="12">KPIs &amp; owners</text>
-  </g>
-  <!-- Track -->
-  <g filter="url(#soft)">
-    <rect x="270" y="48" width="180" height="144" rx="20" fill="url(#gCard)" stroke="rgba(61,139,255,0.35)"/>
-    <circle cx="360" cy="96" r="22" fill="url(#gBlue)"/>
-    <text x="360" y="102" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800">02</text>
-    <text x="360" y="144" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800">Track</text>
-    <text x="360" y="168" text-anchor="middle" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="12">One scorecard</text>
-  </g>
-  <!-- Manage -->
-  <g filter="url(#soft)">
-    <rect x="500" y="48" width="180" height="144" rx="20" fill="url(#gCard)" stroke="rgba(61,139,255,0.35)"/>
-    <circle cx="590" cy="96" r="22" fill="url(#gBlue)"/>
-    <text x="590" y="102" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800">03</text>
-    <text x="590" y="144" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800">Manage</text>
-    <text x="590" y="168" text-anchor="middle" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="12">Review → action</text>
-  </g>
-  <!-- Adapt -->
-  <g filter="url(#soft)">
-    <rect x="730" y="48" width="180" height="144" rx="20" fill="url(#gCard)" stroke="rgba(224,192,120,0.45)"/>
-    <circle cx="820" cy="96" r="22" fill="url(#gGold)"/>
-    <text x="820" y="102" text-anchor="middle" fill="#0B1B33" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800">04</text>
-    <text x="820" y="144" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800">Adapt</text>
-    <text x="820" y="168" text-anchor="middle" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="12">Grow the KPIs</text>
-  </g>
+  <circle cx="158" cy="108" r="24" fill="url(#gGold)"/>
+  <text x="158" y="114" text-anchor="middle" fill="#0B1B33" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">01</text>
+  <text x="158" y="158" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Define</text>
+  <text x="158" y="186" text-anchor="middle" fill="#B8C6DA" font-family="Inter, Arial, sans-serif" font-size="14">KPIs &amp; owners</text>
 
-  <text x="480" y="290" text-anchor="middle" fill="#E0C078" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="700">KPIs first. Everything else follows.</text>
+  <!-- Track -->
+  <circle cx="452" cy="108" r="24" fill="url(#gBlue)"/>
+  <text x="452" y="114" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">02</text>
+  <text x="452" y="158" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Track</text>
+  <text x="452" y="186" text-anchor="middle" fill="#B8C6DA" font-family="Inter, Arial, sans-serif" font-size="14">One scorecard</text>
+
+  <!-- Manage -->
+  <circle cx="746" cy="108" r="24" fill="url(#gBlue)"/>
+  <text x="746" y="114" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">03</text>
+  <text x="746" y="158" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Manage</text>
+  <text x="746" y="186" text-anchor="middle" fill="#B8C6DA" font-family="Inter, Arial, sans-serif" font-size="14">Review → action</text>
+
+  <!-- Adapt -->
+  <circle cx="1040" cy="108" r="24" fill="url(#gGold)"/>
+  <text x="1040" y="114" text-anchor="middle" fill="#0B1B33" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">04</text>
+  <text x="1040" y="158" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800">Adapt</text>
+  <text x="1040" y="186" text-anchor="middle" fill="#B8C6DA" font-family="Inter, Arial, sans-serif" font-size="14">Grow the KPIs</text>
+
+  <text x="600" y="300" text-anchor="middle" fill="#E0C078" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="0.04em">LOOP CONTINUES</text>
+  <text x="600" y="370" text-anchor="middle" fill="#E0C078" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">KPIs first. Everything else follows.</text>
 </svg>
