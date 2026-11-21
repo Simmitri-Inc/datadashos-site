@@ -2935,3 +2935,77 @@ ul.idea-points { list-style: none; padding: 0; }
   font-weight: 700;
 }
 .pending-notice[hidden] { display: none; }
+
+/* Enterprise */
+.badge-early {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: #0f5a44;
+  background: rgba(29, 146, 112, 0.14);
+  border: 1px solid rgba(29, 146, 112, 0.45);
+}
+.badge-early::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--mint-bright); }
+.navy-panel .badge-early,
+.cta-band .badge-early { color: #b9f1dc; background: rgba(29, 146, 112, 0.22); border-color: rgba(29, 146, 112, 0.6); }
+.page-hero-section .badge-early { margin: 2px 0 14px; }
+
+.flow-figure { margin: 8px 0 28px; }
+.flow-diagram { width: 100%; height: auto; }
+.flow-stacked { display: none; max-width: 420px; margin: 0 auto; }
+@media (max-width: 760px) {
+  .flow-wide { display: none; }
+  .flow-stacked { display: block; }
+}
+.table-scroll { overflow-x: auto; }
+.data-table td:first-child { width: 50%; }
+
+/* Form controls shared by waitlist and enterprise forms */
+.btn-block { width: 100%; }
+.field-choice { border: 0; padding: 0; margin: 0; }
+.field-choice legend {
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.choice-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.92rem;
+}
+.choice:has(input:checked) { border-color: var(--gold); background: rgba(224, 192, 120, 0.14); }
+.choice input, .check input { accent-color: var(--gold); width: 18px; height: 18px; flex: 0 0 auto; }
+.field-choice .error { display: none; color: #fecaca; font-size: 0.8rem; margin-top: 6px; }
+.field-choice.is-invalid .error { display: block; }
+.check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(232, 238, 248, 0.88);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  cursor: pointer;
+}
+.check input { margin-top: 2px; }
+.check a { color: var(--gold-bright); }
+.check-wrap .error { display: none; color: #fecaca; font-size: 0.8rem; margin: 4px 0 0 28px; }
+.check-wrap.is-invalid .error { display: block; }
+.field textarea + label { top: 12px; }
+.field[hidden] { display: none; }

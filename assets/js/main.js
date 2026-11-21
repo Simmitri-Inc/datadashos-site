@@ -13,6 +13,18 @@
     if (new URLSearchParams(window.location.search).get("status") === "pending") el.hidden = false;
   });
 
+  document.querySelectorAll("[data-reveal-target]").forEach((box) => {
+    const target = document.querySelector(box.getAttribute("data-reveal-target"));
+    if (!target) return;
+    box.setAttribute("aria-controls", target.id);
+    const sync = () => {
+      target.hidden = !box.checked;
+      box.setAttribute("aria-expanded", box.checked ? "true" : "false");
+    };
+    box.addEventListener("change", sync);
+    sync();
+  });
+
   document.querySelectorAll("[data-scroll-demo]").forEach((link) => {
     link.addEventListener("click", () => {
       const target = document.querySelector(link.getAttribute("href"));
