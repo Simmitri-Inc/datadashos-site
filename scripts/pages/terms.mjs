@@ -1,54 +1,86 @@
+import { config } from "../lib/config.mjs";
+import { esc } from "../lib/layout.mjs";
+
+const email = `<a data-contact-mailto data-contact-email href="mailto:${esc(config.contactEmail)}">${esc(config.contactEmail)}</a>`;
+
 export default {
   out: "terms.html",
-  title: 'Terms of Service (Draft) — DataDashOS',
-  description: 'Draft terms for the DataDashOS marketing site and pre-launch waitlist.',
+  title: "Terms of Service (Draft) — DataDashOS",
+  description:
+    "Draft terms for using the DataDashOS pre-launch website, KPI demo, waitlist and early-access program, including the text message terms.",
   noindex: true,
   draft: true,
-  body: () => `
-    <section class="hero" style="min-height:auto;padding-bottom:20px" aria-labelledby="terms-title">
+  breadcrumbs: [
+    { name: "Home", path: "" },
+    { name: "Terms of Service", path: "terms.html" },
+  ],
+  body: ({ P }) => `
+    <section class="hero page-hero-section" aria-labelledby="terms-title">
       <div class="wrap legal-prose">
         <p class="eyebrow">Legal</p>
-        <h1 id="terms-title" style="font-size:clamp(1.8rem,4vw,2.6rem)">Terms of Service</h1>
-        <p class="hero-lede" style="margin-top:12px">Last updated: November 21, 2026. These draft terms cover use of the DataDashOS marketing website and waitlist before the product is generally available.</p>
+        <h1 id="terms-title" class="page-title">Terms of Service</h1>
+        <p class="hero-lede">Draft — last updated November 21, 2026. These terms cover your use of the DataDashOS website, the KPI demo, the waitlist and the enterprise early-access program before launch.</p>
+        <!-- PLACEHOLDER (lawyer): legal entity name, address, governing law and venue. -->
       </div>
     </section>
 
-    <section style="padding-bottom:60px">
+    <section class="section-last">
       <div class="wrap legal-prose">
-        <h2>Agreement</h2>
-        <p>By using this website or joining the waitlist, you agree to these draft terms and our <a href="./privacy.html">Privacy Policy</a>. If you do not agree, do not use the site or submit the form.</p>
+        <h2>Using this site</h2>
+        <p>By using this website you agree to these terms. If you don't agree, please don't use the site.</p>
 
-        <h2>What this site is</h2>
-        <p>This site describes DataDashOS and collects interest for early access. Joining the waitlist does not create a paid subscription, guarantee a launch date, or guarantee that you will receive access.</p>
+        <h2>DataDashOS is in development</h2>
+        <p>DataDashOS hasn't launched. Features described on this site, including everything on the Enterprise page, are in development and may change, arrive later than planned, or not be offered. Joining the waitlist or the enterprise early-access program doesn't guarantee access, a launch date, specific features or pricing, and doesn't create a contract to provide the product.</p>
 
-        <h2>Waitlist</h2>
-        <p>You agree to provide accurate information and to use a work email you control. We may contact you about early access, product updates related to the waitlist, and follow-up questions needed to prepare your onboarding wave. You can ask us to stop by emailing <a data-contact-mailto data-contact-email>hello@datadashos.com</a>.</p>
+        <h2>Sample data and example scenarios</h2>
+        <p>Product images, scorecards and dashboards on this site show sample data. Use cases are labelled "Example scenario" and are illustrations, not results from real customers. Industry KPI guides are general information.</p>
 
-        <h2>Sample data and product claims</h2>
-        <p>Product screenshots and demo results on this site show sample data. They are illustrations, not customer results or promises of specific outcomes for your business.</p>
+        <h2>The KPI demo</h2>
+        <p>The demo suggests sample KPIs based on a few answers. It's for illustration only and isn't financial, legal, medical or other professional advice. Make business decisions based on your own judgment and qualified advice.</p>
 
-        <h2>Acceptable use</h2>
+        <h2>Waitlist and early access</h2>
         <ul>
-          <li>Do not abuse the waitlist form, scrape the site aggressively, or attempt to disrupt the service</li>
-          <li>Do not submit other people’s personal information without permission</li>
-          <li>Do not use the site for unlawful purposes</li>
+          <li>Give accurate information and only sign up yourself, using an email address you control.</li>
+          <li>We may contact you about early access as described in our <a href="${P}privacy.html">Privacy Policy</a>.</li>
+          <li>You can leave at any time using the unsubscribe link in any email, or by emailing ${email}.</li>
+          <li>We may close the waitlist or remove entries that look fake or abusive.</li>
         </ul>
 
-        <h2>Intellectual property</h2>
-        <p>The DataDashOS name, logo, design, and site content are owned by DataDashOS or its licensors. You may not copy or reuse them except as allowed by law or with written permission.</p>
+        <h2 id="text-messages">Text messages</h2>
+        <p>If you enter a mobile number and tick the box agreeing to texts, you agree to receive text messages from DataDashOS about early access and your account.</p>
+        <ul>
+          <li><strong>Program:</strong> DataDashOS early-access and account messages.</li>
+          <li><strong>Confirmation:</strong> the first message asks you to reply YES. We send nothing else until you do.</li>
+          <li><strong>Frequency:</strong> message frequency varies.</li>
+          <li><strong>Cost:</strong> message and data rates may apply.</li>
+          <li><strong>Opt out:</strong> reply STOP at any time to stop all texts. You'll get one message confirming you've opted out.</li>
+          <li><strong>Help:</strong> reply HELP, or email ${email}.</li>
+          <li><strong>Consent is optional:</strong> agreeing to texts is not a condition of signing up or of any purchase.</li>
+          <li>Carriers are not liable for delayed or undelivered messages.</li>
+          <li>See the <a href="${P}privacy.html#text-messages">Text messages section of our Privacy Policy</a> for how we handle your number.</li>
+        </ul>
 
-        <h2>Disclaimer</h2>
-        <p>This marketing site is provided “as is.” To the fullest extent permitted by law, we disclaim warranties about uninterrupted availability, error-free content, or fitness for a particular purpose. Early-access product terms will be provided separately when access is offered.</p>
+        <h2>Acceptable use</h2>
+        <p>Don't misuse the site: no automated sign-ups or scraping, no attempts to break, overload or get around our forms or bot checks, no submitting someone else's details, and nothing unlawful.</p>
+
+        <h2>Our content</h2>
+        <p>The site, its text, design, illustrations and the DataDashOS name and logo belong to DataDashOS or its licensors. You may share links to the site, but please don't copy or reuse its content without permission.</p>
+
+        <h2>Links to other sites</h2>
+        <p>We may link to other websites. We're not responsible for their content or practices.</p>
+
+        <h2>No warranties</h2>
+        <p>The site and demo are provided "as is" and "as available", without warranties of any kind, to the extent the law allows. We don't promise the site will always be available or error-free.</p>
 
         <h2>Limitation of liability</h2>
-        <p>To the fullest extent permitted by law, DataDashOS is not liable for indirect, incidental, or consequential damages arising from use of this marketing site or waitlist. Our total liability for claims relating to this site is limited to fifty U.S. dollars (US $50).</p>
+        <p>To the extent the law allows, DataDashOS isn't liable for indirect, incidental or consequential losses arising from your use of this pre-launch site, the demo or the waitlist.</p>
+        <!-- PLACEHOLDER (lawyer): liability cap, governing law, dispute resolution. -->
 
         <h2>Changes</h2>
-        <p>We may update these draft terms. Continued use of the site after changes are posted means you accept the updated terms. A final version will replace this draft after legal review.</p>
+        <p>We may update these terms. We'll post changes here and update the date above.</p>
 
         <h2>Contact</h2>
-        <p>Questions: <a data-contact-mailto data-contact-email>hello@datadashos.com</a>.</p>
+        <p>${email}</p>
       </div>
-    </section>
-  `,
+    </section>`,
 };
