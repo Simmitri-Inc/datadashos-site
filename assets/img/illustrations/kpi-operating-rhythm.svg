@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="280" viewBox="0 0 1120 280" fill="none" role="img" aria-labelledby="t d">
+  <title id="t">KPI operating rhythm</title>
+  <desc id="d">Four steps in order: Define, Track, Manage, Adapt. Forward connectors only.</desc>
+
+  <!--
+    Fresh graphic (not derived from prior kpi-rhythm.svg).
+    No filters, no drop shadows, no bottom return loop.
+    Connectors sit only between cards — nothing exits Define/Adapt bottoms.
+  -->
+
+  <!-- Define -->
+  <rect x="24" y="40" width="220" height="160" rx="20" fill="#163057" stroke="#C4A35A" stroke-width="2"/>
+  <circle cx="134" cy="88" r="22" fill="#C4A35A"/>
+  <text x="134" y="94" text-anchor="middle" fill="#0B1B33" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="800">01</text>
+  <text x="134" y="138" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="800">Define</text>
+  <text x="134" y="166" text-anchor="middle" fill="#D6E0EE" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="600">KPIs &amp; owners</text>
+
+  <!-- arrow 1 -->
+  <path d="M254 120 H286" stroke="#3D8BFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M278 112 L290 120 L278 128" fill="none" stroke="#3D8BFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Track -->
+  <rect x="300" y="40" width="220" height="160" rx="20" fill="#163057" stroke="#2F6BFF" stroke-width="2"/>
+  <circle cx="410" cy="88" r="22" fill="#2F6BFF"/>
+  <text x="410" y="94" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="800">02</text>
+  <text x="410" y="138" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="800">Track</text>
+  <text x="410" y="166" text-anchor="middle" fill="#D6E0EE" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="600">One scorecard</text>
+
+  <!-- arrow 2 -->
+  <path d="M530 120 H562" stroke="#3D8BFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M554 112 L566 120 L554 128" fill="none" stroke="#3D8BFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Manage -->
+  <rect x="576" y="40" width="220" height="160" rx="20" fill="#163057" stroke="#2F6BFF" stroke-width="2"/>
+  <circle cx="686" cy="88" r="22" fill="#2F6BFF"/>
+  <text x="686" y="94" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="800">03</text>
+  <text x="686" y="138" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="800">Manage</text>
+  <text x="686" y="166" text-anchor="middle" fill="#D6E0EE" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="600">Review → action</text>
+
+  <!-- arrow 3 -->
+  <path d="M806 120 H838" stroke="#3D8BFF" stroke-width="3" stroke-linecap="round"/>
+  <path d="M830 112 L842 120 L830 128" fill="none" stroke="#3D8BFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Adapt -->
+  <rect x="852" y="40" width="220" height="160" rx="20" fill="#163057" stroke="#C4A35A" stroke-width="2"/>
+  <circle cx="962" cy="88" r="22" fill="#C4A35A"/>
+  <text x="962" y="94" text-anchor="middle" fill="#0B1B33" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="800">04</text>
+  <text x="962" y="138" text-anchor="middle" fill="#FFFFFF" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="22" font-weight="800">Adapt</text>
+  <text x="962" y="166" text-anchor="middle" fill="#D6E0EE" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="14" font-weight="600">Grow the KPIs</text>
+
+  <text x="560" y="248" text-anchor="middle" fill="#E0C078" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="15" font-weight="700">KPIs first. Everything else follows.</text>
+</svg>

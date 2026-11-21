@@ -2081,6 +2081,9 @@ section {
 
 .illus-block {
   margin-top: 28px;
+  /* Keep illustration out of soft compositing from panel blur/transforms */
+  isolation: isolate;
+  transform: translateZ(0);
 }
 
 .illus-block img,
@@ -2088,6 +2091,9 @@ section {
   width: 100%;
   height: auto;
   display: block;
+  image-rendering: auto;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .idea-grid {
