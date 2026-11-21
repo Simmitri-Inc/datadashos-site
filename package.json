@@ -6,9 +6,13 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "check:copy": "node scripts/check-copy.mjs",
-    "serve": "python3 -m http.server 8080 --bind 127.0.0.1"
+    "serve": "python3 -m http.server 8080 --bind 127.0.0.1",
+    "images": "node scripts/images.mjs"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.5"
   }
 }

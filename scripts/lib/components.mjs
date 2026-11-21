@@ -1,6 +1,6 @@
 import { esc } from "./layout.mjs";
 
-/** Existing product screen (illustrative mock with sample data). */
+/** Product screens (illustrative mocks with sample data); web sizes are built by scripts/images.mjs. */
 export const SCREENS = {
   "kpi-scorecard": { w: 1600, h: 1000, alt: "DataDashOS KPI scorecard showing sample revenue, margin and win-rate KPIs with targets and trends" },
   "executive-dashboard": { w: 2400, h: 1500, alt: "DataDashOS executive dashboard showing sample KPI cards and revenue charts" },
@@ -17,8 +17,8 @@ export function shot(P, name, { caption, eager = false, sizes = "(max-width: 960
   return `<figure class="shot-figure">
             <div class="${frameClass}">
               <picture>
-                <source type="image/webp" srcset="${P}assets/img/screens/${name}.webp">
-                <img src="${P}assets/img/screens/${name}.png" width="${s.w}" height="${s.h}" alt="${esc(s.alt)}" ${loading} decoding="async">
+                <source type="image/webp" srcset="${P}assets/img/screens/${name}-800.webp 800w, ${P}assets/img/screens/${name}-1600.webp 1600w" sizes="${sizes}">
+                <img src="${P}assets/img/screens/${name}-1600.png" width="1600" height="1000" alt="${esc(s.alt)}" ${loading} decoding="async">
               </picture>
               <span class="sample-badge">Sample data</span>
             </div>
