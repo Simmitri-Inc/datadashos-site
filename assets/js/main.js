@@ -1,4 +1,13 @@
 (() => {
+  // GitHub Pages can't send frame-ancestors / X-Frame-Options, so refuse to render inside another site's frame.
+  if (window.top !== window.self) {
+    try {
+      window.top.location.href = window.location.href;
+    } catch (_) {
+      document.documentElement.style.display = "none";
+    }
+  }
+
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");

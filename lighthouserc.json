@@ -1,0 +1,28 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": ".",
+      "numberOfRuns": 1,
+      "url": [
+        "http://localhost/index.html",
+        "http://localhost/how-it-works.html",
+        "http://localhost/enterprise.html",
+        "http://localhost/about.html",
+        "http://localhost/faq.html",
+        "http://localhost/kpi-library/index.html",
+        "http://localhost/kpi-library/construction-trades/index.html",
+        "http://localhost/kpi-library/portfolios-holding-companies/index.html"
+      ],
+      "settings": { "chromeFlags": "--no-sandbox" }
+    },
+    "assert": {
+      "assertions": {
+        "categories:performance": ["warn", { "minScore": 0.9 }],
+        "categories:accessibility": ["error", { "minScore": 0.9 }],
+        "categories:seo": ["error", { "minScore": 0.9 }],
+        "categories:best-practices": ["warn", { "minScore": 0.9 }]
+      }
+    },
+    "upload": { "target": "temporary-public-storage" }
+  }
+}

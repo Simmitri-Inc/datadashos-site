@@ -1,0 +1,13 @@
+# GitHub Pages (legacy Jekyll build) settings. The site is plain static HTML; Jekyll only copies it.
+# Keep source, tooling and notes off the public site.
+exclude:
+  - worker/
+  - scripts/
+  - node_modules/
+  - package.json
+  - package-lock.json
+  - site.config.json
+  - lighthouserc.json
+  - "*.md"
+  - .github/
+  - assets/img/screens/src-png/

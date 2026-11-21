@@ -190,7 +190,7 @@ ${scripts}
 `;
 }
 
-export function cspFor(page) {
+export function cspFor(page, { forHeader = false } = {}) {
   const endpointOrigin = (() => {
     try {
       return new URL(config.forms.endpoint).origin;
@@ -201,7 +201,7 @@ export function cspFor(page) {
   const analytics = config.analytics.enabled ? new URL(config.analytics.apiHost).origin : "";
   const analyticsScript = config.analytics.enabled ? new URL(config.analytics.scriptSrc).origin : "";
   const turnstile = "https://challenges.cloudflare.com";
-  const dev = "http://127.0.0.1:8787 http://localhost:8787";
+  const dev = forHeader ? "" : "http://127.0.0.1:8787 http://localhost:8787";
   return [
     "default-src 'self'",
     `script-src 'self' ${turnstile} ${analyticsScript}`.trim(),
@@ -213,5 +213,7 @@ export function cspFor(page) {
     "object-src 'none'",
     "base-uri 'self'",
     `form-action 'self' ${endpointOrigin}`.trim(),
+    // Only honoured as an HTTP header, not in a <meta> tag.
+    ...(forHeader ? ["frame-ancestors 'none'", "upgrade-insecure-requests"] : []),
   ].join("; ");
 }

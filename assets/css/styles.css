@@ -3192,3 +3192,4 @@ ul.idea-points { list-style: none; padding: 0; }
 .form-legal a, .form-note a { color: var(--gold-bright); }
 .status-page { text-align: center; padding: 48px 0 24px; }
 .status-page .cta-group { justify-content: center; }
+.status-page .hero-lede { margin-left: auto; margin-right: auto; }
