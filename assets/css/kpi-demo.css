@@ -312,3 +312,37 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* Premium demo on navy panels */
+.navy-panel .kpi-demo {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: none;
+  color: #fff;
+}
+.navy-panel .kpi-demo legend,
+.navy-panel .kpi-results-title,
+.navy-panel .kpi-card-name {
+  color: #fff;
+}
+.navy-panel .kpi-results-summary,
+.navy-panel .kpi-results-context,
+.navy-panel .kpi-results-disclaimer,
+.navy-panel .kpi-card-def,
+.navy-panel .kpi-card-meta {
+  color: rgba(232, 238, 248, 0.72);
+}
+.navy-panel .kpi-option label {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.14);
+  color: rgba(232, 238, 248, 0.9);
+}
+.navy-panel .kpi-option input:checked + label {
+  border-color: rgba(196, 163, 90, 0.7);
+  background: rgba(196, 163, 90, 0.14);
+  color: #fff;
+}
+.navy-panel .kpi-card {
+  background: rgba(15, 32, 54, 0.75);
+  border-color: rgba(255, 255, 255, 0.1);
+}
