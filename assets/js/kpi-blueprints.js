@@ -2,8 +2,9 @@
  * Read-only KPI blueprint adapter for the homepage "Try it" demo.
  *
  * KPI definitions are copied verbatim from the DataDashOS app's Service Business
- * KPI Pack (Simmitri-Inc/datadashos: src/services/business-os/kpiLibrary.ts) and
- * industry medians (p50) from src/services/business-os/industryBenchmarks.ts.
+ * KPI Pack and INDUSTRY_KPIS (Simmitri-Inc/datadashos:
+ * src/services/business-os/kpiLibrary.ts) and industry medians (p50) from
+ * src/services/business-os/industryBenchmarks.ts.
  * Keep these in sync with the app when those files change.
  *
  * Pure client-side lookup: no storage, no network, no AI.
@@ -116,15 +117,51 @@
       description: "Percentage of available hours that are billable. Measures team productivity.",
       unit: "percentage", cadence: "weekly", leading: true, direction: "higher_is_better", defaultTarget: 75,
     },
+    avg_order_value: {
+      name: "Avg Order Value",
+      description: "Average revenue per customer order. Raising it grows revenue without needing more customers.",
+      unit: "currency", cadence: "weekly", leading: false, direction: "higher_is_better", defaultTarget: null,
+    },
+    inventory_turnover: {
+      name: "Inventory Turnover",
+      description: "How many times inventory is sold and replaced in a year. Higher means less cash tied up in stock.",
+      unit: "ratio", cadence: "monthly", leading: false, direction: "higher_is_better", defaultTarget: null,
+    },
+    conversion_rate_pct: {
+      name: "Online Conversion Rate %",
+      description: "Percentage of store sessions that include an order. Measures how well your site turns visits into sales.",
+      unit: "percentage", cadence: "weekly", leading: true, direction: "higher_is_better", defaultTarget: null,
+    },
+    oee_pct: {
+      name: "OEE %",
+      description: "Overall equipment effectiveness: availability × performance × quality while equipment is scheduled to run. Shows how much of planned production time is truly productive.",
+      unit: "percentage", cadence: "weekly", leading: true, direction: "higher_is_better", defaultTarget: null,
+    },
+    scrap_rate_pct: {
+      name: "Scrap Rate %",
+      description: "Value of product scrapped (cannot be reworked or sold) as a percentage of plant sales. Lower is better.",
+      unit: "percentage", cadence: "monthly", leading: false, direction: "lower_is_better", defaultTarget: null,
+    },
   };
 
   // Median (p50) values from INDUSTRY_BENCHMARKS for KPIs that share a slug.
+  // `null` = no sourced benchmark yet: the card shows no target instead of the pack default.
   const INDUSTRY_MEDIANS = {
     construction: { gross_margin_pct: 25, close_rate_pct: 25, ar_days: 42 },
     home_services: { gross_margin_pct: 40, close_rate_pct: 38, ar_days: 25 },
     professional_services: { gross_margin_pct: 45, utilization_pct: 65, close_rate_pct: 28, ar_days: 45 },
     healthcare: { gross_margin_pct: 50, close_rate_pct: 45, ar_days: 42 },
     technology: { gross_margin_pct: 68, close_rate_pct: 18, ar_days: 38, runway_months: 12 },
+    retail_ecommerce: {
+      conversion_rate_pct: 1.77,
+      gross_margin_pct: null, inventory_turnover: null, cash_conversion_cycle: null,
+      contribution_margin_pct: null, ar_days: null, runway_months: null,
+    },
+    manufacturing: {
+      oee_pct: 75, on_time_delivery_pct: 83, scrap_rate_pct: 5,
+      gross_margin_pct: null, rework_rate_pct: null, inventory_turnover: null, cash_conversion_cycle: null,
+      contribution_margin_pct: null, ar_days: null, runway_months: null, close_rate_pct: null, pipeline_coverage: null,
+    },
     other: { gross_margin_pct: 45, close_rate_pct: 28, ar_days: 38 },
   };
 
@@ -133,9 +170,9 @@
     construction_trades: { label: "Construction & trades", appKey: "construction" },
     home_services: { label: "Home services", appKey: "home_services" },
     professional_services: { label: "Professional services", appKey: "professional_services" },
-    retail_ecommerce: { label: "Retail & e-commerce", appKey: null },
+    retail_ecommerce: { label: "Retail & e-commerce", appKey: "retail_ecommerce" },
     healthcare: { label: "Healthcare", appKey: "healthcare" },
-    manufacturing: { label: "Manufacturing", appKey: null },
+    manufacturing: { label: "Manufacturing", appKey: "manufacturing" },
     technology: { label: "Technology", appKey: "technology" },
     other: { label: "Other", appKey: "other" },
   };
@@ -151,19 +188,19 @@
   const GOALS = {
     grow_revenue: {
       label: "Grow revenue",
-      priority: ["revenue", "leads", "pipeline_coverage", "close_rate_pct", "avg_deal_size", "gross_margin_pct"],
+      priority: ["revenue", "leads", "pipeline_coverage", "close_rate_pct", "avg_deal_size", "gross_margin_pct", "avg_order_value", "conversion_rate_pct"],
     },
     improve_profit: {
       label: "Improve profit",
-      priority: ["gross_margin_pct", "net_profit", "contribution_margin_pct", "revenue_per_labor_hour", "cac", "ar_days"],
+      priority: ["gross_margin_pct", "net_profit", "contribution_margin_pct", "revenue_per_labor_hour", "cac", "ar_days", "scrap_rate_pct"],
     },
     win_customers: {
       label: "Win more customers",
-      priority: ["leads", "lead_to_appointment_pct", "appointment_to_close_pct", "close_rate_pct", "cac", "avg_deal_size"],
+      priority: ["leads", "lead_to_appointment_pct", "appointment_to_close_pct", "close_rate_pct", "cac", "avg_deal_size", "conversion_rate_pct", "avg_order_value"],
     },
     run_operations: {
       label: "Run operations smoother",
-      priority: ["on_time_delivery_pct", "jobs_delivered", "utilization_pct", "rework_rate_pct", "cash_conversion_cycle", "ar_days"],
+      priority: ["on_time_delivery_pct", "jobs_delivered", "utilization_pct", "rework_rate_pct", "cash_conversion_cycle", "ar_days", "inventory_turnover", "oee_pct", "scrap_rate_pct"],
     },
   };
 
@@ -189,9 +226,24 @@
       focus: ["gross_margin_pct", "pipeline_coverage", "cac", "runway_months", "close_rate_pct"],
       exclude: ["jobs_delivered", "rework_rate_pct", "revenue_per_labor_hour"],
     },
+    retail_ecommerce: {
+      focus: ["conversion_rate_pct", "avg_order_value", "gross_margin_pct", "inventory_turnover", "cash_conversion_cycle"],
+      exclude: [
+        "leads", "lead_to_appointment_pct", "appointment_to_close_pct", "close_rate_pct", "pipeline_coverage", "avg_deal_size",
+        "jobs_delivered", "on_time_delivery_pct", "rework_rate_pct", "utilization_pct",
+      ],
+    },
+    manufacturing: {
+      focus: ["oee_pct", "on_time_delivery_pct", "scrap_rate_pct", "gross_margin_pct", "inventory_turnover"],
+      exclude: ["lead_to_appointment_pct", "appointment_to_close_pct", "jobs_delivered", "utilization_pct"],
+    },
   };
 
-  // General small-business set for industries without an app blueprint (and "Other").
+  // The app's INDUSTRY_KPIS (outside the Service Business pack): offered only to
+  // blueprints that list them in `focus`.
+  const INDUSTRY_ONLY_KPIS = ["avg_order_value", "inventory_turnover", "conversion_rate_pct", "oee_pct", "scrap_rate_pct"];
+
+  // General small-business set for industries without an app blueprint ("Other").
   const GENERAL_FOCUS = {
     focus: ["revenue", "gross_margin_pct", "net_profit", "cash_balance", "cac", "cash_conversion_cycle"],
     exclude: ["utilization_pct", "revenue_per_labor_hour", "lead_to_appointment_pct", "appointment_to_close_pct", "pipeline_coverage", "jobs_delivered"],
@@ -222,10 +274,10 @@
     const median = appKey && INDUSTRY_MEDIANS[appKey] ? INDUSTRY_MEDIANS[appKey][slug] : undefined;
     let target = null;
     let targetSource = null;
-    if (median !== undefined) {
+    if (typeof median === "number") {
       target = formatTarget(kpi, median);
       targetSource = "industry median";
-    } else if (kpi.defaultTarget !== null && !SCALE_DEPENDENT_UNITS.includes(kpi.unit)) {
+    } else if (median === undefined && kpi.defaultTarget !== null && !SCALE_DEPENDENT_UNITS.includes(kpi.unit)) {
       target = formatTarget(kpi, kpi.defaultTarget);
       targetSource = "blueprint default";
     }
@@ -253,7 +305,10 @@
     const appKey = industry.appKey;
     const hasBlueprint = Boolean(appKey && INDUSTRY_FOCUS[appKey]);
     const profile = hasBlueprint ? INDUSTRY_FOCUS[appKey] : GENERAL_FOCUS;
-    const allowed = (slug) => KPI_LIBRARY[slug] && !profile.exclude.includes(slug);
+    const allowed = (slug) =>
+      KPI_LIBRARY[slug] &&
+      !profile.exclude.includes(slug) &&
+      (!INDUSTRY_ONLY_KPIS.includes(slug) || profile.focus.includes(slug));
 
     const picked = [];
     const add = (slug) => {
