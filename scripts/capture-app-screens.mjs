@@ -1,5 +1,5 @@
 // Captures the KPI scorecard and AI coach screens from a DataDashOS demo workspace (sample data only)
-// at 1600×1000, 2× scale. Requires: npm i -D playwright && npx playwright install chromium
+// at 1600×1000, 2× scale. Uses Chrome from CHROME_PATH, or run `npx playwright-core install chromium` first.
 //
 //   APP_URL=https://app.example.com DEMO_EMAIL=demo@example.com DEMO_PASSWORD=... node scripts/capture-app-screens.mjs
 //
@@ -14,8 +14,8 @@ if (!APP_URL || !DEMO_EMAIL || !DEMO_PASSWORD) {
   process.exit(1);
 }
 
-const { chromium } = await import("playwright");
-const browser = await chromium.launch();
+const { chromium } = await import("playwright-core");
+const browser = await chromium.launch(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {});
 const page = await browser.newPage({ viewport: { width: 1600, height: 1000 }, deviceScaleFactor: 2 });
 
 await page.goto(new URL("/auth", APP_URL).href);

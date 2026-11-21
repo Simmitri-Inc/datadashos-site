@@ -36,7 +36,7 @@ always-pass Turnstile test key. `cd worker && npm test` runs the unit tests.
 2. Add the domain to a free **Cloudflare** account and switch its nameservers to Cloudflare (the registrar's
    dashboard has a "nameservers" setting). Wait for Cloudflare to show the zone as **Active**.
 3. Point the site at GitHub Pages: in Cloudflare DNS add
-   - `CNAME www → simmitri-inc.github.io` (your GitHub Pages host), and
+   - `CNAME www → <owner>.github.io` (your GitHub Pages host, shown in repo Settings → Pages), and
    - four `A` records for the apex (`@`) → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
    Leave these **DNS only** (grey cloud) for now.
 4. In GitHub → repo **Settings → Pages → Custom domain**, enter `datadashos.com`, save (GitHub commits a
@@ -61,8 +61,8 @@ always-pass Turnstile test key. `cd worker && npm test` runs the unit tests.
    npx wrangler secret put RESEND_API_KEY        # from step 4
    ```
 5. Before the custom domain is live, allow the GitHub Pages origin and send confirm links back to it:
-   in `worker/wrangler.toml` set `EXTRA_ALLOWED_ORIGINS = "https://simmitri-inc.github.io"` and
-   `SITE_URL = "https://simmitri-inc.github.io/datadashos-site"`. Clear both once `datadashos.com` works.
+   in `worker/wrangler.toml` set `EXTRA_ALLOWED_ORIGINS = "https://<owner>.github.io"` and
+   `SITE_URL = "https://<owner>.github.io/datadashos-site"`. Clear both once `datadashos.com` works.
 6. Deploy: `npm run deploy`. Note the `*.workers.dev` URL it prints.
 7. Give it a proper hostname: uncomment the `routes` line in `wrangler.toml` (`forms.datadashos.com`),
    deploy again, and keep `forms.endpoint` in `site.config.json` as `https://forms.datadashos.com`.
@@ -72,7 +72,7 @@ always-pass Turnstile test key. `cd worker && npm test` runs the unit tests.
 ## 3. Turnstile (bot check)
 
 1. Cloudflare dashboard → **Turnstile → Add widget**. Name it "DataDashOS forms", add hostnames
-   `datadashos.com`, `www.datadashos.com` (and `simmitri-inc.github.io` while you're on GitHub Pages),
+   `datadashos.com`, `www.datadashos.com` (and `<owner>.github.io` while you're on GitHub Pages),
    mode **Managed**.
 2. Copy the **site key** into `forms.turnstileSiteKey` in `site.config.json` (replacing
    `YOUR_TURNSTILE_SITE_KEY`), then `npm run build` and commit.
@@ -182,7 +182,29 @@ Use [UptimeRobot](https://uptimerobot.com) (free: 50 monitors, 5-minute checks, 
 
 (Better Stack's free tier is a good alternative with 3-minute checks.)
 
-## 9. Go-live checklist
+## 9. Product screenshots
+
+The How it works page has three dashed "Screenshot coming soon" placeholders: **Guided onboarding**, the
+**KPI scorecard** and the **AI business coach**. They must be real captures from the app, using a demo
+workspace that contains **sample data only**. The app's routes need a signed-in user with a workspace, so
+they couldn't be captured automatically.
+
+1. In the DataDashOS app, create a demo workspace and fill it with sample data only (no real customers,
+   numbers or names).
+2. Create a login that can only see that workspace.
+3. Run, from the repo root:
+   ```bash
+   APP_URL=https://<your-app-url> DEMO_EMAIL=<demo login> DEMO_PASSWORD=<password> \
+     CHROME_PATH=/path/to/chrome node scripts/capture-app-screens.mjs
+   npm run images
+   ```
+   This saves `app-kpi-scorecard.png` and `app-ai-coach.png` (1600×1000 at 2×) and makes web-sized versions.
+4. Capture the onboarding screen by hand at the same size and save it as
+   `assets/img/screens/src-png/guided-onboarding.png`, then `npm run images` again.
+5. In `scripts/pages/how-it-works.mjs`, replace each `placeholderShot(...)` with `shot(P, "<name>", { caption: "..." })`,
+   add alt text for the new names in `SCREENS` (`scripts/lib/components.mjs`), and `npm run build`.
+
+## 10. Go-live checklist
 
 1. Lawyer reviews `privacy.html` and `terms.html`; remove `draft: true` from `scripts/pages/privacy.mjs`
    and `terms.mjs` (this also removes the banner and the `noindex`), then `npm run build`.

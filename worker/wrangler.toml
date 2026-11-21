@@ -5,7 +5,7 @@ main = "src/index.js"
 compatibility_date = "2026-10-01"
 workers_dev = true
 
-# PLACEHOLDER: uncomment once forms.datadashos.com is on Cloudflare DNS (SETUP.md, step 4).
+# PLACEHOLDER: uncomment once forms.datadashos.com is on Cloudflare DNS (SETUP.md, section 2, step 7).
 # routes = [{ pattern = "forms.datadashos.com", custom_domain = true }]
 
 [vars]
