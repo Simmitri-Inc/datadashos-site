@@ -90,6 +90,35 @@ for (const raw of lines) {
   }
 }
 
+// kpi-library-update.md is plain text: one table cell per line, section titles as "KPI Library: X".
+const UPDATE_FILE = "kpi-library-update.md";
+if (fs.existsSync(path.join(ROOT, UPDATE_FILE))) {
+  const STRUCTURE = /^(KPI Library( \(Hub Page\)|: .*)|Meta \/ SEO|Hero|Industry Grid|KPI|Shared KPI|What it tells you|Why it matters)$/;
+  let section = "";
+  let inTemplate = false;
+  for (const raw of fs.readFileSync(path.join(ROOT, UPDATE_FILE), "utf8").split("\n")) {
+    let line = raw.trim().replace(/^•\s*/, "");
+    if (!line) continue;
+    if (/^KPI Library/.test(line)) section = `${UPDATE_FILE}: ${line}`;
+    if (/^Page Template/.test(line)) inTemplate = true;
+    if (inTemplate) {
+      if (/^\[Note for build/.test(line)) inTemplate = false;
+      continue;
+    }
+    if (STRUCTURE.test(line) || /^\[.*\]$/.test(line)) continue;
+    line = line.replace(/\s*\[[^\]]*\]/g, "").replace(LABEL, "").replace(/:$/, "").trim();
+    if (/^Cards linking to each industry page: /.test(line)) {
+      line.replace(/^.*?: /, "").split(" · ").forEach((name) => segments.push({ section, text: name }));
+      continue;
+    }
+    if (/^Not sure where to start\? /.test(line)) {
+      line.split(/(?<=\?) /).forEach((text) => segments.push({ section, text }));
+      continue;
+    }
+    segments.push({ section, text: line });
+  }
+}
+
 const IGNORE = [
   /^Homepage copy for all businesses/,
   /^Cards linking to each industry page/,

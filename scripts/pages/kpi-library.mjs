@@ -62,6 +62,48 @@ ${INDUSTRIES.map(
     </section>`,
 };
 
+const kpiTable = (rows, firstCol = "KPI") => `<div class="table-scroll">
+            <table class="compare-table kpi-table">
+              <thead>
+                <tr><th scope="col">${esc(firstCol)}</th><th scope="col">What it tells you</th><th scope="col">Why it matters</th></tr>
+              </thead>
+              <tbody>
+${rows.map(([k, w, y]) => `                <tr><th scope="row">${esc(k)}</th><td>${esc(w)}</td><td>${esc(y)}</td></tr>`).join("\n")}
+              </tbody>
+            </table>
+          </div>`;
+
+const shortagesBlock = (P, s) => {
+  const target = INDUSTRIES.find((x) => x.slug === s.link);
+  return `
+          <div class="shortages-block">
+            <h3>${esc(s.title)}</h3>
+            <p>${esc(s.intro)}</p>
+            <ul class="shortages-list">
+${s.items.map(([k, d]) => `              <li><strong>${esc(k)}:</strong> ${esc(d)}</li>`).join("\n")}
+            </ul>
+            <p class="shortages-link"><a href="${P}kpi-library/${target.slug}/#shared-kpis">${esc(target.shared.eyebrow)} <span aria-hidden="true">→</span></a></p>
+          </div>`;
+};
+
+const sharedSection = (s) => `
+    <section id="shared-kpis" aria-labelledby="shared-title">
+      <div class="wrap">
+        <div class="navy-panel reveal">
+          <div class="section-head">
+            <p class="eyebrow">${esc(s.eyebrow)}</p>
+            <h2 id="shared-title">${esc(s.title)}</h2>
+            <p>${esc(s.intro)}</p>
+          </div>
+          ${kpiTable(s.kpis, "Shared KPI")}
+          <ul class="also-track">
+${s.alsoTrack.map(([lead, rest]) => `            <li><strong>Also track:</strong> ${esc(lead)} ${esc(rest)}</li>`).join("\n")}
+          </ul>
+        </div>
+      </div>
+    </section>
+`;
+
 function industryPage(ind, index) {
   const crumbs = [...HUB_CRUMBS, { name: ind.name, path: `kpi-library/${ind.slug}/` }];
   const isPortfolio = !ind.demoKey;
@@ -109,17 +151,19 @@ function industryPage(ind, index) {
           <div class="section-head">
             <h2 id="core-title">The core KPIs</h2>
           </div>
-          <div class="table-scroll">
-            <table class="compare-table kpi-table">
-              <thead>
-                <tr><th scope="col">KPI</th><th scope="col">What it tells you</th><th scope="col">Why it matters</th></tr>
-              </thead>
-              <tbody>
-${ind.kpis.map(([k, w, y]) => `                <tr><th scope="row">${esc(k)}</th><td>${esc(w)}</td><td>${esc(y)}</td></tr>`).join("\n")}
-              </tbody>
-            </table>
-          </div>
+          ${kpiTable(ind.kpis)}
 ${isPortfolio ? `          <div class="kpi-extra-visual">${sampleScorecard(ind, index)}</div>` : ""}
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="ops-title">
+      <div class="wrap">
+        <div class="navy-panel reveal">
+          <div class="section-head">
+            <h2 id="ops-title">${esc(ind.opsTitle)}</h2>
+          </div>
+          ${kpiTable(ind.opsKpis)}${ind.shortages ? shortagesBlock(P, ind.shortages) : ""}
         </div>
       </div>
     </section>
@@ -136,13 +180,13 @@ ${isPortfolio ? `          <div class="kpi-extra-visual">${sampleScorecard(ind, 
         </div>
       </div>
     </section>
-
+${ind.shared ? sharedSection(ind.shared) : ""}
     <section aria-labelledby="helps-title">
       <div class="wrap mid">
         <div class="navy-panel reveal">
           <div class="section-head">
             <h2 id="helps-title">How DataDashOS helps</h2>
-${isPortfolio ? `            <p>${esc(ind.helps)}</p>` : ""}
+${ind.helps ? `            <p>${esc(ind.helps)}</p>` : ""}
           </div>
 ${
   isPortfolio

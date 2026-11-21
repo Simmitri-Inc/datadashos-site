@@ -6,6 +6,7 @@ export const INDUSTRIES = [
   "healthcare",
   "manufacturing",
   "technology",
+  "building_supply_distribution",
   "other",
 ];
 export const EMPLOYEES = ["1-10", "11-50", "51-200", "201-500", "500+"];
