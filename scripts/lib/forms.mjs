@@ -33,8 +33,47 @@ export const INTEREST_OPTIONS = [
   ["both", "Both"],
 ];
 
+export const EMAIL_CONSENT_TEXT =
+  "I agree to receive emails from DataDashOS about early access. I can unsubscribe at any time.";
+export const SMS_CONSENT_TEXT =
+  "I agree to receive text messages from DataDashOS about early access and my account. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of signing up.";
+export const PENDING_MESSAGE = "Almost there — check your inbox and click the link to confirm.";
+
+/** Honeypot, timing field and the bot-check slot. Bots that fill the honeypot are dropped silently. */
+const antiSpam = (id) => `<div class="hp" aria-hidden="true">
+              <label for="${id}-website">Website</label>
+              <input id="${id}-website" type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <input type="hidden" name="started_at" value="">`;
+
+const consentBlock = (id, P) => `<div class="field">
+              <input id="${id}-phone" name="phone" type="tel" maxlength="20" placeholder=" " autocomplete="tel" inputmode="tel" aria-describedby="${id}-phone-error">
+              <label for="${id}-phone">Mobile number (optional)</label>
+              <div class="error" id="${id}-phone-error">Enter a valid mobile number, or leave it blank.</div>
+            </div>
+            <div class="check-wrap">
+              <label class="check">
+                <input type="checkbox" name="email_consent" value="yes" required aria-describedby="${id}-email-consent-error">
+                <span>${EMAIL_CONSENT_TEXT} <a href="${P}privacy.html">Privacy Policy</a></span>
+              </label>
+              <div class="error" id="${id}-email-consent-error">Please tick this box so we can email you about early access.</div>
+            </div>
+            <div class="check-wrap">
+              <label class="check">
+                <input type="checkbox" name="sms_consent" value="yes" aria-describedby="${id}-sms-consent-error">
+                <span>${SMS_CONSENT_TEXT}</span>
+              </label>
+              <div class="error" id="${id}-sms-consent-error">Add your mobile number above to get texts, or untick this box.</div>
+            </div>
+            <div class="turnstile-slot" data-turnstile></div>`;
+
+const formFooter = (P) => `<p class="form-legal">We'll only use this to contact you about early access. <a href="${P}privacy.html">Privacy Policy</a></p>
+            <div class="form-status" role="status" aria-live="polite" hidden></div>
+            <div class="form-error" role="alert" hidden></div>`;
+
 export function enterpriseForm(P) {
-  return `<form class="lead-form" id="enterprise-form" novalidate data-form-type="enterprise">
+  return `<form class="lead-form" id="enterprise-form" novalidate data-form-type="enterprise" data-analytics-name="Enterprise">
+            ${antiSpam("ent")}
             <div class="field">
               <input id="ent-name" name="name" type="text" required maxlength="120" placeholder=" " autocomplete="name">
               <label for="ent-name">Full name</label>
@@ -94,31 +133,31 @@ ${INTEREST_OPTIONS.map(
               <input id="ent-times" name="meeting_times" type="text" maxlength="300" placeholder=" ">
               <label for="ent-times">Preferred days/times (optional)</label>
             </div>
+            ${consentBlock("ent", P)}
             <button class="btn btn-shimmer btn-block" type="submit">Request early access <span class="arrow" aria-hidden="true">→</span></button>
             <p class="form-note">DataDashOS Enterprise is in development. Early-access partners will be contacted directly.</p>
+            ${formFooter(P)}
           </form>`;
 }
 
 export function waitlistForm(P) {
-  return `<form class="lead-form" id="waitlist-form" novalidate data-source="homepage">
-            <div class="hp" aria-hidden="true">
-              <label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
-            </div>
+  return `<form class="lead-form" id="waitlist-form" novalidate data-form-type="waitlist" data-analytics-name="Waitlist" data-success-url="${P}thank-you.html?status=pending">
+            ${antiSpam("waitlist")}
             <input type="hidden" id="demo-industry" name="demo_industry" value="">
             <input type="hidden" id="demo-employees" name="demo_employees" value="">
             <input type="hidden" id="demo-goal" name="demo_goal" value="">
             <div class="field">
-              <input id="waitlist-name" name="name" type="text" required placeholder=" " autocomplete="name">
+              <input id="waitlist-name" name="name" type="text" required maxlength="120" placeholder=" " autocomplete="name">
               <label for="waitlist-name">Full name</label>
               <div class="error">Please enter your name.</div>
             </div>
             <div class="field">
-              <input id="waitlist-email" name="email" type="email" required placeholder=" " autocomplete="email">
+              <input id="waitlist-email" name="email" type="email" required maxlength="200" placeholder=" " autocomplete="email">
               <label for="waitlist-email">Work email</label>
               <div class="error">Enter a valid email.</div>
             </div>
             <div class="field">
-              <input id="waitlist-company" name="company" type="text" required placeholder=" " autocomplete="organization">
+              <input id="waitlist-company" name="company" type="text" required maxlength="160" placeholder=" " autocomplete="organization">
               <label for="waitlist-company">Company name</label>
               <div class="error">Please enter your company name.</div>
             </div>
@@ -144,9 +183,9 @@ export function waitlistForm(P) {
               </select>
               <label for="waitlist-revenue">Annual revenue (optional)</label>
             </div>
-            <button class="btn btn-shimmer" type="submit" style="width:100%">Join the waitlist <span class="arrow" aria-hidden="true">→</span></button>
+            ${consentBlock("waitlist", P)}
+            <button class="btn btn-shimmer btn-block" type="submit">Join the waitlist <span class="arrow" aria-hidden="true">→</span></button>
             <p class="form-note">No spam. We'll reach out when your spot opens.</p>
-            <p class="form-legal">By joining, you agree to our <a href="${P}privacy.html">Privacy Policy</a>.</p>
-            <div class="form-error" role="alert" hidden>Something went wrong — please try again, or email <span data-contact-email>hello@datadashos.com</span>.</div>
+            ${formFooter(P)}
           </form>`;
 }

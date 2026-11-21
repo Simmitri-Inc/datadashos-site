@@ -2,16 +2,23 @@
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
-  const form = document.querySelector("#waitlist-form");
   const yearEls = document.querySelectorAll("[data-year]");
 
   const cfg = window.DATADASHOS_CONFIG || {};
   const contactEmail = (cfg.contactEmail || "hello@datadashos.com").trim();
-  const formEndpoint = "";
 
   document.querySelectorAll("[data-pending-notice]").forEach((el) => {
     if (new URLSearchParams(window.location.search).get("status") === "pending") el.hidden = false;
   });
+
+  const statusViews = document.querySelectorAll("[data-status-view]");
+  if (statusViews.length) {
+    const wanted = new URLSearchParams(window.location.search).get("status") || "ok";
+    const match = [...statusViews].some((v) => v.dataset.statusView === wanted) ? wanted : "ok";
+    statusViews.forEach((v) => {
+      v.hidden = v.dataset.statusView !== match;
+    });
+  }
 
   document.querySelectorAll("[data-reveal-target]").forEach((box) => {
     const target = document.querySelector(box.getAttribute("data-reveal-target"));
@@ -145,96 +152,4 @@
       }
     });
   });
-
-  // Waitlist form
-  if (form) {
-    const started = Date.now();
-    const failure = form.querySelector(".form-error");
-    const submitBtn = form.querySelector('button[type="submit"]');
-    const note = form.querySelector(".form-note");
-
-    if (formEndpoint) {
-      form.dataset.endpoint = formEndpoint;
-      if (note) {
-        note.textContent = "No spam. We'll reach out when your spot opens.";
-      }
-    }
-
-    const selectedLabel = (select) =>
-      select && select.value ? select.options[select.selectedIndex].text : "";
-
-    const showError = (message) => {
-      if (!failure) return;
-      failure.hidden = false;
-      failure.textContent = message;
-    };
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      const hp = form.querySelector('input[name="company_website"]');
-      if (hp && hp.value) return;
-      if (Date.now() - started < 1200) return;
-
-      let valid = true;
-      form.querySelectorAll("[required]").forEach((field) => {
-        const wrap = field.closest(".field");
-        const ok = field.checkValidity();
-        if (wrap) wrap.classList.toggle("is-invalid", !ok);
-        if (!ok) valid = false;
-      });
-      if (!valid) return;
-
-      if (!formEndpoint) {
-        showError(`The waitlist isn't connected yet. Email us at ${contactEmail}.`);
-        return;
-      }
-
-      const industrySelect = form.querySelector("#waitlist-industry");
-      const employeesSelect = form.querySelector("#waitlist-employees");
-      const revenueSelect = form.querySelector("#waitlist-revenue");
-      const payload = {
-        name: form.querySelector("#waitlist-name")?.value?.trim() || "",
-        email: form.querySelector("#waitlist-email")?.value?.trim() || "",
-        company: form.querySelector("#waitlist-company")?.value?.trim() || "",
-        industry: industrySelect?.value || "",
-        industry_label: selectedLabel(industrySelect),
-        employees: employeesSelect?.value || "",
-        employees_label: selectedLabel(employeesSelect),
-        revenue: revenueSelect?.value || "",
-        revenue_label: selectedLabel(revenueSelect),
-        demo_industry: form.querySelector("#demo-industry")?.value || "",
-        demo_employees: form.querySelector("#demo-employees")?.value || "",
-        demo_goal: form.querySelector("#demo-goal")?.value || "",
-        source: form.dataset.source || "homepage",
-        _subject: "DataDashOS waitlist signup",
-      };
-
-      if (failure) failure.hidden = true;
-      if (submitBtn) submitBtn.disabled = true;
-
-      try {
-        const res = await fetch(formEndpoint, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Accept: "application/json",
-          },
-          body: JSON.stringify(payload),
-        });
-        if (!res.ok) throw new Error(`Waitlist request failed: ${res.status}`);
-        const params = new URLSearchParams();
-        if (payload.industry) params.set("industry", payload.industry);
-        if (payload.employees) params.set("size", payload.employees);
-        params.set("joined", "1");
-        const qs = params.toString();
-        window.location.href = `thank-you.html${qs ? `?${qs}` : ""}`;
-      } catch (_) {
-        showError(
-          `Something went wrong — please try again, or email ${contactEmail}.`
-        );
-      } finally {
-        if (submitBtn) submitBtn.disabled = false;
-      }
-    });
-  }
 })();

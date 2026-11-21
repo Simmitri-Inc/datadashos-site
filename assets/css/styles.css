@@ -3181,3 +3181,14 @@ ul.idea-points { list-style: none; padding: 0; }
 }
 .related-links a:hover, .related-links a:focus-visible { border-color: var(--blue); }
 .related-links .industry-icon { width: 32px; height: 32px; border-radius: 9px; }
+
+/* Form states */
+.form-status { text-align: left; }
+.form-status p { color: #fff; font-weight: 700; font-size: 1.05rem; line-height: 1.5; }
+.form-status p + p { margin-top: 8px; font-weight: 600; color: rgba(232, 238, 248, 0.9); }
+.form-status:focus { outline: none; }
+.turnstile-slot { min-height: 0; }
+.turnstile-slot:not(:empty) { min-height: 65px; }
+.form-legal a, .form-note a { color: var(--gold-bright); }
+.status-page { text-align: center; padding: 48px 0 24px; }
+.status-page .cta-group { justify-content: center; }

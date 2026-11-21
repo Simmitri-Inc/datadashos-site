@@ -400,25 +400,27 @@
         <div class="cta-band reveal">
           <h2 id="waitlist-title">Know your numbers. Run your business.</h2>
           <p>Join the waitlist and be among the first to run your business KPI-first.</p>
-          <form class="lead-form" id="waitlist-form" novalidate data-source="homepage">
+          <form class="lead-form" id="waitlist-form" novalidate data-form-type="waitlist" data-analytics-name="Waitlist" data-success-url="./thank-you.html?status=pending">
             <div class="hp" aria-hidden="true">
-              <label>Company website<input type="text" name="company_website" tabindex="-1" autocomplete="off"></label>
+              <label for="waitlist-website">Website</label>
+              <input id="waitlist-website" type="text" name="website" tabindex="-1" autocomplete="off">
             </div>
+            <input type="hidden" name="started_at" value="">
             <input type="hidden" id="demo-industry" name="demo_industry" value="">
             <input type="hidden" id="demo-employees" name="demo_employees" value="">
             <input type="hidden" id="demo-goal" name="demo_goal" value="">
             <div class="field">
-              <input id="waitlist-name" name="name" type="text" required placeholder=" " autocomplete="name">
+              <input id="waitlist-name" name="name" type="text" required maxlength="120" placeholder=" " autocomplete="name">
               <label for="waitlist-name">Full name</label>
               <div class="error">Please enter your name.</div>
             </div>
             <div class="field">
-              <input id="waitlist-email" name="email" type="email" required placeholder=" " autocomplete="email">
+              <input id="waitlist-email" name="email" type="email" required maxlength="200" placeholder=" " autocomplete="email">
               <label for="waitlist-email">Work email</label>
               <div class="error">Enter a valid email.</div>
             </div>
             <div class="field">
-              <input id="waitlist-company" name="company" type="text" required placeholder=" " autocomplete="organization">
+              <input id="waitlist-company" name="company" type="text" required maxlength="160" placeholder=" " autocomplete="organization">
               <label for="waitlist-company">Company name</label>
               <div class="error">Please enter your company name.</div>
             </div>
@@ -461,10 +463,31 @@
               </select>
               <label for="waitlist-revenue">Annual revenue (optional)</label>
             </div>
-            <button class="btn btn-shimmer" type="submit" style="width:100%">Join the waitlist <span class="arrow" aria-hidden="true">→</span></button>
+            <div class="field">
+              <input id="waitlist-phone" name="phone" type="tel" maxlength="20" placeholder=" " autocomplete="tel" inputmode="tel" aria-describedby="waitlist-phone-error">
+              <label for="waitlist-phone">Mobile number (optional)</label>
+              <div class="error" id="waitlist-phone-error">Enter a valid mobile number, or leave it blank.</div>
+            </div>
+            <div class="check-wrap">
+              <label class="check">
+                <input type="checkbox" name="email_consent" value="yes" required aria-describedby="waitlist-email-consent-error">
+                <span>I agree to receive emails from DataDashOS about early access. I can unsubscribe at any time. <a href="./privacy.html">Privacy Policy</a></span>
+              </label>
+              <div class="error" id="waitlist-email-consent-error">Please tick this box so we can email you about early access.</div>
+            </div>
+            <div class="check-wrap">
+              <label class="check">
+                <input type="checkbox" name="sms_consent" value="yes" aria-describedby="waitlist-sms-consent-error">
+                <span>I agree to receive text messages from DataDashOS about early access and my account. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of signing up.</span>
+              </label>
+              <div class="error" id="waitlist-sms-consent-error">Add your mobile number above to get texts, or untick this box.</div>
+            </div>
+            <div class="turnstile-slot" data-turnstile></div>
+            <button class="btn btn-shimmer btn-block" type="submit">Join the waitlist <span class="arrow" aria-hidden="true">→</span></button>
             <p class="form-note">No spam. We'll reach out when your spot opens.</p>
-            <p class="form-legal">By joining, you agree to our <a href="./privacy.html">Privacy Policy</a>.</p>
-            <div class="form-error" role="alert" hidden>Something went wrong — please try again, or email <span data-contact-email>hello@datadashos.com</span>.</div>
+            <p class="form-legal">We'll only use this to contact you about early access. <a href="./privacy.html">Privacy Policy</a></p>
+            <div class="form-status" role="status" aria-live="polite" hidden></div>
+            <div class="form-error" role="alert" hidden></div>
           </form>
         </div>
       </div>
@@ -510,5 +533,6 @@
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/kpi-blueprints.js" defer></script>
   <script src="./assets/js/kpi-demo.js" defer></script>
+  <script src="./assets/js/forms.js" defer></script>
 </body>
 </html>

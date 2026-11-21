@@ -1,0 +1,13 @@
+# Copy to .dev.vars for `npm run dev`. .dev.vars is git-ignored; never commit real keys.
+ENVIRONMENT=development
+SITE_URL=http://127.0.0.1:8081
+EXTRA_ALLOWED_ORIGINS=http://127.0.0.1:8081,http://localhost:8081
+# Cloudflare's always-pass Turnstile test secret (pairs with site key 1x00000000000000000000AA).
+TURNSTILE_SECRET_KEY=1x0000000000000000000000000000000AA
+UNSUBSCRIBE_SECRET=dev-only-change-me
+IP_HASH_SALT=dev-only-salt
+# Leave these empty locally: emails and texts are printed to the console instead of sent.
+RESEND_API_KEY=
+TWILIO_ACCOUNT_SID=
+TWILIO_AUTH_TOKEN=
+TWILIO_MESSAGING_SERVICE_SID=

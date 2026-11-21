@@ -25,16 +25,17 @@ export default {
   title: "DataDashOS Enterprise — Private AI, governed by your KPIs",
   description: "Run AI on your own servers, use outside AI models without sharing your data, and govern it all through one KPI-first layer. Request early access.",
   ogImage: "assets/og/enterprise.png",
+  scripts: ["assets/js/forms.js"],
   breadcrumbs: [
     { name: "Home", path: "" },
     { name: "Enterprise", path: "enterprise.html" },
   ],
   body: ({ P }) => `
-    <section class="hero page-hero-section" aria-labelledby="ent-title">
+    <section class="hero page-hero-section" aria-labelledby="ent-hero-title">
       <div class="wrap mid">
         <p class="eyebrow">Enterprise · Early access</p>
         <p>${earlyAccessBadge}</p>
-        <h1 id="ent-title" class="page-title">Your data stays yours. Your AI answers to your KPIs.</h1>
+        <h1 id="ent-hero-title" class="page-title">Your data stays yours. Your AI answers to your KPIs.</h1>
         <p class="hero-lede">DataDashOS Enterprise is a private orchestration layer that connects to AI running on your own servers, and to outside AI models without handing them your data.</p>
         <div class="cta-group">
           <a class="btn btn-shimmer" href="#early-access">Request early access ${arrow}</a>
