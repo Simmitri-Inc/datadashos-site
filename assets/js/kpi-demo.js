@@ -34,7 +34,7 @@
   const QUESTIONS = [
     { name: "industry", legend: "Industry", options: B.INDUSTRIES, error: "Choose your industry." },
     { name: "employees", legend: "Number of employees", options: B.EMPLOYEE_RANGES, error: "Choose your team size." },
-    { name: "goal", legend: "Top goal", options: B.GOALS, error: "Choose your top goal." },
+    { name: "goal", legend: "Your top goal right now", options: B.GOALS, error: "Choose your top goal." },
   ];
 
   const CADENCE = { weekly: "Weekly", monthly: "Monthly" };

@@ -1,0 +1,14 @@
+{
+  "name": "datadashos-site",
+  "private": true,
+  "type": "module",
+  "description": "DataDashOS marketing site (static, served by GitHub Pages).",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check:copy": "node scripts/check-copy.mjs",
+    "serve": "python3 -m http.server 8080 --bind 127.0.0.1"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -5,49 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About DataDashOS — Built by operators, for operators</title>
   <meta name="description" content="DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs.">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <meta name="theme-color" content="#0B1B33">
-  <link rel="canonical" href="https://simmitri-inc.github.io/datadashos-site/about.html">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://forms.datadashos.com https://plausible.io https://challenges.cloudflare.com http://127.0.0.1:8787 http://localhost:8787; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self' https://forms.datadashos.com">
+  <link rel="canonical" href="https://datadashos.com/about.html">
+
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DataDashOS">
-  <meta property="og:url" content="https://simmitri-inc.github.io/datadashos-site/about.html">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://datadashos.com/about.html">
   <meta property="og:title" content="About DataDashOS — Built by operators, for operators">
   <meta property="og:description" content="DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs.">
-  <meta property="og:image" content="https://simmitri-inc.github.io/datadashos-site/assets/og/og-cover.png">
+  <meta property="og:image" content="https://datadashos.com/assets/og/about.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="About DataDashOS — Built by operators, for operators">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About DataDashOS — Built by operators, for operators">
   <meta name="twitter:description" content="DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs.">
+  <meta name="twitter:image" content="https://datadashos.com/assets/og/about.png">
+
   <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="./assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./assets/css/styles.css">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "AboutPage",
-        "@id": "https://simmitri-inc.github.io/datadashos-site/about.html#webpage",
-        "url": "https://simmitri-inc.github.io/datadashos-site/about.html",
-        "name": "About DataDashOS",
-        "description": "DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs.",
-        "isPartOf": { "@id": "https://simmitri-inc.github.io/datadashos-site/#website" },
-        "dateModified": "2026-11-21",
-        "breadcrumb": {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://simmitri-inc.github.io/datadashos-site/" },
-            { "@type": "ListItem", "position": 2, "name": "About", "item": "https://simmitri-inc.github.io/datadashos-site/about.html" }
-          ]
-        }
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://datadashos.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About",
+            "item": "https://datadashos.com/about.html"
+          }
+        ]
       },
       {
-        "@type": "Organization",
-        "@id": "https://simmitri-inc.github.io/datadashos-site/#organization",
-        "name": "DataDashOS",
-        "url": "https://simmitri-inc.github.io/datadashos-site/",
-        "email": "hello@datadashos.com"
+        "@type": "AboutPage",
+        "name": "About DataDashOS",
+        "description": "DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs."
       }
     ]
   }
@@ -55,12 +61,15 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="wrap">
       <a class="logo" href="./" aria-label="DataDashOS home">DataDash<span>OS</span></a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
       <nav class="nav" id="site-nav" aria-label="Primary">
         <a href="./how-it-works.html">How it works</a>
+        <a href="./kpi-library/">KPI Library</a>
+        <a href="./enterprise.html">Enterprise</a>
         <a href="./faq.html">FAQ</a>
         <a href="./about.html" aria-current="page">About</a>
         <a class="btn btn-shimmer" href="./#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
@@ -69,21 +78,21 @@
   </header>
 
   <main id="main">
-    <section class="hero" style="min-height:auto;padding-bottom:40px" aria-labelledby="about-title">
-      <div class="wrap" style="max-width:760px">
+
+    <section class="hero page-hero-section" aria-labelledby="about-title">
+      <div class="wrap narrow">
         <p class="eyebrow">About</p>
-        <h1 id="about-title" class="mask-reveal" style="font-size:clamp(2rem,5vw,3.2rem)">We built the system we wish we'd started with.</h1>
-        <p class="hero-lede" style="margin-top:16px">DataDashOS exists because running a business without clear KPIs is exhausting, expensive and avoidable.</p>
+        <h1 id="about-title" class="page-title">We built the system we wish we'd started with.</h1>
+        <p class="hero-lede">DataDashOS exists because running a business without clear KPIs is exhausting, expensive and avoidable.</p>
       </div>
     </section>
 
     <section aria-labelledby="why-title">
-      <div class="wrap" style="max-width:760px">
+      <div class="wrap narrow">
         <div class="section-head reveal">
-          <p class="eyebrow">Why we built DataDashOS</p>
-          <h2 id="why-title">The hard lesson that became the product</h2>
+          <h2 id="why-title">Why We Built DataDashOS</h2>
         </div>
-        <div class="reveal" style="color:var(--muted);display:grid;gap:14px">
+        <div class="prose-stack reveal">
           <p>We spent years running a real business. We had accounting software, a CRM, marketing tools and plenty of spreadsheets. What we didn't have was agreement on which numbers actually mattered.</p>
           <p>So meetings ran on opinions. Problems showed up late. Good ideas died without an owner.</p>
           <p>When we finally defined our KPIs first, everything changed. Priorities got clear. Accountability got real. Growth got repeatable. DataDashOS turns that lesson into a system any business can run.</p>
@@ -92,43 +101,30 @@
     </section>
 
     <section aria-labelledby="believe-title">
-      <div class="wrap" style="max-width:900px">
+      <div class="wrap mid">
         <div class="navy-panel reveal">
-        <div class="section-head">
-          <p class="eyebrow">What we believe</p>
-          <h2 id="believe-title">Principles that shape every release</h2>
-        </div>
-        <ul class="belief-list">
-          <li>KPIs come first. Strategy, hiring and spending should follow from what success looks like in numbers.</li>
-          <li>Owners, not analysts. Business performance shouldn't need a data team to understand.</li>
-          <li>Insight is worthless without action. Every recommendation needs an owner and a result.</li>
-          <li>Your KPIs should grow with you. What matters at 10 people isn't what matters at 100.</li>
-          <li>Honesty over hype. We never present product screens as customer results.</li>
-        </ul>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="team-title">
-      <div class="wrap" style="max-width:760px">
-        <div class="section-head reveal">
-          <p class="eyebrow">The team</p>
-          <h2 id="team-title">Named people build trust</h2>
-        </div>
-        <div class="founder-placeholder reveal">
-          <strong>Founder name, photo and bio — placeholder</strong>
-          <p>Add a named founder, photo and a two-sentence bio here. Named people build far more trust than "our team".</p>
+          <div class="section-head">
+            <h2 id="believe-title">What We Believe</h2>
+          </div>
+          <ul class="belief-list">
+            <li><strong>KPIs come first.</strong> Strategy, hiring and spending should follow from what success looks like in numbers.</li>
+            <li><strong>Owners, not analysts.</strong> Business performance shouldn't need a data team to understand.</li>
+            <li><strong>Insight is worthless without action.</strong> Every recommendation needs an owner and a result.</li>
+            <li><strong>Your KPIs should grow with you.</strong> What matters at 10 people isn't what matters at 100.</li>
+            <li><strong>Honesty over hype.</strong> Our product screens show sample data, and we never present it as customer results.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section aria-labelledby="talk-title" style="padding-bottom:60px">
+    <!-- PLACEHOLDER: "The Team" section — founder name, photo and a two-sentence bio. Named people build far more trust than "our team". -->
+
+    <section aria-labelledby="talk-title" class="section-last">
       <div class="wrap">
         <div class="cta-band reveal">
-          <p class="eyebrow" style="color:var(--gold-bright);justify-content:center">Talk with us</p>
-          <h2 id="talk-title">Want to see DataDashOS in action?</h2>
-          <p>Join the waitlist or email us at <a data-contact-mailto data-contact-email>hello@datadashos.com</a>.</p>
-          <p style="margin-top:18px"><a class="btn btn-shimmer" href="./#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a></p>
+          <h2 id="talk-title">Talk With Us</h2>
+          <p>Want to see DataDashOS in action or share what your business needs? Join the waitlist or email us at <a data-contact-mailto data-contact-email href="mailto:hello@datadashos.com">hello@datadashos.com</a>.</p>
+          <p><a class="btn btn-shimmer" href="./#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a></p>
         </div>
       </div>
     </section>
@@ -138,34 +134,37 @@
     <div class="wrap">
       <div class="footer-grid-4">
         <div>
-          <div class="footer-brand">DataDash<span>OS</span></div>
-          <p>DataDashOS — the KPI-first operating system. KPIs first. Everything else follows.</p>
-          <p style="margin-top:12px">Contact: <a data-contact-mailto data-contact-email>hello@datadashos.com</a></p>
-          <p style="margin-top:8px;color:var(--muted);font-size:0.9rem">Social: LinkedIn · X — add when accounts exist</p>
+          <p class="footer-brand">DataDash<span>OS</span></p>
+          <p><strong>DataDashOS</strong> — the KPI-first operating system. KPIs first. Everything else follows.</p>
+          <p class="footer-contact">Contact: <a data-contact-mailto data-contact-email href="mailto:hello@datadashos.com">hello@datadashos.com</a></p>
+          <!-- PLACEHOLDER: Social links (LinkedIn · X) — add when accounts exist. -->
         </div>
-        <div class="footer-col">
-          <h4>Product</h4>
+        <nav class="footer-col" aria-labelledby="footer-product">
+          <h2 id="footer-product">Product</h2>
           <a href="./how-it-works.html">How it works</a>
           <a href="./faq.html">FAQ</a>
+          <a href="./kpi-library/">KPI Library</a>
+          <a href="./enterprise.html">Enterprise</a>
           <a href="./#waitlist">Join the waitlist</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
+        </nav>
+        <nav class="footer-col" aria-labelledby="footer-company">
+          <h2 id="footer-company">Company</h2>
           <a href="./about.html">About</a>
-          <a data-contact-mailto>Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
+          <a data-contact-mailto href="mailto:hello@datadashos.com">Contact</a>
+        </nav>
+        <nav class="footer-col" aria-labelledby="footer-legal">
+          <h2 id="footer-legal">Legal</h2>
           <a href="./privacy.html">Privacy policy</a>
           <a href="./terms.html">Terms of service</a>
-        </div>
+        </nav>
       </div>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> DataDashOS. All rights reserved.</span>
+        <span>© 2026 DataDashOS. All rights reserved. Product screens show sample data.</span>
       </div>
     </div>
   </footer>
   <div class="mobile-cta"><a class="btn btn-shimmer" href="./#waitlist">Join the waitlist</a></div>
+
   <script src="./assets/js/config.js" defer></script>
   <script src="./assets/js/main.js" defer></script>
 </body>

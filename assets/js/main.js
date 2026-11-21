@@ -5,15 +5,20 @@
   const form = document.querySelector("#waitlist-form");
   const yearEls = document.querySelectorAll("[data-year]");
 
-  const contactEmail =
-    (window.DATADASHOS_CONTACT_EMAIL || "hello@datadashos.com").trim() ||
-    "hello@datadashos.com";
-  const formId = (window.DATADASHOS_FORMSPREE_FORM_ID || "").trim();
-  const formConfigured =
-    Boolean(formId) && formId !== "YOUR_FORMSPREE_FORM_ID";
-  const formEndpoint = formConfigured
-    ? `https://formspree.io/f/${formId}`
-    : "";
+  const cfg = window.DATADASHOS_CONFIG || {};
+  const contactEmail = (cfg.contactEmail || "hello@datadashos.com").trim();
+  const formEndpoint = "";
+
+  document.querySelectorAll("[data-pending-notice]").forEach((el) => {
+    if (new URLSearchParams(window.location.search).get("status") === "pending") el.hidden = false;
+  });
+
+  document.querySelectorAll("[data-scroll-demo]").forEach((link) => {
+    link.addEventListener("click", () => {
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) setTimeout(() => target.focus({ preventScroll: true }), 400);
+    });
+  });
 
   yearEls.forEach((el) => {
     el.textContent = String(new Date().getFullYear());
@@ -129,7 +134,7 @@
     });
   });
 
-  // Waitlist form — Formspree JSON POST; no mailto.
+  // Waitlist form
   if (form) {
     const started = Date.now();
     const failure = form.querySelector(".form-error");
@@ -168,9 +173,7 @@
       if (!valid) return;
 
       if (!formEndpoint) {
-        showError(
-          `Waitlist is not connected yet. Email us at ${contactEmail}, or set DATADASHOS_FORMSPREE_FORM_ID in assets/js/config.js.`
-        );
+        showError(`The waitlist isn't connected yet. Email us at ${contactEmail}.`);
         return;
       }
 
