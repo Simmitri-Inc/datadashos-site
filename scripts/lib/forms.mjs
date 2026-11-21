@@ -6,6 +6,7 @@ export const INDUSTRY_OPTIONS = [
   ["healthcare", "Healthcare"],
   ["manufacturing", "Manufacturing"],
   ["technology", "Technology"],
+  ["building_supply_distribution", "Building supply &amp; distribution"],
   ["other", "Other"],
 ];
 

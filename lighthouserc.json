@@ -11,6 +11,7 @@
         "http://localhost/faq.html",
         "http://localhost/kpi-library/index.html",
         "http://localhost/kpi-library/construction-trades/index.html",
+        "http://localhost/kpi-library/building-supply-distribution/index.html",
         "http://localhost/kpi-library/portfolios-holding-companies/index.html"
       ],
       "settings": { "chromeFlags": "--no-sandbox" }

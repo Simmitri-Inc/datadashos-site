@@ -173,6 +173,7 @@
     healthcare: { label: "Healthcare", appKey: "healthcare" },
     manufacturing: { label: "Manufacturing", appKey: "manufacturing" },
     technology: { label: "Technology", appKey: "technology" },
+    building_supply_distribution: { label: "Building supply & distribution", appKey: null },
     other: { label: "Other", appKey: "other" },
   };
 

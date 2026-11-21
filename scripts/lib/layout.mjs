@@ -54,6 +54,7 @@ const footer = (P, page) => `
           <a href="${P}how-it-works.html">How it works</a>
           <a href="${P}faq.html">FAQ</a>
           <a href="${P}kpi-library/">KPI Library</a>
+          <a href="${P}kpi-library/building-supply-distribution/">Building supply &amp; distribution</a>
           <a href="${P}enterprise.html">Enterprise</a>
           <a href="${page.waitlistHref}">Join the waitlist</a>
         </nav>

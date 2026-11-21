@@ -13,6 +13,7 @@ const LABELS = {
   healthcare: "Healthcare",
   manufacturing: "Manufacturing",
   technology: "Technology",
+  building_supply_distribution: "Building supply & distribution",
   other: "Other",
   under_1m: "Under $1M",
   "1m_5m": "$1M–$5M",
