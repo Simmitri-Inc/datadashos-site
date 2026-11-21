@@ -1983,3 +1983,228 @@ section {
 .step-block.navy-panel h2 { color: #fff; }
 .step-block.navy-panel p,
 .step-block.navy-panel .check-list { color: rgba(232, 238, 248, 0.78); }
+
+/* ========== Contrast + gold emphasis pass ========== */
+.navy-panel .navy-subhead {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--gold-bright);
+  margin: 0;
+}
+
+.navy-panel .section-head h2,
+.navy-panel h2 {
+  color: #fff;
+}
+
+.navy-panel .section-head p,
+.navy-panel .lede {
+  color: rgba(232, 238, 248, 0.86);
+}
+
+.navy-panel .hook-line {
+  color: var(--gold-bright);
+}
+
+.navy-tile p {
+  color: rgba(232, 238, 248, 0.82);
+}
+
+.navy-panel .shot-caption,
+.navy-panel .shot-card figcaption {
+  color: rgba(224, 192, 120, 0.9);
+}
+
+.navy-panel .compare-table td:first-child {
+  color: rgba(232, 238, 248, 0.72);
+}
+
+.navy-panel .form-note,
+.cta-band .form-note {
+  color: rgba(232, 238, 248, 0.78);
+}
+
+.navy-panel .form-legal,
+.cta-band .form-legal {
+  color: rgba(232, 238, 248, 0.72);
+}
+
+.navy-panel .form-legal a,
+.cta-band .form-legal a {
+  color: var(--gold-bright);
+}
+
+.field label {
+  color: rgba(224, 192, 120, 0.92);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+}
+
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label,
+.field select:focus + label,
+.field select:valid + label {
+  color: var(--gold-bright);
+}
+
+/* Timeline step markers — gold badges */
+.timeline .step::before,
+.timeline .step[data-step]::before {
+  color: #0b1b33;
+  background: linear-gradient(145deg, #e0c078, #c4a35a);
+  box-shadow: 0 0 0 6px rgba(11, 27, 51, 0.08);
+}
+
+.navy-panel .timeline .step::before {
+  box-shadow: 0 0 0 6px #122844;
+}
+
+.navy-panel .timeline::before {
+  background: linear-gradient(to bottom, #e0c078, #3d8bff, #c4a35a);
+}
+
+.illus-block {
+  margin-top: 28px;
+}
+
+.illus-block img,
+.illus-block svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.idea-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.idea-points {
+  display: grid;
+  gap: 12px;
+}
+
+.idea-point {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.idea-point .mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, rgba(224, 192, 120, 0.22), rgba(61, 139, 255, 0.16));
+  color: var(--gold-bright);
+}
+
+.idea-point strong {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.idea-point span {
+  color: rgba(232, 238, 248, 0.78);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 860px) {
+  .idea-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.navy-panel .timeline .step h3 {
+  color: #fff;
+}
+
+.navy-panel .timeline .step p {
+  color: rgba(232, 238, 248, 0.82);
+}
+
+.step-kicker {
+  color: var(--gold-bright);
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-weight: 750;
+}
+
+.navy-panel .eyebrow,
+.cta-band .eyebrow {
+  color: var(--gold-bright);
+}
+
+/* Keep OS mark blue for brand recognition; gold elsewhere */
+.footer-brand span {
+  color: var(--gold-bright);
+}
+
+.hero-copy h1 .gold-word {
+  background: linear-gradient(120deg, #e0c078, #f0d9a0 45%, #c4a35a);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.shot-badge {
+  color: #0b1b33;
+  background: linear-gradient(145deg, #e0c078, #c4a35a);
+  border-color: transparent;
+}
+
+.navy-panel a:not(.btn) {
+  color: var(--gold-bright);
+}
+
+.navy-panel a:not(.btn):hover {
+  color: #fff;
+}
+
+/* FAQ answers a bit brighter on navy */
+.navy-panel .faq-item .answer {
+  color: rgba(232, 238, 248, 0.84);
+}
+
+/* Footer contact standout */
+.site-footer a[data-contact-mailto] {
+  color: var(--gold);
+  font-weight: 650;
+}
+
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-mark-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(11, 27, 51, 0.18);
+}
+
+.navy-panel .illus-block {
+  padding: 8px;
+  border-radius: 20px;
+  background: rgba(10, 22, 40, 0.35);
+  border: 1px solid rgba(224, 192, 120, 0.22);
+}

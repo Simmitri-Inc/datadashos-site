@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-labelledby="rhythmTitle rhythmDesc">
+  <title id="rhythmTitle">KPI operating rhythm</title>
+  <desc id="rhythmDesc">Four connected steps: Define, Track, Manage, Adapt — the KPI-first loop.</desc>
+  <defs>
+    <linearGradient id="gGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E0C078"/>
+      <stop offset="100%" stop-color="#C4A35A"/>
+    </linearGradient>
+    <linearGradient id="gBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3D8BFF"/>
+      <stop offset="100%" stop-color="#2F6BFF"/>
+    </linearGradient>
+    <linearGradient id="gCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A3050"/>
+      <stop offset="100%" stop-color="#12263F"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="960" height="320" rx="24" fill="transparent"/>
+  <!-- connector -->
+  <path d="M130 120 H830" stroke="url(#gBlue)" stroke-width="3" stroke-dasharray="6 10" opacity="0.55"/>
+  <path d="M830 120 C860 120, 880 160, 860 200 C840 240, 780 250, 720 250" fill="none" stroke="url(#gGold)" stroke-width="3" opacity="0.7"/>
+  <path d="M720 250 H130" stroke="url(#gGold)" stroke-width="3" stroke-dasharray="6 10" opacity="0.45"/>
+  <path d="M130 250 C100 250, 90 200, 110 160 C120 135, 120 120, 130 120" fill="none" stroke="url(#gGold)" stroke-width="3" opacity="0.7"/>
+
+  <!-- Define -->
+  <g filter="url(#soft)">
+    <rect x="40" y="48" width="180" height="144" rx="20" fill="url(#gCard)" stroke="rgba(224,192,120,0.35)"/>
+    <circle cx="130" cy="96" r="22" fill="url(#gGold)"/>
+    <text x="130" y="102" text-anchor="middle" fill="#0B1B33" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800">01</text>
+    <text x="130" y="144" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800">Define</text>
+    <text x="130" y="168" text-anchor="middle" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="12">KPIs &amp; owners</text>
+  </g>
+  <!-- Track -->
+  <g filter="url(#soft)">
+    <rect x="270" y="48" width="180" height="144" rx="20" fill="url(#gCard)" stroke="rgba(61,139,255,0.35)"/>
+    <circle cx="360" cy="96" r="22" fill="url(#gBlue)"/>
+    <text x="360" y="102" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800">02</text>
+    <text x="360" y="144" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800">Track</text>
+    <text x="360" y="168" text-anchor="middle" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="12">One scorecard</text>
+  </g>
+  <!-- Manage -->
+  <g filter="url(#soft)">
+    <rect x="500" y="48" width="180" height="144" rx="20" fill="url(#gCard)" stroke="rgba(61,139,255,0.35)"/>
+    <circle cx="590" cy="96" r="22" fill="url(#gBlue)"/>
+    <text x="590" y="102" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800">03</text>
+    <text x="590" y="144" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800">Manage</text>
+    <text x="590" y="168" text-anchor="middle" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="12">Review → action</text>
+  </g>
+  <!-- Adapt -->
+  <g filter="url(#soft)">
+    <rect x="730" y="48" width="180" height="144" rx="20" fill="url(#gCard)" stroke="rgba(224,192,120,0.45)"/>
+    <circle cx="820" cy="96" r="22" fill="url(#gGold)"/>
+    <text x="820" y="102" text-anchor="middle" fill="#0B1B33" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="800">04</text>
+    <text x="820" y="144" text-anchor="middle" fill="#FFFFFF" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="800">Adapt</text>
+    <text x="820" y="168" text-anchor="middle" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="12">Grow the KPIs</text>
+  </g>
+
+  <text x="480" y="290" text-anchor="middle" fill="#E0C078" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="700">KPIs first. Everything else follows.</text>
+</svg>
