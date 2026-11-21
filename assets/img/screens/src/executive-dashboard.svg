@@ -1,15 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Executive dashboard sample">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Executive dashboard">
+
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0B1B33"/>
-      <stop offset="50%" stop-color="#122844"/>
-      <stop offset="100%" stop-color="#16375F"/>
+      <stop offset="48%" stop-color="#122844"/>
+      <stop offset="100%" stop-color="#183A63"/>
     </linearGradient>
     <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1A3050"/>
+      <stop offset="0%" stop-color="#1C3354"/>
       <stop offset="100%" stop-color="#13263F"/>
     </linearGradient>
     <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3D8BFF"/>
+      <stop offset="100%" stop-color="#2F6BFF"/>
+    </linearGradient>
+    <linearGradient id="blueV" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#3D8BFF"/>
       <stop offset="100%" stop-color="#2F6BFF"/>
     </linearGradient>
@@ -17,64 +22,76 @@
       <stop offset="0%" stop-color="#E0C078"/>
       <stop offset="100%" stop-color="#C4A35A"/>
     </linearGradient>
-    <filter id="cardShadow" x="-8%" y="-8%" width="116%" height="130%">
-      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
-    </filter>
   </defs>
+
+
   <rect width="1600" height="1000" rx="32" fill="url(#bg)"/>
-  <circle cx="1420" cy="90" r="220" fill="#3D8BFF" opacity="0.14"/>
-  <circle cx="140" cy="920" r="180" fill="#C4A35A" opacity="0.08"/>
-  <rect x="36" y="36" width="100" height="928" rx="22" fill="#0A1628"/>
-  <circle cx="86" cy="86" r="18" fill="url(#gold)"/>
-  <rect x="66" y="140" width="40" height="10" rx="5" fill="#3D8BFF"/>
-  <rect x="66" y="170" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
-  <rect x="66" y="200" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
-  <rect x="66" y="230" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
-  <rect x="66" y="260" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
-  <rect x="66" y="910" width="40" height="10" rx="5" fill="#C4A35A"/>
-  <text x="176" y="88" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Executive dashboard</text>
-  <text x="176" y="122" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="16">Leadership overview · Sample data</text>
-  <rect x="1360" y="64" width="140" height="36" rx="18" fill="rgba(61,139,255,0.16)" stroke="#3D8BFF" stroke-width="1.5"/>
-  <text x="1430" y="88" text-anchor="middle" fill="#B8D4FF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Sample data</text>
-  <g filter="url(#cardShadow)">
-    <rect x="176" y="160" width="320" height="150" rx="20" fill="url(#card)"/>
-    <rect x="516" y="160" width="320" height="150" rx="20" fill="url(#card)"/>
-    <rect x="856" y="160" width="320" height="150" rx="20" fill="url(#card)"/>
-    <rect x="1196" y="160" width="204" height="150" rx="20" fill="url(#card)"/>
-  </g>
-  <text x="200" y="206" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="14">Revenue</text>
-  <text x="200" y="258" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">$248k</text>
-  <text x="200" y="288" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">▲ 12.4% vs prior</text>
-  <text x="540" y="206" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="14">Gross margin</text>
-  <text x="540" y="258" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">41.2%</text>
-  <text x="540" y="288" fill="#C4A35A" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">● On target</text>
-  <text x="880" y="206" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="14">Win rate</text>
-  <text x="880" y="258" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="800">31%</text>
-  <text x="880" y="288" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">▲ +2.1 pts</text>
-  <text x="1220" y="206" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="14">Cash runway</text>
-  <text x="1220" y="258" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="800">7.4 mo</text>
-  <text x="1220" y="288" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">▲ Healthy</text>
-  <g filter="url(#cardShadow)">
-    <rect x="176" y="340" width="860" height="560" rx="26" fill="url(#card)"/>
-    <rect x="1060" y="340" width="340" height="560" rx="26" fill="url(#card)"/>
-  </g>
-  <text x="216" y="392" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Trend · last 12 weeks</text>
-  <path d="M220 820 C300 780, 360 620, 450 590 C540 560, 600 680, 700 560 C800 440, 880 500, 980 420 C1040 370, 1070 390, 1040 430" fill="none" stroke="url(#blue)" stroke-width="4" stroke-linecap="round"/>
-  <path d="M220 820 C300 800, 380 700, 470 680 C560 660, 640 720, 740 640 C840 560, 920 600, 1040 540" fill="none" stroke="#C4A35A" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
-  <circle cx="1040" cy="430" r="8" fill="#E0C078"/>
-  <text x="240" y="870" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="13">Blue = revenue · Gold = margin</text>
-  <rect x="1060" y="340" width="340" height="70" rx="26" fill="#102038"/>
-  <rect x="1060" y="386" width="340" height="24" fill="#102038"/>
-  <text x="1092" y="386" fill="#E0C078" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Owners &amp; actions</text>
+  <circle cx="1420" cy="80" r="210" fill="#3D8BFF" opacity="0.13"/>
+  <circle cx="130" cy="920" r="170" fill="#C4A35A" opacity="0.09"/>
+  <rect x="36" y="36" width="104" height="928" rx="24" fill="#0A1628"/>
+  <circle cx="88" cy="88" r="18" fill="url(#gold)"/>
+  <rect x="68" y="142" width="44" height="11" rx="5.5" fill="#3D8BFF"/>
+  <rect x="68" y="172" width="44" height="11" rx="5.5" fill="#7A8BA3" opacity="0.5"/>
+  <rect x="68" y="202" width="44" height="11" rx="5.5" fill="#7A8BA3" opacity="0.5"/>
+  <rect x="68" y="232" width="44" height="11" rx="5.5" fill="#7A8BA3" opacity="0.5"/>
+  <rect x="68" y="262" width="44" height="11" rx="5.5" fill="#7A8BA3" opacity="0.5"/>
+  <rect x="68" y="910" width="44" height="11" rx="5.5" fill="#C4A35A"/>
+
+
+  <text x="176" y="86" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Executive dashboard</text>
+  <text x="176" y="120" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="16">Leadership overview · Sample data</text>
+  <rect x="1348" y="62" width="152" height="38" rx="19" fill="rgba(61,139,255,0.16)" stroke="#3D8BFF" stroke-width="1.5"/>
+  <text x="1424" y="87" text-anchor="middle" fill="#B8D4FF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Sample data</text>
+
+
+  <rect x="176" y="156" width="300" height="150" rx="22" fill="url(#card)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="204" y="198" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Revenue</text>
+  <text x="204" y="254" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">$248k</text>
+  <text x="204" y="290" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">▲ 12.4% vs prior</text>
+
+
+  <rect x="496" y="156" width="300" height="150" rx="22" fill="url(#card)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="524" y="198" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Gross margin</text>
+  <text x="524" y="254" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">41.2%</text>
+  <text x="524" y="290" fill="#C4A35A" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">● On target</text>
+
+
+  <rect x="816" y="156" width="300" height="150" rx="22" fill="url(#card)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="844" y="198" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Win rate</text>
+  <text x="844" y="254" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">31%</text>
+  <text x="844" y="290" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">▲ +2.1 pts</text>
+
+
+  <rect x="1136" y="156" width="264" height="150" rx="22" fill="url(#card)" stroke="rgba(255,255,255,0.1)"/>
+  <text x="1164" y="198" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="600">Cash runway</text>
+  <text x="1164" y="254" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="800">7.4 mo</text>
+  <text x="1164" y="290" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">▲ Healthy</text>
+
+<rect x="176" y="336" width="860" height="560" rx="26" fill="url(#card)" stroke="rgba(224,192,120,0.18)"/>
+<rect x="1060" y="336" width="340" height="560" rx="26" fill="url(#card)" stroke="rgba(224,192,120,0.18)"/>
+  <text x="216" y="388" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Trend · last 12 weeks</text>
+  <line x1="220" y1="780" x2="980" y2="780" stroke="#2A3F5F" stroke-width="2"/>
+  <path d="M230 760 C310 720, 370 560, 460 540 C550 520, 610 650, 710 520 C810 390, 880 450, 970 380" fill="none" stroke="url(#blue)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M230 760 C310 740, 390 640, 480 620 C570 600, 650 680, 750 590 C850 500, 910 540, 970 500" fill="none" stroke="#C4A35A" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="970" cy="380" r="8" fill="#E0C078"/>
+  <circle cx="970" cy="500" r="6" fill="#3D8BFF"/>
+  <text x="230" y="820" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="13">Blue = revenue · Gold = margin</text>
+  <rect x="1060" y="336" width="340" height="68" rx="26" fill="#102038"/>
+  <rect x="1060" y="380" width="340" height="24" fill="#102038"/>
+  <text x="1092" y="382" fill="#E0C078" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Owners &amp; actions</text>
+
   <rect x="1092" y="430" width="276" height="78" rx="14" fill="#0F2036" stroke="#2A3F5F"/>
   <text x="1112" y="462" fill="#B8D4FF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Improve close rate</text>
   <text x="1112" y="486" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="13">Owner · Sales lead</text>
+
   <rect x="1092" y="528" width="276" height="78" rx="14" fill="#0F2036" stroke="#2A3F5F"/>
   <text x="1112" y="560" fill="#E0C078" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Protect margin</text>
   <text x="1112" y="584" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="13">Owner · Ops</text>
+
   <rect x="1092" y="626" width="276" height="78" rx="14" fill="#0F2036" stroke="#2A3F5F"/>
   <text x="1112" y="658" fill="#B8D4FF" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">Cash review Friday</text>
   <text x="1112" y="682" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="13">Owner · Finance</text>
+
   <rect x="1092" y="740" width="276" height="52" rx="14" fill="url(#gold)"/>
   <text x="1230" y="773" text-anchor="middle" fill="#0B1B33" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">Open weekly review</text>
 </svg>
