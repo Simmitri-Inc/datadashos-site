@@ -2772,19 +2772,24 @@ section {
   font-weight: 650;
 }
 
-/* Primary KPI rhythm step names */
-.step-name {
-  color: var(--gold-bright);
+/* Primary KPI rhythm step names
+   Override: .navy-panel h2/h3 and .navy-panel .timeline .step h3 set color:#fff
+   (specificity up to 0,3,1). Those paint the headings white; spans must win. */
+.step-name,
+span.step-name,
+.navy-panel .step-name,
+.navy-panel h2 .step-name,
+.navy-panel h3 .step-name,
+.navy-panel .section-head h2 .step-name,
+.navy-panel .timeline .step h3 .step-name,
+.step-block.navy-panel .step-kicker .step-name,
+.step-kicker .step-name,
+#how .step-name,
+#howto-timeline .step-name {
+  color: #e0c078 !important;
   font-weight: 800;
 }
 
-.navy-panel .step-name,
-.navy-panel h2 .step-name,
-.navy-panel h3 .step-name {
-  color: var(--gold-bright);
-}
-
 .step-kicker .step-name {
-  color: var(--gold-bright);
   font-size: 1.05em;
 }
