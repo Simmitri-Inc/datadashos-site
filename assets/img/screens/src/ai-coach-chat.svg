@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B1B33"/>
+      <stop offset="45%" stop-color="#122844"/>
+      <stop offset="100%" stop-color="#16375F"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1A3050"/>
+      <stop offset="100%" stop-color="#13263F"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3D8BFF"/>
+      <stop offset="100%" stop-color="#2F6BFF"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E0C078"/>
+      <stop offset="100%" stop-color="#C4A35A"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1D9270"/>
+      <stop offset="100%" stop-color="#157A5C"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3D8BFF" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#C4A35A" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="1440" height="900" rx="28" fill="url(#bg)"/>
+  <circle cx="1320" cy="80" r="180" fill="url(#glow)"/>
+  <circle cx="120" cy="840" r="140" fill="#C4A35A" opacity="0.08"/>
+  <rect x="28" y="28" width="88" height="844" rx="20" fill="#0A1628" opacity="0.9"/>
+  <circle cx="72" cy="72" r="16" fill="url(#gold)"/>
+  <rect x="52" y="118" width="40" height="8" rx="4" fill="#3D8BFF"/>
+  <rect x="52" y="144" width="40" height="8" rx="4" fill="#7A8BA3" opacity="0.4"/>
+  <rect x="52" y="170" width="40" height="8" rx="4" fill="#7A8BA3" opacity="0.4"/>
+  <rect x="52" y="196" width="40" height="8" rx="4" fill="#7A8BA3" opacity="0.4"/>
+  <rect x="52" y="222" width="40" height="8" rx="4" fill="#7A8BA3" opacity="0.4"/>
+  <rect x="52" y="828" width="40" height="8" rx="4" fill="#C4A35A" opacity="0.85"/>
+  <text x="144" y="68" fill="#F4F7FC" font-family="Manrope, Arial, sans-serif" font-size="26" font-weight="800">AI business coach</text>
+  <text x="144" y="96" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="14">Grounded in your KPIs · Sample data</text>
+  <rect x="1270" y="52" width="118" height="32" rx="16" fill="rgba(61,139,255,0.18)" stroke="#3D8BFF" stroke-width="1"/>
+  <text x="1288" y="73" fill="#B8D4FF" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="700">Live chat</text>
+
+  <rect x="144" y="130" width="900" height="680" rx="24" fill="url(#card)" filter="url(#soft)"/>
+  <rect x="176" y="170" width="620" height="90" rx="18" fill="#102038"/>
+  <text x="200" y="208" fill="#B8D4FF" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">You</text>
+  <text x="200" y="234" fill="#E8EEF8" font-size="16" font-family="Manrope, Arial, sans-serif">Why did close rate slip this week?</text>
+  <rect x="320" y="290" width="680" height="160" rx="18" fill="#0F2036" stroke="#2A3F5F"/>
+  <text x="344" y="328" fill="#E0C078" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Coach · Sales</text>
+  <text x="344" y="360" fill="#E8EEF8" font-size="16" font-family="Manrope, Arial, sans-serif">Win rate fell 2.1 pts. Discovery→proposal conversion</text>
+  <text x="344" y="386" fill="#E8EEF8" font-size="16" font-family="Manrope, Arial, sans-serif">dropped after average cycle days rose to 27.</text>
+  <text x="344" y="420" fill="#9FB0C8" font-size="15" font-family="Manrope, Arial, sans-serif">Recommend: tighten proposal SLA to 48 hours.</text>
+  <rect x="176" y="490" width="700" height="120" rx="18" fill="#102038"/>
+  <text x="200" y="530" fill="#B8D4FF" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">You</text>
+  <text x="200" y="560" fill="#E8EEF8" font-size="16" font-family="Manrope, Arial, sans-serif">Turn that into an owned action.</text>
+  <rect x="176" y="650" width="836" height="100" rx="18" fill="#0A1628" stroke="#C4A35A" stroke-opacity="0.5"/>
+  <text x="208" y="710" fill="#9FB0C8" font-size="16" font-family="Manrope, Arial, sans-serif">Ask about revenue, margin, pipeline…</text>
+  <rect x="900" y="672" width="80" height="56" rx="14" fill="url(#gold)"/>
+  <text x="924" y="708" fill="#0B1B33" font-size="18" font-weight="800" font-family="Manrope, Arial, sans-serif">→</text>
+  <rect x="1080" y="130" width="280" height="680" rx="24" fill="url(#card)" filter="url(#soft)"/>
+  <text x="1110" y="180" fill="#E0C078" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Specialists</text>
+<rect x="1110" y="220" width="220" height="64" rx="14" fill="#0F2036" stroke="#2A3F5F"/><text x="1134" y="258" fill="#E8EEF8" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Finance</text><rect x="1110" y="310" width="220" height="64" rx="14" fill="#0F2036" stroke="#2A3F5F"/><text x="1134" y="348" fill="#E8EEF8" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Sales</text><rect x="1110" y="400" width="220" height="64" rx="14" fill="#0F2036" stroke="#2A3F5F"/><text x="1134" y="438" fill="#E8EEF8" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Marketing</text><rect x="1110" y="490" width="220" height="64" rx="14" fill="#0F2036" stroke="#2A3F5F"/><text x="1134" y="528" fill="#E8EEF8" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Operations</text><rect x="1110" y="580" width="220" height="64" rx="14" fill="#0F2036" stroke="#2A3F5F"/><text x="1134" y="618" fill="#E8EEF8" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Customer XP</text></svg>

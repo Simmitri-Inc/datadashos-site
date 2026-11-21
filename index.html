@@ -216,8 +216,8 @@
           <div class="product-frame">
             <div class="shot-frame ken-burns">
               <picture>
-                <source type="image/webp" srcset="./assets/img/screens/executive-dashboard.webp">
-                <img src="./assets/img/screens/executive-dashboard.png" width="1440" height="1094" alt="DataDashOS executive KPI scorecard showing sample revenue, pipeline, and performance metrics" fetchpriority="high" decoding="async">
+                <source type="image/webp" srcset="./assets/img/screens/kpi-scorecard.webp">
+                <img src="./assets/img/screens/kpi-scorecard.png" width="1600" height="1000" alt="DataDashOS KPI scorecard with sample revenue, margin, win rate, and trends" fetchpriority="high" decoding="async">
               </picture>
             </div>
           </div>
@@ -233,7 +233,8 @@
 
     <section id="problem" aria-labelledby="problem-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="navy-panel reveal">
+        <div class="section-head">
           <p class="eyebrow">The problem</p>
           <h2 id="problem-title">You can't improve what you never defined.</h2>
           <p>Most businesses never sit down and decide which few numbers define success. So everyone works hard, and no one agrees on what winning looks like.</p>
@@ -243,21 +244,21 @@
           <h3 style="font-family:var(--font-display);font-size:1.35rem;color:var(--navy)">What it's costing you</h3>
         </div>
         <div class="tile-grid">
-          <article class="tile reveal reveal-delay-1">
+          <article class="tile navy-tile">
             <div class="tile-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h6v13H4zM14 4h6v16h-6zM10 11h4v9h-4z"/></svg>
             </div>
             <h3>Definitions drift</h3>
             <p>Teams disagree on what a lead, a sale or a margin means, so no report is trusted.</p>
           </article>
-          <article class="tile reveal reveal-delay-2">
+          <article class="tile navy-tile">
             <div class="tile-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
             </div>
             <h3>Data is scattered</h3>
             <p>Accounting, CRM, marketing and spreadsheets each hold part of the truth. Nobody sees the whole scorecard.</p>
           </article>
-          <article class="tile reveal reveal-delay-3 featured">
+          <article class="tile navy-tile featured">
             <div class="tile-icon" aria-hidden="true">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19h16M7 16V9m5 7V5m5 11v-4"/></svg>
             </div>
@@ -265,29 +266,33 @@
             <p>Without owners and follow-through, the same problems come back every week.</p>
           </article>
         </div>
-        <p class="reveal" style="margin-top:22px;color:var(--muted);max-width:46rem">Another dashboard won't fix that. The wrong metrics, beautifully charted, are still the wrong metrics.</p>
+        <p style="margin-top:22px;color:rgba(232,238,248,0.75);max-width:46rem">Another dashboard won't fix that. The wrong metrics, beautifully charted, are still the wrong metrics.</p>
+        </div>
       </div>
     </section>
 
     <section id="idea" aria-labelledby="idea-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="navy-panel reveal">
+        <div class="section-head">
           <p class="eyebrow">The big idea</p>
           <h2 id="idea-title">Define success in numbers before you do anything else.</h2>
           <p>Before you hire, spend on marketing or buy another tool, decide what winning looks like. KPIs turn vision into targets, targets into weekly actions, and actions into results.</p>
         </div>
-        <ul class="idea-list reveal">
+        <ul class="idea-list">
           <li>Everyone knows exactly what they own.</li>
           <li>Decisions run on evidence, not opinion.</li>
           <li>Problems surface early, while they're cheap to fix.</li>
           <li>Growth becomes repeatable, because you know what drives it.</li>
         </ul>
+        </div>
       </div>
     </section>
 
     <section id="kpi-demo" aria-labelledby="kpi-demo-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="navy-panel reveal">
+        <div class="section-head">
           <p class="eyebrow">Try it</p>
           <h2 id="kpi-demo-title">See your KPIs in 30 seconds.</h2>
           <p>Tell us a little about your business and we'll show you the KPIs a business like yours should run on.</p>
@@ -301,6 +306,7 @@
              data-prefill-focus="#waitlist-name">
           <noscript><p class="kpi-demo-noscript">Turn on JavaScript to try the KPI demo, or <a href="#waitlist">join the waitlist</a>.</p></noscript>
         </div>
+        </div>
       </div>
     </section>
 
@@ -308,11 +314,12 @@
 
     <section id="how" aria-labelledby="how-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="navy-panel reveal">
+        <div class="section-head">
           <p class="eyebrow">How it works</p>
           <h2 id="how-title">Define. Track. Manage. Adapt.</h2>
         </div>
-        <div class="timeline reveal" id="howto-timeline">
+        <div class="timeline" id="howto-timeline">
           <div class="step" data-step="01">
             <h3>Define — KPIs built for your business</h3>
             <p>Tell DataDashOS about your industry, model, goals and stage. It recommends the KPIs a business like yours should run on, with clear definitions, owners and targets. You never start from a blank dashboard.</p>
@@ -330,17 +337,19 @@
             <p>Your business changes, and your KPIs should change with it. DataDashOS spots room for improvement, flags what's slipping, and recommends new KPIs as you grow.</p>
           </div>
         </div>
-        <p class="reveal" style="margin-top:22px"><a class="btn btn-ghost" href="./how-it-works.html">See the product page <span class="arrow" aria-hidden="true">→</span></a></p>
+        <p style="margin-top:22px"><a class="btn btn-ghost" href="./how-it-works.html">See the product page <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
       </div>
     </section>
 
     <section id="inside" aria-labelledby="inside-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="navy-panel reveal">
+        <div class="section-head">
           <p class="eyebrow">What's inside</p>
           <h2 id="inside-title">The modules that make the rhythm work</h2>
         </div>
-        <table class="module-table reveal">
+        <table class="module-table">
           <thead>
             <tr><th scope="col">Module</th><th scope="col">What it does</th></tr>
           </thead>
@@ -355,53 +364,55 @@
         </table>
 
         <div class="shot-grid" style="margin-top:28px">
-          <figure class="shot-card reveal">
+          <figure class="shot-card">
             <div class="shot-frame">
               <picture>
                 <source type="image/webp" srcset="./assets/img/screens/marketing-dashboard.webp">
-                <img src="./assets/img/screens/marketing-dashboard.png" width="806" height="737" alt="DataDashOS marketing dashboard with sample traffic, conversion, and campaign metrics" loading="lazy" decoding="async">
+                <img src="./assets/img/screens/marketing-dashboard.png" width="1600" height="1200" alt="DataDashOS marketing dashboard with sample traffic, conversion, and campaign metrics" loading="lazy" decoding="async">
               </picture>
             </div>
             <figcaption>Marketing dashboard — Sample data</figcaption>
           </figure>
-          <figure class="shot-card reveal reveal-delay-1">
+          <figure class="shot-card">
             <div class="shot-frame">
               <picture>
                 <source type="image/webp" srcset="./assets/img/screens/sales-dashboard.webp">
-                <img src="./assets/img/screens/sales-dashboard.png" width="807" height="737" alt="DataDashOS sales dashboard with sample revenue, win rate, and pipeline metrics" loading="lazy" decoding="async">
+                <img src="./assets/img/screens/sales-dashboard.png" width="1600" height="1200" alt="DataDashOS sales dashboard with sample revenue, win rate, and pipeline metrics" loading="lazy" decoding="async">
               </picture>
             </div>
             <figcaption>Sales dashboard — Sample data</figcaption>
           </figure>
-          <figure class="shot-card reveal reveal-delay-2">
+          <figure class="shot-card">
             <div class="shot-frame">
               <picture>
                 <source type="image/webp" srcset="./assets/img/screens/operations-dashboard.webp">
-                <img src="./assets/img/screens/operations-dashboard.png" width="806" height="737" alt="DataDashOS operations dashboard with sample performance and incident metrics" loading="lazy" decoding="async">
+                <img src="./assets/img/screens/operations-dashboard.png" width="1600" height="1200" alt="DataDashOS operations dashboard with sample performance and incident metrics" loading="lazy" decoding="async">
               </picture>
             </div>
             <figcaption>Operations dashboard — Sample data</figcaption>
           </figure>
         </div>
-        <figure class="reveal" style="margin-top:22px">
+        <figure style="margin-top:22px">
           <div class="shot-frame">
             <picture>
-              <source type="image/webp" srcset="./assets/img/screens/poc-dashboard.webp">
-              <img src="./assets/img/screens/poc-dashboard.png" width="1484" height="1069" alt="DataDashOS executive scorecard with sample KPI cards and revenue charts" loading="lazy" decoding="async">
+              <source type="image/webp" srcset="./assets/img/screens/executive-dashboard.webp">
+              <img src="./assets/img/screens/executive-dashboard.png" width="1600" height="1000" alt="DataDashOS executive scorecard with sample KPI cards and revenue charts" loading="lazy" decoding="async">
             </picture>
           </div>
           <figcaption class="shot-caption">Executive scorecard — Sample data</figcaption>
         </figure>
+        </div>
       </div>
     </section>
 
     <section id="compare" aria-labelledby="compare-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="navy-panel reveal">
+        <div class="section-head">
           <p class="eyebrow">Why KPI-first</p>
           <h2 id="compare-title">Why KPI-first beats dashboard-first</h2>
         </div>
-        <table class="compare-table reveal">
+        <table class="compare-table">
           <thead>
             <tr><th scope="col">Dashboard-first tools</th><th scope="col">DataDashOS</th></tr>
           </thead>
@@ -413,84 +424,93 @@
             <tr><td>Reports</td><td>A weekly rhythm of review, action and accountability</td></tr>
           </tbody>
         </table>
-        <p class="reveal" style="margin-top:18px;color:var(--muted);max-width:46rem">Unify performance, not software. DataDashOS sits on top of the tools you already run. Nothing to rip out.</p>
+        <p style="margin-top:18px;color:rgba(232,238,248,0.75);max-width:46rem">Unify performance, not software. DataDashOS sits on top of the tools you already run. Nothing to rip out.</p>
+        </div>
       </div>
     </section>
 
     <section id="who" aria-labelledby="who-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="navy-panel reveal">
+        <div class="section-head">
           <p class="eyebrow">Who it's for</p>
           <h2 id="who-title">Built for owners and growing teams</h2>
         </div>
-        <ul class="who-list reveal">
+        <ul class="who-list">
           <li>Owners and CEOs who want one clear view of business health and a coach in their corner.</li>
           <li>Leadership teams who want accountability built on shared numbers.</li>
           <li>Growing businesses that have outgrown spreadsheets but don't want a BI project.</li>
         </ul>
+        </div>
       </div>
     </section>
 
     <section aria-labelledby="operators-title">
-      <div class="wrap origin">
-        <div class="origin-panel reveal">
-          <p class="eyebrow">Built by operators</p>
-          <h2 id="operators-title">We lived this problem</h2>
-          <p>DataDashOS was built by people who've run a business for decades and lived this problem: plenty of software, plenty of effort, and no shared scorecard. So we built the operating rhythm we wished we'd had.</p>
-          <div class="founder-placeholder">
-            <strong>Founder details coming soon</strong>
-            <p style="margin-top:8px">Add a named founder, photo and one verified result here.</p>
+      <div class="wrap">
+        <div class="navy-panel reveal">
+          <div class="origin" style="margin:0;align-items:start">
+            <div>
+              <p class="eyebrow">Built by operators</p>
+              <h2 id="operators-title">We lived this problem</h2>
+              <p style="color:rgba(232,238,248,0.78);margin-top:12px">DataDashOS was built by people who've run a business for decades and lived this problem: plenty of software, plenty of effort, and no shared scorecard. So we built the operating rhythm we wished we'd had.</p>
+              <div class="founder-placeholder">
+                <strong>Founder details coming soon</strong>
+                <p style="margin-top:8px">Add a named founder, photo and one verified result here.</p>
+              </div>
+            </div>
+            <div>
+              <p class="eyebrow">Next step</p>
+              <h2 style="font-family:var(--font-display);font-size:1.8rem;letter-spacing:-0.03em;margin-bottom:12px;color:#fff">Ready to run KPI-first?</h2>
+              <p class="lede" style="margin-bottom:18px;color:rgba(232,238,248,0.78)">Join the waitlist and be among the first to get access.</p>
+              <p><a class="btn btn-shimmer" href="#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a></p>
+            </div>
           </div>
-        </div>
-        <div class="reveal reveal-delay-2">
-          <p class="eyebrow">Next step</p>
-          <h2 style="font-family:var(--font-display);font-size:1.8rem;letter-spacing:-0.03em;margin-bottom:12px;color:var(--navy)">Ready to run KPI-first?</h2>
-          <p class="lede" style="margin-bottom:18px">Join the waitlist and be among the first to get access.</p>
-          <p><a class="btn btn-shimmer" href="#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a></p>
         </div>
       </div>
     </section>
 
     <section id="faq" aria-labelledby="faq-title">
       <div class="wrap">
-        <div class="section-head reveal">
+        <div class="navy-panel reveal">
+        <div class="section-head">
           <p class="eyebrow">FAQ</p>
           <h2 id="faq-title">Answers owners ask first</h2>
         </div>
         <div class="faq-list">
-          <details class="faq-item reveal">
+          <details class="faq-item">
             <summary>What is DataDashOS? <span class="chev" aria-hidden="true">▾</span></summary>
             <div class="answer">DataDashOS is a KPI-first operating system for growing businesses. Instead of starting with dashboards, it starts by deciding which numbers define success for your business, then builds a weekly rhythm of review and action around them.</div>
           </details>
-          <details class="faq-item reveal reveal-delay-1">
+          <details class="faq-item">
             <summary>Who is it for? <span class="chev" aria-hidden="true">▾</span></summary>
             <div class="answer">Owner-led and growing businesses that want one shared scorecard and a weekly rhythm for improving it.</div>
           </details>
-          <details class="faq-item reveal reveal-delay-2">
+          <details class="faq-item">
             <summary>Does it replace my existing software? <span class="chev" aria-hidden="true">▾</span></summary>
             <div class="answer">No. It sits on top of your accounting, CRM and marketing tools.</div>
           </details>
-          <details class="faq-item reveal">
+          <details class="faq-item">
             <summary>How is it different from a BI dashboard? <span class="chev" aria-hidden="true">▾</span></summary>
             <div class="answer">BI shows data. DataDashOS starts by defining what to measure, then turns the numbers into weekly decisions and owned actions.</div>
           </details>
-          <details class="faq-item reveal reveal-delay-1">
+          <details class="faq-item">
             <summary>How does the AI coach use my data? <span class="chev" aria-hidden="true">▾</span></summary>
             <div class="answer">Its recommendations are grounded in your own KPIs and reviews, so advice stays tied to measurable results.</div>
           </details>
-          <details class="faq-item reveal reveal-delay-2">
+          <details class="faq-item">
             <summary>Can I use it today? <span class="chev" aria-hidden="true">▾</span></summary>
             <div class="answer">We're opening early access in waves. Join the waitlist to get a spot.</div>
           </details>
         </div>
-        <p style="text-align:center;margin-top:24px" class="reveal"><a href="./faq.html">Browse the full FAQ →</a></p>
+        <p style="text-align:center;margin-top:24px"><a href="./faq.html" style="color:var(--gold-bright)">Browse the full FAQ →</a></p>
+        </div>
       </div>
     </section>
 
     <section id="waitlist" aria-labelledby="waitlist-title">
       <div class="wrap">
         <div class="cta-band reveal">
-          <p class="eyebrow" style="color:var(--gold-bright);justify-content:center">Final CTA</p>
+          <p class="eyebrow" style="color:var(--gold-bright);justify-content:center">Early access</p>
           <h2 id="waitlist-title">Know your numbers. Run your business.</h2>
           <p>Join the waitlist and be among the first to run your business KPI-first.</p>
 
