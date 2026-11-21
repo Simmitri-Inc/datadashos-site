@@ -1,9 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img">
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Sales dashboard sample">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#0B1B33"/>
-      <stop offset="45%" stop-color="#122844"/>
+      <stop offset="50%" stop-color="#122844"/>
       <stop offset="100%" stop-color="#16375F"/>
     </linearGradient>
     <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
@@ -18,49 +17,70 @@
       <stop offset="0%" stop-color="#E0C078"/>
       <stop offset="100%" stop-color="#C4A35A"/>
     </linearGradient>
-    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#1D9270"/>
-      <stop offset="100%" stop-color="#157A5C"/>
-    </linearGradient>
-    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#3D8BFF" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#C4A35A" stop-opacity="0.12"/>
-    </linearGradient>
-    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity="0.4"/>
+    <filter id="cardShadow" x="-8%" y="-8%" width="116%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000" flood-opacity="0.35"/>
     </filter>
   </defs>
 
-  <rect width="1200" height="900" rx="28" fill="url(#bg)"/>
-  <circle cx="1080" cy="80" r="180" fill="url(#glow)"/>
-  <circle cx="120" cy="840" r="140" fill="#C4A35A" opacity="0.08"/>
-  <rect x="28" y="28" width="88" height="844" rx="20" fill="#0A1628" opacity="0.9"/>
-  <circle cx="72" cy="72" r="16" fill="url(#gold)"/>
-  <rect x="52" y="118" width="40" height="8" rx="4" fill="#3D8BFF"/>
-  <rect x="52" y="144" width="40" height="8" rx="4" fill="#7A8BA3" opacity="0.4"/>
-  <rect x="52" y="170" width="40" height="8" rx="4" fill="#7A8BA3" opacity="0.4"/>
-  <rect x="52" y="196" width="40" height="8" rx="4" fill="#7A8BA3" opacity="0.4"/>
-  <rect x="52" y="222" width="40" height="8" rx="4" fill="#7A8BA3" opacity="0.4"/>
-  <rect x="52" y="828" width="40" height="8" rx="4" fill="#C4A35A" opacity="0.85"/>
-  <text x="144" y="68" fill="#F4F7FC" font-family="Manrope, Arial, sans-serif" font-size="26" font-weight="800">Sales</text>
-  <text x="144" y="96" fill="#9FB0C8" font-family="Manrope, Arial, sans-serif" font-size="14">Pipeline · win rate · cycle · Sample data</text>
-  <rect x="1030" y="52" width="118" height="32" rx="16" fill="rgba(61,139,255,0.18)" stroke="#3D8BFF" stroke-width="1"/>
-  <text x="1048" y="73" fill="#B8D4FF" font-family="Manrope, Arial, sans-serif" font-size="13" font-weight="700">Sample data</text>
+  <rect width="1600" height="1000" rx="32" fill="url(#bg)"/>
+  <circle cx="1420" cy="90" r="220" fill="#3D8BFF" opacity="0.14"/>
+  <circle cx="140" cy="920" r="180" fill="#C4A35A" opacity="0.08"/>
 
-  <g filter="url(#soft)">
-    <rect x="144" y="130" width="320" height="150" rx="20" fill="url(#card)"/>
-    <text x="168" y="172" fill="#9FB0C8" font-size="14" font-family="Manrope, Arial, sans-serif">Pipeline</text>
-    <text x="168" y="220" fill="#fff" font-size="42" font-weight="800" font-family="Manrope, Arial, sans-serif">$1.14M</text>
-    <text x="168" y="252" fill="#1D9270" font-size="14" font-weight="700" font-family="Manrope, Arial, sans-serif">▲ 6.1%</text>
-    <rect x="488" y="130" width="320" height="150" rx="20" fill="url(#card)"/>
-    <text x="512" y="172" fill="#9FB0C8" font-size="14" font-family="Manrope, Arial, sans-serif">Win rate</text>
-    <text x="512" y="220" fill="#fff" font-size="42" font-weight="800" font-family="Manrope, Arial, sans-serif">31%</text>
-    <text x="512" y="252" fill="#C4A35A" font-size="14" font-weight="700" font-family="Manrope, Arial, sans-serif">● On target</text>
-    <rect x="832" y="130" width="288" height="150" rx="20" fill="url(#card)"/>
-    <text x="856" y="172" fill="#9FB0C8" font-size="14" font-family="Manrope, Arial, sans-serif">Cycle days</text>
-    <text x="856" y="220" fill="#fff" font-size="42" font-weight="800" font-family="Manrope, Arial, sans-serif">24</text>
-    <text x="856" y="252" fill="#1D9270" font-size="14" font-weight="700" font-family="Manrope, Arial, sans-serif">▼ −3 days</text>
+  <rect x="36" y="36" width="100" height="928" rx="22" fill="#0A1628"/>
+  <circle cx="86" cy="86" r="18" fill="url(#gold)"/>
+  <rect x="66" y="140" width="40" height="10" rx="5" fill="#3D8BFF"/>
+  <rect x="66" y="170" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
+  <rect x="66" y="200" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
+  <rect x="66" y="230" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
+  <rect x="66" y="260" width="40" height="10" rx="5" fill="#7A8BA3" opacity="0.45"/>
+  <rect x="66" y="910" width="40" height="10" rx="5" fill="#C4A35A"/>
+
+  <text x="176" y="88" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Sales</text>
+  <text x="176" y="122" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="16">Pipeline · win rate · cycle · Sample data</text>
+  <rect x="1360" y="64" width="140" height="36" rx="18" fill="rgba(61,139,255,0.16)" stroke="#3D8BFF" stroke-width="1.5"/>
+  <text x="1430" y="88" text-anchor="middle" fill="#B8D4FF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Sample data</text>
+
+  <g filter="url(#cardShadow)">
+    <rect x="176" y="160" width="400" height="168" rx="22" fill="url(#card)"/>
+    <rect x="600" y="160" width="400" height="168" rx="22" fill="url(#card)"/>
+    <rect x="1024" y="160" width="376" height="168" rx="22" fill="url(#card)"/>
   </g>
-  <rect x="144" y="320" width="976" height="480" rx="24" fill="url(#card)" filter="url(#soft)"/>
-  <text x="176" y="364" fill="#F4F7FC" font-size="18" font-weight="700" font-family="Manrope, Arial, sans-serif">Stage funnel</text>
-<rect x="176" y="400" width="820" height="44" rx="12" fill="url(#blue)" opacity="0.95"/><text x="196" y="428" fill="#fff" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Qualified</text><rect x="176" y="470" width="640" height="44" rx="12" fill="url(#blue)" opacity="0.83"/><text x="196" y="498" fill="#fff" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Discovery</text><rect x="176" y="540" width="420" height="44" rx="12" fill="url(#blue)" opacity="0.71"/><text x="196" y="568" fill="#fff" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Proposal</text><rect x="176" y="610" width="260" height="44" rx="12" fill="url(#blue)" opacity="0.59"/><text x="196" y="638" fill="#fff" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Negotiation</text><rect x="176" y="680" width="160" height="44" rx="12" fill="url(#blue)" opacity="0.47"/><text x="196" y="708" fill="#fff" font-size="15" font-weight="700" font-family="Manrope, Arial, sans-serif">Won</text></svg>
+  <text x="204" y="210" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15">Pipeline</text>
+  <text x="204" y="268" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">$1.14M</text>
+  <text x="204" y="302" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">▲ 6.1%</text>
+
+  <text x="628" y="210" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15">Win rate</text>
+  <text x="628" y="268" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">31%</text>
+  <text x="628" y="302" fill="#C4A35A" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">● On target</text>
+
+  <text x="1052" y="210" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="15">Cycle days</text>
+  <text x="1052" y="268" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">24</text>
+  <text x="1052" y="302" fill="#1D9270" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700">▼ −3 days</text>
+
+  <g filter="url(#cardShadow)">
+    <rect x="176" y="360" width="1224" height="560" rx="26" fill="url(#card)"/>
+  </g>
+  <text x="216" y="416" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700">Stage funnel</text>
+  <text x="216" y="448" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="14">Deals by stage · current quarter</text>
+
+  <!-- Funnel rows with values outside bars for crisp readability -->
+  <rect x="216" y="490" width="980" height="52" rx="14" fill="url(#blue)"/>
+  <text x="240" y="523" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Qualified</text>
+  <text x="1320" y="523" text-anchor="end" fill="#E8EEF8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">42</text>
+
+  <rect x="216" y="562" width="780" height="52" rx="14" fill="url(#blue)" opacity="0.88"/>
+  <text x="240" y="595" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Discovery</text>
+  <text x="1320" y="595" text-anchor="end" fill="#E8EEF8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">31</text>
+
+  <rect x="216" y="634" width="560" height="52" rx="14" fill="url(#blue)" opacity="0.76"/>
+  <text x="240" y="667" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Proposal</text>
+  <text x="1320" y="667" text-anchor="end" fill="#E8EEF8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">18</text>
+
+  <rect x="216" y="706" width="360" height="52" rx="14" fill="url(#blue)" opacity="0.64"/>
+  <text x="240" y="739" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">Negotiation</text>
+  <text x="1320" y="739" text-anchor="end" fill="#E8EEF8" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">11</text>
+
+  <rect x="216" y="778" width="220" height="52" rx="14" fill="url(#gold)"/>
+  <text x="240" y="811" fill="#0B1B33" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">Won</text>
+  <text x="1320" y="811" text-anchor="end" fill="#E0C078" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700">7</text>
+</svg>
