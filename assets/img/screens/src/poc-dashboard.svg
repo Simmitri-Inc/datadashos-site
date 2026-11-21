@@ -39,9 +39,8 @@
 
 
   <text x="176" y="86" fill="#F4F7FC" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Product scorecard</text>
-  <text x="176" y="120" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="16">Leadership overview · Sample data</text>
+  <text x="176" y="120" fill="#9FB0C8" font-family="Inter, Arial, sans-serif" font-size="16">Leadership overview</text>
   <rect x="1348" y="62" width="152" height="38" rx="19" fill="rgba(61,139,255,0.16)" stroke="#3D8BFF" stroke-width="1.5"/>
-  <text x="1424" y="87" text-anchor="middle" fill="#B8D4FF" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">Sample data</text>
 
 
   <rect x="176" y="156" width="300" height="150" rx="22" fill="url(#card)" stroke="rgba(255,255,255,0.1)"/>

@@ -14,5 +14,4 @@ Contact: hello@datadashos.com
 - [Terms](https://simmitri-inc.github.io/datadashos-site/terms.html): Draft terms of service
 
 ## Notes
-- Product screens show sample data.
 - Early access is waitlist-only.
