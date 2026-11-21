@@ -5,8 +5,28 @@
   const form = document.querySelector("#waitlist-form");
   const yearEls = document.querySelectorAll("[data-year]");
 
+  const contactEmail =
+    (window.DATADASHOS_CONTACT_EMAIL || "hello@datadashos.com").trim() ||
+    "hello@datadashos.com";
+  const formId = (window.DATADASHOS_FORMSPREE_FORM_ID || "").trim();
+  const formConfigured =
+    Boolean(formId) && formId !== "YOUR_FORMSPREE_FORM_ID";
+  const formEndpoint = formConfigured
+    ? `https://formspree.io/f/${formId}`
+    : "";
+
   yearEls.forEach((el) => {
     el.textContent = String(new Date().getFullYear());
+  });
+
+  document.querySelectorAll("[data-contact-email]").forEach((el) => {
+    el.textContent = contactEmail;
+  });
+  document.querySelectorAll("a[data-contact-mailto]").forEach((el) => {
+    el.setAttribute("href", `mailto:${contactEmail}`);
+    if (!el.textContent.trim() || el.hasAttribute("data-contact-email")) {
+      el.textContent = contactEmail;
+    }
   });
 
   const onScroll = () => {
@@ -29,7 +49,6 @@
     });
   }
 
-  // Spotlight + gentle tilt on interactive tiles
   document.querySelectorAll(".tile").forEach((tile) => {
     tile.addEventListener("pointermove", (e) => {
       const rect = tile.getBoundingClientRect();
@@ -46,7 +65,6 @@
     });
   });
 
-  // Reveal on scroll
   const revealEls = document.querySelectorAll(".reveal, .timeline, .stat");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(
@@ -65,7 +83,6 @@
     revealEls.forEach((el) => el.classList.add("is-in"));
   }
 
-  // Animated counters
   document.querySelectorAll("[data-count]").forEach((el) => {
     const target = Number(el.getAttribute("data-count") || "0");
     const suffix = el.getAttribute("data-suffix") || "";
@@ -96,23 +113,44 @@
     }
   });
 
-  // Waitlist form with honeypot + client validation.
-  // POSTs JSON to data-endpoint when set; otherwise falls back to a mailto draft.
+  // Share helpers on thank-you page
+  document.querySelectorAll("[data-share-copy]").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const url = btn.getAttribute("data-share-copy") || window.location.origin + "/";
+      try {
+        await navigator.clipboard.writeText(url);
+        btn.textContent = "Link copied";
+        setTimeout(() => {
+          btn.textContent = "Copy link";
+        }, 2000);
+      } catch (_) {
+        window.prompt("Copy this link:", url);
+      }
+    });
+  });
+
+  // Waitlist form — Formspree JSON POST; no mailto.
   if (form) {
     const started = Date.now();
-    const endpoint = (form.dataset.endpoint || "").trim();
-    const success = form.querySelector(".form-success");
     const failure = form.querySelector(".form-error");
-    const note = form.querySelector(".form-note");
     const submitBtn = form.querySelector('button[type="submit"]');
+    const note = form.querySelector(".form-note");
 
-    if (endpoint) {
-      if (note && note.dataset.noteEndpoint) note.textContent = note.dataset.noteEndpoint;
-      if (success && success.dataset.successEndpoint) success.textContent = success.dataset.successEndpoint;
+    if (formEndpoint) {
+      form.dataset.endpoint = formEndpoint;
+      if (note) {
+        note.textContent = "No spam. We'll reach out when your spot opens.";
+      }
     }
 
     const selectedLabel = (select) =>
       select && select.value ? select.options[select.selectedIndex].text : "";
+
+    const showError = (message) => {
+      if (!failure) return;
+      failure.hidden = false;
+      failure.textContent = message;
+    };
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -129,42 +167,56 @@
       });
       if (!valid) return;
 
-      const industrySelect = form.querySelector("#waitlist-industry");
-      const employeesSelect = form.querySelector("#waitlist-employees");
-      const payload = {
-        name: form.querySelector("#waitlist-name")?.value?.trim() || "",
-        email: form.querySelector("#waitlist-email")?.value?.trim() || "",
-        industry: industrySelect?.value || "",
-        employees: employeesSelect?.value || "",
-        source: "homepage",
-      };
-
-      if (failure) failure.hidden = true;
-
-      if (!endpoint) {
-        const subject = encodeURIComponent("DataDashOS waitlist signup");
-        const body = encodeURIComponent(
-          `Waitlist signup\n\nName: ${payload.name}\nEmail: ${payload.email}` +
-            `\nIndustry: ${selectedLabel(industrySelect) || "—"}` +
-            `\nNumber of employees: ${selectedLabel(employeesSelect) || "—"}`
+      if (!formEndpoint) {
+        showError(
+          `Waitlist is not connected yet. Email us at ${contactEmail}, or set DATADASHOS_FORMSPREE_FORM_ID in assets/js/config.js.`
         );
-        if (success) success.classList.add("is-visible");
-        window.location.href = `mailto:hello@simmitri.com?subject=${subject}&body=${body}`;
         return;
       }
 
+      const industrySelect = form.querySelector("#waitlist-industry");
+      const employeesSelect = form.querySelector("#waitlist-employees");
+      const revenueSelect = form.querySelector("#waitlist-revenue");
+      const payload = {
+        name: form.querySelector("#waitlist-name")?.value?.trim() || "",
+        email: form.querySelector("#waitlist-email")?.value?.trim() || "",
+        company: form.querySelector("#waitlist-company")?.value?.trim() || "",
+        industry: industrySelect?.value || "",
+        industry_label: selectedLabel(industrySelect),
+        employees: employeesSelect?.value || "",
+        employees_label: selectedLabel(employeesSelect),
+        revenue: revenueSelect?.value || "",
+        revenue_label: selectedLabel(revenueSelect),
+        demo_industry: form.querySelector("#demo-industry")?.value || "",
+        demo_employees: form.querySelector("#demo-employees")?.value || "",
+        demo_goal: form.querySelector("#demo-goal")?.value || "",
+        source: form.dataset.source || "homepage",
+        _subject: "DataDashOS waitlist signup",
+      };
+
+      if (failure) failure.hidden = true;
       if (submitBtn) submitBtn.disabled = true;
+
       try {
-        const res = await fetch(endpoint, {
+        const res = await fetch(formEndpoint, {
           method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
           body: JSON.stringify(payload),
         });
         if (!res.ok) throw new Error(`Waitlist request failed: ${res.status}`);
-        if (success) success.classList.add("is-visible");
-        form.reset();
-      } catch (err) {
-        if (failure) failure.hidden = false;
+        const params = new URLSearchParams();
+        if (payload.industry) params.set("industry", payload.industry);
+        if (payload.employees) params.set("size", payload.employees);
+        params.set("joined", "1");
+        const qs = params.toString();
+        window.location.href = `thank-you.html${qs ? `?${qs}` : ""}`;
+      } catch (_) {
+        showError(
+          `Something went wrong — please try again, or email ${contactEmail}.`
+        );
       } finally {
         if (submitBtn) submitBtn.disabled = false;
       }

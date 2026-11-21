@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About DataDashOS — Built by Simmitri operators</title>
-  <meta name="description" content="DataDashOS is built by Simmitri, Inc., a Northern California solar and roofing company with 32 years in business. Learn the operator story behind the product.">
+  <title>About DataDashOS — Built by operators, for operators</title>
+  <meta name="description" content="DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs.">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0B1B33">
   <link rel="canonical" href="https://simmitri-inc.github.io/datadashos-site/about.html">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DataDashOS">
   <meta property="og:url" content="https://simmitri-inc.github.io/datadashos-site/about.html">
-  <meta property="og:title" content="About DataDashOS — Built by Simmitri operators">
-  <meta property="og:description" content="Operator-built KPI software forged inside a 32-year Northern California company.">
+  <meta property="og:title" content="About DataDashOS — Built by operators, for operators">
+  <meta property="og:description" content="DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs.">
   <meta property="og:image" content="https://simmitri-inc.github.io/datadashos-site/assets/og/og-cover.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="About DataDashOS — Built by operators, for operators">
+  <meta name="twitter:description" content="DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs.">
   <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,42 +31,23 @@
         "@id": "https://simmitri-inc.github.io/datadashos-site/about.html#webpage",
         "url": "https://simmitri-inc.github.io/datadashos-site/about.html",
         "name": "About DataDashOS",
-        "description": "The operator story behind DataDashOS and Simmitri, Inc.",
+        "description": "DataDashOS was built by business operators who learned the hard way that every business should start with its KPIs.",
         "isPartOf": { "@id": "https://simmitri-inc.github.io/datadashos-site/#website" },
-        "about": { "@id": "https://simmitri-inc.github.io/datadashos-site/#organization" },
+        "dateModified": "2026-11-21",
         "breadcrumb": {
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://simmitri-inc.github.io/datadashos-site/" },
             { "@type": "ListItem", "position": 2, "name": "About", "item": "https://simmitri-inc.github.io/datadashos-site/about.html" }
           ]
-        },
-        "dateModified": "2026-11-18"
+        }
       },
       {
         "@type": "Organization",
         "@id": "https://simmitri-inc.github.io/datadashos-site/#organization",
-        "name": "Simmitri, Inc.",
-        "legalName": "Simmitri, Inc.",
-        "url": "https://simmitri.com",
-        "foundingDate": "1993",
-        "description": "Northern California solar and roofing company and the operator behind DataDashOS.",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Northern California",
-          "addressRegion": "CA",
-          "addressCountry": "US"
-        },
-        "areaServed": { "@type": "AdministrativeArea", "name": "California" },
-        "sameAs": ["https://simmitri.com", "https://github.com/Simmitri-Inc"]
-      },
-      {
-        "@type": "Person",
-        "@id": "https://simmitri-inc.github.io/datadashos-site/about.html#operator",
-        "name": "Simmitri Leadership",
-        "jobTitle": "Operators & product founders",
-        "worksFor": { "@id": "https://simmitri-inc.github.io/datadashos-site/#organization" },
-        "description": "Operator team that built DataDashOS from the weekly realities of running Simmitri."
+        "name": "DataDashOS",
+        "url": "https://simmitri-inc.github.io/datadashos-site/",
+        "email": "hello@datadashos.com"
       }
     ]
   }
@@ -72,11 +57,10 @@
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <div class="wrap">
-      <a class="logo" href="./">DataDash<span>OS</span></a>
+      <a class="logo" href="./" aria-label="DataDashOS home">DataDash<span>OS</span></a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
       <nav class="nav" id="site-nav" aria-label="Primary">
-        <a href="./#product">Product</a>
-        <a href="./#how">How it works</a>
+        <a href="./how-it-works.html">How it works</a>
         <a href="./faq.html">FAQ</a>
         <a href="./about.html" aria-current="page">About</a>
         <a class="btn btn-shimmer" href="./#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
@@ -84,56 +68,103 @@
     </div>
   </header>
 
-  <main id="main" class="wrap">
-    <header class="page-hero">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="./">Home</a><span aria-hidden="true">›</span><span>About</span>
-      </nav>
-      <p class="eyebrow">Company</p>
-      <h1>Built inside the business it was meant to run</h1>
-      <p class="lede">DataDashOS is the shared KPI layer Simmitri Holdings needed across separate software stacks — now built for contractor owners and portfolios.</p>
-    </header>
+  <main id="main">
+    <section class="hero" style="min-height:auto;padding-bottom:40px" aria-labelledby="about-title">
+      <div class="wrap" style="max-width:760px">
+        <p class="eyebrow">About</p>
+        <h1 id="about-title" class="mask-reveal" style="font-size:clamp(2rem,5vw,3.2rem)">We built the system we wish we'd started with.</h1>
+        <p class="hero-lede" style="margin-top:16px">DataDashOS exists because running a business without clear KPIs is exhausting, expensive and avoidable.</p>
+      </div>
+    </section>
 
-    <aside class="answer-capsule" style="max-width:52ch;margin-bottom:32px">
-      <div class="label">Key takeaways</div>
-      <p>Simmitri Holdings brings two operating companies and 32 years of contractor know-how. DataDashOS unifies performance across those stacks into shared KPIs, weekly AI reviews, and owned actions — without replacing existing software.</p>
-    </aside>
-
-    <article class="prose">
-      <h2>Why we built DataDashOS</h2>
-      <p>Contractor businesses already pay for accounting software, a CRM, and ads platforms. What they still lack is a shared scorecard where those numbers become a weekly decision. Spreadsheets fill the gap until they break under growth.</p>
-      <p>We felt that pain running Simmitri Holdings. So we built the loop we needed: define KPIs, connect data, see performance, review every week with AI, and assign the actions that follow.</p>
-
-      <div class="person-card">
-        <div class="avatar" aria-hidden="true">S</div>
-        <div>
-          <strong>Simmitri Leadership</strong>
-          <div style="color:var(--muted);font-size:0.92rem;margin:4px 0 8px">Operators &amp; product founders · Northern California</div>
-          <p style="color:var(--muted);font-size:0.95rem;margin:0">Credentialed operators of a 32-year home-services company. Entity details and company presence: <a href="https://simmitri.com" rel="noopener">simmitri.com</a>.</p>
+    <section aria-labelledby="why-title">
+      <div class="wrap" style="max-width:760px">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why we built DataDashOS</p>
+          <h2 id="why-title">The hard lesson that became the product</h2>
+        </div>
+        <div class="reveal" style="color:var(--muted);display:grid;gap:14px">
+          <p>We spent years running a real business. We had accounting software, a CRM, marketing tools and plenty of spreadsheets. What we didn't have was agreement on which numbers actually mattered.</p>
+          <p>So meetings ran on opinions. Problems showed up late. Good ideas died without an owner.</p>
+          <p>When we finally defined our KPIs first, everything changed. Priorities got clear. Accountability got real. Growth got repeatable. DataDashOS turns that lesson into a system any business can run.</p>
         </div>
       </div>
+    </section>
 
-      <h2>Geographic roots (GEO)</h2>
-      <p>DataDashOS is headquartered with Simmitri in Northern California, United States. Product judgment reflects California operating realities — permitting timelines, job-cost discipline, seasonal cash flow, and multi-crew coordination — while the software itself is designed for owner-led SMBs across the U.S.</p>
+    <section aria-labelledby="believe-title">
+      <div class="wrap" style="max-width:760px">
+        <div class="section-head reveal">
+          <p class="eyebrow">What we believe</p>
+          <h2 id="believe-title">Principles that shape every release</h2>
+        </div>
+        <ul class="belief-list reveal">
+          <li>KPIs come first. Strategy, hiring and spending should follow from what success looks like in numbers.</li>
+          <li>Owners, not analysts. Business performance shouldn't need a data team to understand.</li>
+          <li>Insight is worthless without action. Every recommendation needs an owner and a result.</li>
+          <li>Your KPIs should grow with you. What matters at 10 people isn't what matters at 100.</li>
+          <li>Honesty over hype. Our product screens show sample data, and we never present it as customer results.</li>
+        </ul>
+      </div>
+    </section>
 
-      <h2>What we stand behind</h2>
-      <ul>
-        <li><strong>32 years</strong> operating Simmitri in Northern California</li>
-        <li><strong>Transparent sample data</strong> on product illustrations — never presented as customer claims</li>
-        <li><strong>AI crawler-friendly</strong> documentation via <a href="./llms.txt">llms.txt</a> and structured FAQ answers</li>
-      </ul>
+    <section aria-labelledby="team-title">
+      <div class="wrap" style="max-width:760px">
+        <div class="section-head reveal">
+          <p class="eyebrow">The team</p>
+          <h2 id="team-title">Named people build trust</h2>
+        </div>
+        <div class="founder-placeholder reveal">
+          <strong>Founder name, photo and bio — placeholder</strong>
+          <p style="margin-top:8px">Add a named founder, photo and a two-sentence bio here. Named people build far more trust than "our team".</p>
+        </div>
+      </div>
+    </section>
 
-      <h2>Talk with us</h2>
-      <p>Owners and operators can reach the team at <a href="mailto:hello@simmitri.com">hello@simmitri.com</a> or via the <a href="./#waitlist">waitlist form</a>.</p>
-    </article>
+    <section aria-labelledby="talk-title" style="padding-bottom:60px">
+      <div class="wrap">
+        <div class="cta-band reveal">
+          <p class="eyebrow" style="color:var(--gold-bright);justify-content:center">Talk with us</p>
+          <h2 id="talk-title">Want to see DataDashOS in action?</h2>
+          <p>Join the waitlist or email us at <a data-contact-mailto data-contact-email>hello@datadashos.com</a>.</p>
+          <p style="margin-top:18px"><a class="btn btn-shimmer" href="./#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap footer-bottom" style="border:0;padding-top:40px">
-      <span>© <span data-year>2026</span> DataDashOS · Simmitri, Inc.</span>
-      <a href="./">Back to home</a>
+    <div class="wrap">
+      <div class="footer-grid-4">
+        <div>
+          <div class="footer-brand">DataDash<span>OS</span></div>
+          <p>DataDashOS — the KPI-first operating system. KPIs first. Everything else follows.</p>
+          <p style="margin-top:12px">Contact: <a data-contact-mailto data-contact-email>hello@datadashos.com</a></p>
+          <p style="margin-top:8px;color:var(--muted);font-size:0.9rem">Social: LinkedIn · X — add when accounts exist</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="./how-it-works.html">How it works</a>
+          <a href="./faq.html">FAQ</a>
+          <a href="./#waitlist">Join the waitlist</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="./about.html">About</a>
+          <a data-contact-mailto>Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="./privacy.html">Privacy policy</a>
+          <a href="./terms.html">Terms of service</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>2026</span> DataDashOS. All rights reserved. Product screens show sample data.</span>
+      </div>
     </div>
   </footer>
+  <div class="mobile-cta"><a class="btn btn-shimmer" href="./#waitlist">Join the waitlist</a></div>
+  <script src="./assets/js/config.js" defer></script>
   <script src="./assets/js/main.js" defer></script>
 </body>
 </html>

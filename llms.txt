@@ -1,21 +1,18 @@
 # DataDashOS
-> The KPI intelligence and AI orchestration layer for contractor businesses. Built with Simmitri Holdings (Northern California).
 
-DataDashOS unifies performance across existing tools into shared KPIs, weekly AI reviews, and owned actions — without replacing the software contractors already run.
+> The KPI-first operating system for your business. DataDashOS defines the KPIs your business should run on, tracks them, helps you hit them, and adapts them as you grow.
 
-## Primary pages
-- [Home](https://simmitri-inc.github.io/datadashos-site/): Product overview, screenshots, how it works, demo contact
-- [About](https://simmitri-inc.github.io/datadashos-site/about.html): Operator story and geographic roots
-- [FAQ](https://simmitri-inc.github.io/datadashos-site/faq.html): Citable Q&A for owners
+Canonical site: https://simmitri-inc.github.io/datadashos-site/
+Contact: hello@datadashos.com
 
-## Key facts
-- Product: DataDashOS (SoftwareApplication / BusinessApplication)
-- Positioning: Unify performance, not software
-- Tagline: Build with clarity. Scale with control.
-- First market: Contractor trades and contractor portfolios
-- Integrations: QuickBooks Online, GoHighLevel, Google Ads, CSV import
-- Contact: hello@simmitri.com
+## Pages
+- [Home](https://simmitri-inc.github.io/datadashos-site/): Product overview, KPI demo, waitlist
+- [How it works](https://simmitri-inc.github.io/datadashos-site/how-it-works.html): Define, Track, Manage, Adapt
+- [About](https://simmitri-inc.github.io/datadashos-site/about.html): Operator story and beliefs
+- [FAQ](https://simmitri-inc.github.io/datadashos-site/faq.html): Common questions
+- [Privacy](https://simmitri-inc.github.io/datadashos-site/privacy.html): Draft privacy policy
+- [Terms](https://simmitri-inc.github.io/datadashos-site/terms.html): Draft terms of service
 
-## Optional
-- [llms-full.txt](https://simmitri-inc.github.io/datadashos-site/llms-full.txt)
-- [sitemap.xml](https://simmitri-inc.github.io/datadashos-site/sitemap.xml)
+## Notes
+- Product screens show sample data.
+- Early access is waitlist-only.

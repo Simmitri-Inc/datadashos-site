@@ -15,7 +15,7 @@
   <circle cx="180" cy="540" r="180" fill="#C4A35A" opacity="0.16"/>
   <text x="88" y="210" fill="#FFFFFF" font-family="Georgia, serif" font-size="86" font-weight="700">DataDashOS</text>
   <rect x="88" y="236" width="120" height="6" rx="3" fill="url(#gold)"/>
-  <text x="88" y="310" fill="#D7E3F5" font-family="Arial, sans-serif" font-size="36">From scattered numbers to clear weekly decisions</text>
-  <text x="88" y="370" fill="#9FB0C8" font-family="Arial, sans-serif" font-size="24">KPI dashboards · Weekly AI reviews · Executive coach</text>
-  <text x="88" y="540" fill="#E0C078" font-family="Arial, sans-serif" font-size="20" font-weight="700">Built by Simmitri, Inc. · Northern California</text>
+  <text x="88" y="310" fill="#D7E3F5" font-family="Arial, sans-serif" font-size="36">KPIs first. Everything else follows.</text>
+  <text x="88" y="370" fill="#9FB0C8" font-family="Arial, sans-serif" font-size="24">Define · Track · Manage · Adapt</text>
+  <text x="88" y="540" fill="#E0C078" font-family="Arial, sans-serif" font-size="20" font-weight="700">The KPI-first operating system for your business</text>
 </svg>
