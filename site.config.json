@@ -1,0 +1,27 @@
+{
+  "$comment": "Single source of site settings. Run `npm run build` after editing; the build writes assets/js/config.js (public values only) and the forms worker imports this file directly. Values marked PLACEHOLDER must be replaced before launch (see SETUP.md).",
+  "siteName": "DataDashOS",
+  "siteUrl": "https://datadashos.com",
+  "deployBasePath": "/datadashos-site/",
+  "contactEmail": "hello@datadashos.com",
+  "leadAlertEmail": "leads@datadashos.com",
+  "emailFrom": "DataDashOS <hello@datadashos.com>",
+  "forms": {
+    "endpoint": "https://forms.datadashos.com",
+    "turnstileSiteKey": "YOUR_TURNSTILE_SITE_KEY",
+    "allowedOrigins": [
+      "https://datadashos.com",
+      "https://www.datadashos.com"
+    ],
+    "confirmLinkHours": 48,
+    "rateLimit": { "windowSeconds": 3600, "maxPerIp": 5, "maxPerEmail": 3 },
+    "sendUnconfirmedAlerts": false
+  },
+  "analytics": {
+    "provider": "plausible",
+    "enabled": true,
+    "domain": "datadashos.com",
+    "scriptSrc": "https://plausible.io/js/script.js",
+    "apiHost": "https://plausible.io"
+  }
+}

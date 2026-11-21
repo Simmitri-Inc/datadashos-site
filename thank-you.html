@@ -4,28 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>You're on the list — DataDashOS</title>
-  <meta name="description" content="Thanks for joining the DataDashOS waitlist. We'll email you when your early-access spot is ready.">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Thanks for joining the DataDashOS waitlist. We're opening early access in waves, and we'll email you as soon as your spot is ready.">
+  <meta name="robots" content="noindex, follow">
   <meta name="theme-color" content="#0B1B33">
-  <link rel="canonical" href="https://simmitri-inc.github.io/datadashos-site/thank-you.html">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://challenges.cloudflare.com https://plausible.io; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://forms.datadashos.com https://plausible.io https://challenges.cloudflare.com http://127.0.0.1:8787 http://localhost:8787; frame-src https://challenges.cloudflare.com; object-src 'none'; base-uri 'self'; form-action 'self' https://forms.datadashos.com">
+  <link rel="canonical" href="https://datadashos.com/thank-you.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DataDashOS">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:url" content="https://datadashos.com/thank-you.html">
   <meta property="og:title" content="You're on the list — DataDashOS">
-  <meta property="og:description" content="Thanks for joining the DataDashOS waitlist.">
-  <meta property="og:image" content="https://simmitri-inc.github.io/datadashos-site/assets/og/og-cover.png">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:description" content="Thanks for joining the DataDashOS waitlist. We're opening early access in waves, and we'll email you as soon as your spot is ready.">
+  <meta property="og:image" content="https://datadashos.com/assets/og/thank-you.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="You're on the list — DataDashOS">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="You're on the list — DataDashOS">
+  <meta name="twitter:description" content="Thanks for joining the DataDashOS waitlist. We're opening early access in waves, and we'll email you as soon as your spot is ready.">
+  <meta name="twitter:image" content="https://datadashos.com/assets/og/thank-you.png">
+
   <link rel="icon" href="./assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" href="./assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="wrap">
       <a class="logo" href="./" aria-label="DataDashOS home">DataDash<span>OS</span></a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span></span></button>
       <nav class="nav" id="site-nav" aria-label="Primary">
         <a href="./how-it-works.html">How it works</a>
+        <a href="./kpi-library/">KPI Library</a>
+        <a href="./enterprise.html">Enterprise</a>
         <a href="./faq.html">FAQ</a>
         <a href="./about.html">About</a>
         <a class="btn btn-shimmer" href="./#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
@@ -34,43 +49,41 @@
   </header>
 
   <main id="main">
-    <section class="hero" style="min-height:auto;padding-bottom:28px" aria-labelledby="thanks-title">
-      <div class="wrap" style="max-width:720px">
-        <p class="eyebrow">Waitlist</p>
-        <h1 id="thanks-title" style="font-size:clamp(2rem,5vw,3rem)">You're on the list.</h1>
-        <p class="hero-lede" style="margin-top:14px">Thanks for joining the DataDashOS waitlist. We're opening early access in waves, and we'll email you as soon as your spot is ready.</p>
+
+    <section class="hero page-hero-section" aria-labelledby="thanks-title">
+      <div class="wrap narrow">
+        <p class="pending-notice" data-pending-notice hidden role="status">Almost there — check your inbox and click the link to confirm.</p>
+        <h1 id="thanks-title" class="page-title">You're on the list.</h1>
+        <p class="hero-lede">Thanks for joining the DataDashOS waitlist. We're opening early access in waves, and we'll email you as soon as your spot is ready.</p>
       </div>
     </section>
 
     <section aria-labelledby="next-title">
-      <div class="wrap" style="max-width:720px">
+      <div class="wrap narrow">
         <div class="section-head reveal">
-          <p class="eyebrow">What happens next</p>
-          <h2 id="next-title">Three simple steps</h2>
+          <h2 id="next-title">What Happens Next</h2>
         </div>
-        <ol class="who-list reveal" style="list-style:decimal;padding-left:1.4rem">
+        <ol class="next-steps reveal">
           <li><strong>Check your inbox.</strong> You'll get a confirmation email in the next few minutes.</li>
           <li><strong>We review your details.</strong> Your industry and team size help us set up the right KPI blueprint for you.</li>
           <li><strong>You get access.</strong> When your spot opens, we'll send your invite and a quick onboarding guide.</li>
         </ol>
-        <p class="reveal" style="margin-top:14px;color:var(--muted);font-size:0.92rem">Note: confirmation email sending depends on your Formspree / email provider setup. Until that is configured, you may not receive an automated confirmation.</p>
       </div>
     </section>
 
-    <section aria-labelledby="wait-title" style="padding-bottom:60px">
-      <div class="wrap" style="max-width:720px">
+    <section class="section-last" aria-labelledby="wait-title">
+      <div class="wrap narrow">
         <div class="section-head reveal">
-          <p class="eyebrow">While you wait</p>
-          <h2 id="wait-title">Start thinking KPI-first</h2>
-          <p>Ask yourself one question: if you could only track three numbers for your business, which would they be? That's where DataDashOS starts.</p>
+          <h2 id="wait-title">While You Wait</h2>
         </div>
-        <p class="reveal" style="color:var(--muted)">Want to jump the line? Share DataDashOS with another business owner who's tired of running on gut feel.</p>
+        <p class="reveal"><strong>Start thinking KPI-first.</strong> Ask yourself one question: if you could only track three numbers for your business, which would they be? That's where DataDashOS starts.</p>
+        <p class="reveal spaced"><strong>Want to jump the line?</strong> Share DataDashOS with another business owner who's tired of running on gut feel.</p>
         <div class="share-row reveal">
-          <button type="button" class="btn btn-ghost" data-share-copy="https://simmitri-inc.github.io/datadashos-site/">Copy link</button>
-          <a class="btn btn-ghost" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fsimmitri-inc.github.io%2Fdatadashos-site%2F" rel="noopener" target="_blank">LinkedIn</a>
-          <a class="btn btn-ghost" href="mailto:?subject=DataDashOS%20%E2%80%94%20KPI-first%20operating%20system&body=Worth%20a%20look%3A%20https%3A%2F%2Fsimmitri-inc.github.io%2Fdatadashos-site%2F">Email</a>
+          <button type="button" class="btn btn-ghost" data-share-copy="https://datadashos.com/">Copy link</button>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fdatadashos.com%2F" rel="noopener" target="_blank">LinkedIn</a>
+          <a class="btn btn-ghost" href="mailto:?subject=DataDashOS%20%E2%80%94%20the%20KPI-first%20operating%20system&amp;body=https%3A%2F%2Fdatadashos.com%2F">Email</a>
         </div>
-        <p class="reveal" style="margin-top:28px"><a class="btn btn-shimmer" href="./how-it-works.html">See how DataDashOS works <span class="arrow" aria-hidden="true">→</span></a></p>
+        <p class="reveal spaced"><a class="btn btn-shimmer" href="./how-it-works.html">See how DataDashOS works <span class="arrow" aria-hidden="true">→</span></a></p>
       </div>
     </section>
   </main>
@@ -79,35 +92,40 @@
     <div class="wrap">
       <div class="footer-grid-4">
         <div>
-          <div class="footer-brand">DataDash<span>OS</span></div>
-          <p>DataDashOS — the KPI-first operating system. KPIs first. Everything else follows.</p>
-          <p style="margin-top:12px">Contact: <a data-contact-mailto data-contact-email>hello@datadashos.com</a></p>
-          <p style="margin-top:8px;color:var(--muted);font-size:0.9rem">Social: LinkedIn · X — add when accounts exist</p>
+          <p class="footer-brand">DataDash<span>OS</span></p>
+          <p><strong>DataDashOS</strong> — the KPI-first operating system. KPIs first. Everything else follows.</p>
+          <p class="footer-contact">Contact: <a data-contact-mailto data-contact-email href="mailto:hello@datadashos.com">hello@datadashos.com</a></p>
+          <!-- PLACEHOLDER: Social links (LinkedIn · X) — add when accounts exist. -->
         </div>
-        <div class="footer-col">
-          <h4>Product</h4>
+        <nav class="footer-col" aria-labelledby="footer-product">
+          <h2 id="footer-product">Product</h2>
           <a href="./how-it-works.html">How it works</a>
           <a href="./faq.html">FAQ</a>
+          <a href="./kpi-library/">KPI Library</a>
+          <a href="./enterprise.html">Enterprise</a>
           <a href="./#waitlist">Join the waitlist</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
+        </nav>
+        <nav class="footer-col" aria-labelledby="footer-company">
+          <h2 id="footer-company">Company</h2>
           <a href="./about.html">About</a>
-          <a data-contact-mailto>Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
+          <a data-contact-mailto href="mailto:hello@datadashos.com">Contact</a>
+        </nav>
+        <nav class="footer-col" aria-labelledby="footer-legal">
+          <h2 id="footer-legal">Legal</h2>
           <a href="./privacy.html">Privacy policy</a>
           <a href="./terms.html">Terms of service</a>
-        </div>
+        </nav>
       </div>
       <div class="footer-bottom">
-        <span>© <span data-year>2026</span> DataDashOS. All rights reserved.</span>
+        <span>© 2026 DataDashOS. All rights reserved. Product screens show sample data.</span>
       </div>
     </div>
   </footer>
   <div class="mobile-cta"><a class="btn btn-shimmer" href="./#waitlist">Join the waitlist</a></div>
+
   <script src="./assets/js/config.js" defer></script>
+  <script src="./assets/js/analytics.js" defer></script>
   <script src="./assets/js/main.js" defer></script>
+  <script defer data-domain="datadashos.com" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>

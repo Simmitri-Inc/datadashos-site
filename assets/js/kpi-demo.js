@@ -34,7 +34,7 @@
   const QUESTIONS = [
     { name: "industry", legend: "Industry", options: B.INDUSTRIES, error: "Choose your industry." },
     { name: "employees", legend: "Number of employees", options: B.EMPLOYEE_RANGES, error: "Choose your team size." },
-    { name: "goal", legend: "Top goal", options: B.GOALS, error: "Choose your top goal." },
+    { name: "goal", legend: "Your top goal right now", options: B.GOALS, error: "Choose your top goal." },
   ];
 
   const CADENCE = { weekly: "Weekly", monthly: "Monthly" };
@@ -216,5 +216,15 @@
         renderResults(answers, { moveFocus: false });
       }
     });
+
+    const preset = new URLSearchParams(window.location.search).get("industry");
+    if (preset && Object.prototype.hasOwnProperty.call(B.INDUSTRIES, preset)) {
+      const radio = form.querySelector(`input[name="industry"][value="${preset}"]`);
+      if (radio) radio.checked = true;
+      if (window.location.hash === "#kpi-demo") {
+        const section = document.getElementById("kpi-demo");
+        if (section) section.scrollIntoView();
+      }
+    }
   });
 })();

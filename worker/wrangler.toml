@@ -1,0 +1,29 @@
+# Cloudflare Worker that receives the waitlist and enterprise forms.
+# Secrets are never stored here: set them with `npx wrangler secret put <NAME>` (see SETUP.md).
+name = "datadashos-forms"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+# PLACEHOLDER: uncomment once forms.datadashos.com is on Cloudflare DNS (SETUP.md, section 2, step 7).
+# routes = [{ pattern = "forms.datadashos.com", custom_domain = true }]
+
+[vars]
+ENVIRONMENT = "production"
+# Comma-separated extra origins allowed to post (e.g. the GitHub Pages URL before the custom domain is live).
+EXTRA_ALLOWED_ORIGINS = ""
+# Overrides siteUrl from site.config.json for confirm/unsubscribe redirects (e.g. the GitHub Pages URL).
+SITE_URL = ""
+
+[[d1_databases]]
+binding = "DB"
+database_name = "datadashos-leads"
+# PLACEHOLDER: replace with the id printed by `npx wrangler d1 create datadashos-leads`.
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["17 3 * * *"]
+
+[observability]
+enabled = true

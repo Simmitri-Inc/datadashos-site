@@ -1,0 +1,53 @@
+name: Site checks
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build and make sure generated files are committed
+        run: |
+          npm run build
+          git diff --exit-code -- . ':(exclude)sitemap.xml' || (echo "::error::Run 'npm run build' and commit the result." && exit 1)
+      - run: npm run check:copy
+      - name: Worker unit tests
+        working-directory: worker
+        run: |
+          npm ci
+          npm test
+
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check links (internal links must resolve; external checked but allowed to be flaky)
+        run: |
+          python3 -m http.server 8080 --bind 127.0.0.1 &
+          sleep 1
+          npx --yes linkinator@6 http://127.0.0.1:8080/ --recurse --skip "^(?!http://127\.0\.0\.1)" --verbosity error
+          npx --yes linkinator@6 http://127.0.0.1:8080/ --recurse --verbosity error --retry || echo "::warning::Some external links failed; see log."
+
+  lighthouse:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Lighthouse CI
+        run: npx --yes @lhci/cli@0.14.x autorun
