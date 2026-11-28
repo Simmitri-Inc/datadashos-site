@@ -29,7 +29,7 @@ export default {
         <div class="cta-band reveal">
           <h2 id="faq-cta-title">Know your numbers. Run your business.</h2>
           <p>Join the waitlist and be among the first to run your business KPI-first.</p>
-          <p><a class="btn btn-shimmer" href="${waitlistHref}">Join the waitlist ${arrow}</a></p>
+          <p><a class="btn" href="${waitlistHref}">Join the waitlist ${arrow}</a></p>
         </div>
       </div>
     </section>`,

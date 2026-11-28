@@ -64,38 +64,24 @@ export default {
   ],
   body: ({ P }) => `
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-stage" aria-hidden="true">
-        <div class="aurora aurora-a"></div>
-        <div class="aurora aurora-b"></div>
-        <svg class="orbital" viewBox="0 0 560 560">
-          <circle class="ring-a" cx="280" cy="280" r="210" stroke-dasharray="4 10"/>
-          <circle class="ring-b" cx="280" cy="280" r="160" stroke-dasharray="2 14"/>
-          <circle cx="280" cy="280" r="110" stroke-dasharray="1 18"/>
-          <circle class="star" cx="280" cy="70" r="3"/>
-          <circle class="star" cx="470" cy="280" r="2.5"/>
-          <circle class="star" cx="120" cy="180" r="2"/>
-          <circle class="star" cx="400" cy="420" r="2.5"/>
-        </svg>
-      </div>
-
       <div class="wrap hero-grid">
         <div class="hero-copy">
-          <p class="brand-mark mask-reveal">
+          <p class="brand-mark">
             <img class="brand-mark-icon" src="${P}assets/img/illustrations/scorecard-mark.svg" width="48" height="48" alt="">
             DataDash<span>OS</span>
           </p>
-          <h1 id="hero-title" class="mask-reveal">KPIs first. <span class="gold-word">Everything else follows.</span></h1>
+          <h1 id="hero-title">KPIs first. <span class="gold-word">Everything else follows.</span></h1>
           <p class="hero-lede">DataDashOS defines the KPIs your business should run on, tracks them, helps you hit them, and adapts them as you grow.</p>
           <p class="hook-line">Hard work without a scorecard is just a hamster wheel.</p>
           <div class="cta-group">
-            <a class="btn btn-shimmer" href="#kpi-demo" data-scroll-demo>Build my KPI scorecard ${arrow}</a>
+            <a class="btn" href="#kpi-demo" data-scroll-demo>Build my KPI scorecard ${arrow}</a>
             <a class="btn btn-ghost" href="${P}how-it-works.html">See how it works</a>
           </div>
         </div>
 
         <div class="hero-visual">
           <div class="product-frame">
-            ${shot(P, "kpi-scorecard", { eager: true, caption: "KPI scorecard", sizes: "(max-width: 960px) 100vw, 580px" })}
+            ${shot(P, "kpi-scorecard", { eager: true, caption: false, sizes: "(max-width: 960px) 100vw, 580px", badge: false })}
           </div>
         </div>
       </div>

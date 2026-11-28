@@ -11,18 +11,27 @@ export const SCREENS = {
   "ai-coach-chat": { w: 1600, h: 1000, alt: "DataDashOS AI business coach chat answering a question about sample KPIs" },
 };
 
-export function shot(P, name, { caption, eager = false, sizes = "(max-width: 960px) 100vw, 560px", frameClass = "shot-frame" } = {}) {
+export function shot(P, name, { caption, eager = false, sizes = "(max-width: 960px) 100vw, 560px", frameClass = "shot-frame", badge = true } = {}) {
   const s = SCREENS[name];
   const loading = eager ? 'fetchpriority="high"' : 'loading="lazy"';
+  const badgeHtml = badge ? `<span class="sample-badge">Sample data</span>` : "";
+  let captionHtml = "";
+  if (caption === false) {
+    captionHtml = "";
+  } else if (caption) {
+    captionHtml = `<figcaption class="shot-caption">${caption}${badge ? ` <span class="caption-sample">· Sample data</span>` : ""}</figcaption>`;
+  } else if (badge) {
+    captionHtml = `<figcaption class="shot-caption caption-sample">Sample data</figcaption>`;
+  }
   return `<figure class="shot-figure">
             <div class="${frameClass}">
               <picture>
                 <source type="image/webp" srcset="${P}assets/img/screens/${name}-800.webp 800w, ${P}assets/img/screens/${name}-1600.webp 1600w" sizes="${sizes}">
                 <img src="${P}assets/img/screens/${name}-1600.png" width="1600" height="1000" alt="${esc(s.alt)}" ${loading} decoding="async">
               </picture>
-              <span class="sample-badge">Sample data</span>
+              ${badgeHtml}
             </div>
-            ${caption ? `<figcaption class="shot-caption">${caption} <span class="caption-sample">· Sample data</span></figcaption>` : `<figcaption class="shot-caption caption-sample">Sample data</figcaption>`}
+            ${captionHtml}
           </figure>`;
 }
 

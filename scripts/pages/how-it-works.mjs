@@ -46,7 +46,7 @@ export default {
         <h1 id="product-title" class="page-title">One system. Four steps. A business that runs on what matters.</h1>
         <p class="hero-lede">DataDashOS gives every business the operating rhythm great companies share: know your numbers, review them every week, act, and improve.</p>
         <div class="cta-group">
-          <a class="btn btn-shimmer" href="${waitlistHref}">Join the waitlist ${arrow}</a>
+          <a class="btn" href="${waitlistHref}">Join the waitlist ${arrow}</a>
         </div>
         <figure class="illus-block reveal">
           <img src="${P}assets/img/illustrations/kpi-operating-rhythm.svg" width="1120" height="280" alt="Illustration of Define, Track, Manage, Adapt — the KPI-first operating rhythm" loading="lazy" decoding="async">
@@ -143,7 +143,7 @@ ${step({
         <div class="cta-band reveal">
           <h2 id="ready-title">Ready to run your business KPI-first?</h2>
           <p>Join the waitlist and be among the first to get access.</p>
-          <p><a class="btn btn-shimmer" href="${waitlistHref}">Join the waitlist ${arrow}</a></p>
+          <p><a class="btn" href="${waitlistHref}">Join the waitlist ${arrow}</a></p>
         </div>
       </div>
     </section>`,

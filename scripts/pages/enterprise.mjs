@@ -38,7 +38,7 @@ export default {
         <h1 id="ent-hero-title" class="page-title">Your data stays yours. Your AI answers to your KPIs.</h1>
         <p class="hero-lede">DataDashOS Enterprise is a private orchestration layer that connects to AI running on your own servers, and to outside AI models without handing them your data.</p>
         <div class="cta-group">
-          <a class="btn btn-shimmer" href="#early-access">Request early access ${arrow}</a>
+          <a class="btn" href="#early-access">Request early access ${arrow}</a>
         </div>
       </div>
     </section>

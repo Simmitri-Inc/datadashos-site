@@ -135,7 +135,7 @@ ${INTEREST_OPTIONS.map(
               <label for="ent-times">Preferred days/times (optional)</label>
             </div>
             ${consentBlock("ent", P)}
-            <button class="btn btn-shimmer btn-block" type="submit">Request early access <span class="arrow" aria-hidden="true">→</span></button>
+            <button class="btn btn-block" type="submit">Request early access <span class="arrow" aria-hidden="true">→</span></button>
             <p class="form-note">DataDashOS Enterprise is in development. Early-access partners will be contacted directly.</p>
             ${formFooter(P)}
           </form>`;
@@ -185,7 +185,7 @@ export function waitlistForm(P) {
               <label for="waitlist-revenue">Annual revenue (optional)</label>
             </div>
             ${consentBlock("waitlist", P)}
-            <button class="btn btn-shimmer btn-block" type="submit">Join the waitlist <span class="arrow" aria-hidden="true">→</span></button>
+            <button class="btn btn-block" type="submit">Join the waitlist <span class="arrow" aria-hidden="true">→</span></button>
             <p class="form-note">No spam. We'll reach out when your spot opens.</p>
             ${formFooter(P)}
           </form>`;
