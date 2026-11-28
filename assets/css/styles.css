@@ -4219,7 +4219,7 @@ section:not(.page-hero-section) .legal-prose h2 {
 .lead-form .field input:focus + label,
 .lead-form .field input:not(:placeholder-shown) + label,
 .lead-form .field select + label {
-  color: var(--gold) !important;
+  color: #8a6f2e !important;
 }
 
 .cta-band .lead-form .check,
@@ -4238,7 +4238,9 @@ section:not(.page-hero-section) .legal-prose h2 {
 .cta-band .form-note a,
 .form-legal a,
 .form-note a {
-  color: var(--gold) !important;
+  color: #8a6f2e !important;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .cta-band .form-status p {
@@ -4297,4 +4299,133 @@ section:not(.page-hero-section) .legal-prose h2 {
 }
 .navy-panel .compare-table thead th {
   background: #f7f8fa !important;
+}
+
+/* ==========================================================================
+   Polish pass 2 — contrast, header-over-hero, a11y, leftovers
+   ========================================================================== */
+
+/* Form errors readable on light surfaces */
+.cta-band .field .error,
+.cta-band .check-wrap .error,
+.cta-band .form-error,
+.lead-form .field .error,
+.lead-form .check-wrap .error,
+.lead-form .form-error {
+  color: #b42318 !important;
+}
+
+.cta-band .form-error,
+.lead-form .form-error {
+  background: rgba(180, 35, 24, 0.08) !important;
+  border-color: rgba(180, 35, 24, 0.28) !important;
+}
+
+.cta-band .field.is-invalid input,
+.cta-band .field.is-invalid textarea,
+.cta-band .field.is-invalid select,
+.lead-form .field.is-invalid input,
+.lead-form .field.is-invalid textarea,
+.lead-form .field.is-invalid select {
+  border-color: #b42318 !important;
+}
+
+/* Focus rings that work on gold buttons */
+.btn:focus-visible {
+  outline: 2px solid var(--navy) !important;
+  outline-offset: 3px;
+}
+
+.btn-ghost:focus-visible {
+  outline-color: var(--gold) !important;
+}
+
+/* Footer headings on dark footer */
+.site-footer .footer-col h2 {
+  color: rgba(232, 238, 248, 0.55) !important;
+}
+
+.site-footer .footer-bottom {
+  border-top-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+/* Light-panel leftovers */
+.navy-panel .panel-note strong {
+  color: var(--text) !important;
+}
+
+.navy-panel .shot-placeholder-frame {
+  background: #f7f8fa !important;
+  border: 1px dashed rgba(10, 18, 32, 0.2) !important;
+  color: var(--muted) !important;
+}
+
+.navy-panel .shot-placeholder-frame strong {
+  color: var(--text) !important;
+}
+
+.navy-panel .badge-early,
+.cta-band .badge-early {
+  color: var(--text) !important;
+  background: rgba(201, 169, 98, 0.12) !important;
+  border-color: rgba(201, 169, 98, 0.35) !important;
+}
+
+/* Home hero bleeds under sticky header so over-hero chrome sits on dark */
+body.has-dark-hero .hero:not(.page-hero-section) {
+  margin-top: calc(-1 * var(--header-h));
+  min-height: 100svh;
+  padding-top: var(--header-h);
+}
+
+body.has-dark-hero .hero:not(.page-hero-section) .hero-grid {
+  min-height: calc(100svh - var(--header-h));
+}
+
+/* Dark frosted header while over the cinematic hero */
+body.has-dark-hero .site-header.is-over-hero {
+  background: rgba(7, 15, 28, 0.55) !important;
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: blur(16px) saturate(1.15);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+}
+
+body.has-dark-hero .site-header.is-over-hero.is-scrolled {
+  background: rgba(7, 15, 28, 0.82) !important;
+}
+
+body.has-dark-hero .site-header.is-over-hero .logo {
+  color: #fff;
+}
+
+body.has-dark-hero .site-header.is-over-hero .logo span {
+  color: var(--gold-bright);
+}
+
+body.has-dark-hero .site-header.is-over-hero .nav a:not(.btn) {
+  color: rgba(232, 238, 248, 0.82);
+}
+
+body.has-dark-hero .site-header.is-over-hero .nav a:not(.btn):hover,
+body.has-dark-hero .site-header.is-over-hero .nav a:not(.btn)[aria-current="page"] {
+  color: #fff;
+}
+
+body.has-dark-hero .site-header.is-over-hero .nav-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+body.has-dark-hero .site-header.is-over-hero .nav-toggle span,
+body.has-dark-hero .site-header.is-over-hero .nav-toggle span::before,
+body.has-dark-hero .site-header.is-over-hero .nav-toggle span::after {
+  background: #fff;
+}
+
+@media (max-width: 720px) {
+  body.has-dark-hero .site-header.is-over-hero .nav {
+    background: rgba(7, 15, 28, 0.96);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
 }

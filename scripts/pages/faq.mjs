@@ -1,9 +1,12 @@
-import { faqList, faqJsonLd, arrow } from "../lib/components.mjs";
+import { faqList, faqJsonLd } from "../lib/components.mjs";
+import { waitlistForm } from "../lib/forms.mjs";
 import { HOME_FAQ } from "./index.mjs";
 
 export default {
   out: "faq.html",
   nav: "faq",
+  embedWaitlist: true,
+  scripts: ["assets/js/forms.js"],
   title: "FAQ — DataDashOS, the KPI-first operating system",
   description: "Answers to common questions about DataDashOS: what it is, who it's for, how it works with your software, how the AI coach uses your data, and how to get early access.",
   breadcrumbs: [
@@ -11,7 +14,7 @@ export default {
     { name: "FAQ", path: "faq.html" },
   ],
   jsonld: [faqJsonLd(HOME_FAQ)],
-  body: ({ P, waitlistHref }) => `
+  body: ({ P }) => `
     <section class="hero page-hero-section" aria-labelledby="faq-title">
       <div class="wrap narrow">
         <h1 id="faq-title" class="page-title">FAQ</h1>
@@ -24,12 +27,12 @@ export default {
       </div>
     </section>
 
-    <section class="section-last" aria-labelledby="faq-cta-title">
+    <section id="waitlist" class="section-last" aria-labelledby="faq-cta-title" tabindex="-1">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2 id="faq-cta-title">Know your numbers. Run your business.</h2>
           <p>Join the waitlist and be among the first to run your business KPI-first.</p>
-          <p><a class="btn" href="${waitlistHref}">Join the waitlist ${arrow}</a></p>
+          ${waitlistForm(P)}
         </div>
       </div>
     </section>`,

@@ -25,6 +25,7 @@ export default [
     title: "You're confirmed — DataDashOS",
     description: "Your email is confirmed for DataDashOS early access.",
     noindex: true,
+    hideMobileCta: true,
     body: ({ P }) =>
       shell(
         view(
@@ -54,6 +55,7 @@ export default [
     title: "You're unsubscribed — DataDashOS",
     description: "You've been unsubscribed from DataDashOS emails.",
     noindex: true,
+    hideMobileCta: true,
     body: ({ P }) =>
       shell(
         view(

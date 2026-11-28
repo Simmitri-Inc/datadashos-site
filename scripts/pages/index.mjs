@@ -31,6 +31,7 @@ const icon = {
 export default {
   out: "index.html",
   nav: "home",
+  bodyClass: "has-dark-hero",
   title: "DataDashOS — The KPI-first operating system for your business",
   description: "DataDashOS defines the KPIs your business should run on, tracks them, helps you hit them, and adapts them as you grow.",
   ogTitle: "KPIs first. Everything else follows.",

@@ -15,7 +15,6 @@
   const nav = document.querySelector(".nav");
   const mobileCta = document.querySelector(".mobile-cta");
   const yearEls = document.querySelectorAll("[data-year]");
-  const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const cfg = window.DATADASHOS_CONFIG || {};
   const contactEmail = (cfg.contactEmail || "hello@datadashos.com").trim();
@@ -66,18 +65,34 @@
     }
   });
 
+  const darkHero = document.querySelector(".has-dark-hero .hero:not(.page-hero-section)");
   const onScroll = () => {
     if (!header) return;
     header.classList.toggle("is-scrolled", window.scrollY > 12);
+    if (darkHero) {
+      const heroBottom = darkHero.offsetTop + darkHero.offsetHeight - header.offsetHeight;
+      header.classList.toggle("is-over-hero", window.scrollY < heroBottom);
+    }
   };
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  let lastFocus = null;
   const setNavOpen = (open) => {
     if (!toggle || !nav) return;
+    const wasOpen = nav.classList.contains("is-open");
     nav.classList.toggle("is-open", open);
     toggle.setAttribute("aria-expanded", open ? "true" : "false");
     toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.style.overflow = open ? "hidden" : "";
+    if (open && !wasOpen) {
+      lastFocus = document.activeElement;
+      const first = nav.querySelector("a");
+      if (first) first.focus();
+    } else if (!open && wasOpen) {
+      (lastFocus || toggle).focus?.();
+      lastFocus = null;
+    }
   };
 
   if (toggle && nav) {
@@ -88,7 +103,23 @@
       link.addEventListener("click", () => setNavOpen(false));
     });
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") setNavOpen(false);
+      if (!nav.classList.contains("is-open")) return;
+      if (e.key === "Escape") {
+        setNavOpen(false);
+        return;
+      }
+      if (e.key !== "Tab") return;
+      const focusables = [toggle, ...nav.querySelectorAll("a")];
+      const i = focusables.indexOf(document.activeElement);
+      if (e.shiftKey) {
+        if (i <= 0) {
+          e.preventDefault();
+          focusables[focusables.length - 1].focus();
+        }
+      } else if (i === focusables.length - 1 || i === -1) {
+        e.preventDefault();
+        focusables[0].focus();
+      }
     });
     document.addEventListener("pointerdown", (e) => {
       if (!nav.classList.contains("is-open")) return;
@@ -128,23 +159,6 @@
       });
     }
   }
-
-  document.querySelectorAll(".tile").forEach((tile) => {
-    tile.addEventListener("pointermove", (e) => {
-      if (prefersReducedMotion()) return;
-      const rect = tile.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      tile.style.setProperty("--mx", `${x}px`);
-      tile.style.setProperty("--my", `${y}px`);
-      const rx = ((y / rect.height) - 0.5) * -4;
-      const ry = ((x / rect.width) - 0.5) * 4;
-      tile.style.transform = `translateY(-6px) rotateX(${rx}deg) rotateY(${ry}deg)`;
-    });
-    tile.addEventListener("pointerleave", () => {
-      tile.style.transform = "";
-    });
-  });
 
   const revealEls = document.querySelectorAll(".reveal, .timeline, .stat");
   if ("IntersectionObserver" in window) {
