@@ -33,8 +33,8 @@ export function emailType(email) {
 
 const EMAIL_RE = /^[^\s@<>()[\]\\,;:"]+@[^\s@<>()[\]\\,;:"]+\.[a-z]{2,}$/i;
 
-/** Normalises to E.164. Bare 10-digit numbers are treated as US/Canada (+1). Returns null if invalid. */
-export function normalisePhone(raw) {
+/** Normalizes to E.164. Bare 10-digit numbers are treated as US/Canada (+1). Returns null if invalid. */
+export function normalizePhone(raw) {
   const s = String(raw || "").trim();
   if (!s) return "";
   if (!/^[+\d\s().-]+$/.test(s)) return null;
@@ -94,7 +94,7 @@ export function validateLead(body) {
   if (data.email && !EMAIL_RE.test(data.email)) errors.email = "Enter a valid email.";
   if (!data.email_consent) errors.email_consent = "Email consent is required.";
 
-  const phone = normalisePhone(str(body.phone, 30) ?? "x");
+  const phone = normalizePhone(str(body.phone, 30) ?? "x");
   if (phone === null) errors.phone = "Enter a valid mobile number, or leave it blank.";
   else data.phone = phone;
   // SMS consent only counts when a number was entered.

@@ -4,7 +4,7 @@ import { dataFlowDiagram } from "../lib/data-flow-diagram.mjs";
 
 const SECURITY_FAQ = [
   ["Where does my data live?", "On your own servers or private cloud. DataDashOS's KPI layer only sees structured KPI data, never your raw records."],
-  ["Who can see it?", "Only the people you authorise. Role-based access controls who sees which KPIs, and every action is logged."],
+  ["Who can see it?", "Only the people you authorize. Role-based access controls who sees which KPIs, and every action is logged."],
   ["Can we use our own AI model?", "Yes. Connect AI models running on your own servers, outside models, or both."],
   ["Do outside AI providers see our data?", "Only the KPI summaries you choose to send. No customer details, financials or raw files."],
   ["What happens if we leave?", "Your data never left your environment, so there's nothing to extract. Your KPI definitions and history can be exported."],

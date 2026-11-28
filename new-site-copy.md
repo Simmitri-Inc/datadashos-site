@@ -408,7 +408,7 @@ Our team can set up a dedicated server for your business so you can run AI local
 
 **Where does my data live?** On your own servers or private cloud. DataDashOS's KPI layer only sees structured KPI data, never your raw records.
 
-**Who can see it?** Only the people you authorise. Role-based access controls who sees which KPIs, and every action is logged.
+**Who can see it?** Only the people you authorize. Role-based access controls who sees which KPIs, and every action is logged.
 
 **Can we use our own AI model?** Yes. Connect AI models running on your own servers, outside models, or both.
 
@@ -530,14 +530,14 @@ Cards linking to each industry page: Construction & trades · Home services · P
 
 | KPI | What it tells you | Why it matters |
 | --- | --- | --- |
-| Billable utilisation | Share of hours billed to clients | Core driver of profit |
-| Realisation rate | Billed value actually collected | Exposes write-offs and discounts |
+| Billable utilization | Share of hours billed to clients | Core driver of profit |
+| Realization rate | Billed value actually collected | Exposes write-offs and discounts |
 | Revenue per employee | Output per person | Shows efficiency as you grow |
 | Client profitability | Margin by client | Shows who to grow or reprice |
 | Pipeline value | Proposals in progress | Predicts future workload |
 | Client retention | Clients who renew or return | Measures relationship strength |
 
-**Example scenario:** A 15-person consulting firm felt overworked but under-earning. Tracking utilisation and client profitability showed two large clients consumed far more hours than they paid for. The firm renegotiated scope and freed capacity for better-paying work.
+**Example scenario:** A 15-person consulting firm felt overworked but under-earning. Tracking utilization and client profitability showed two large clients consumed far more hours than they paid for. The firm renegotiated scope and freed capacity for better-paying work.
 
 **CTA:** See your professional services KPIs →
 
@@ -572,14 +572,14 @@ Cards linking to each industry page: Construction & trades · Home services · P
 
 | KPI | What it tells you | Why it matters |
 | --- | --- | --- |
-| Appointment utilisation | Booked slots out of available slots | Shows capacity use |
+| Appointment utilization | Booked slots out of available slots | Shows capacity use |
 | No-show rate | Missed appointments | Lost revenue and care gaps |
 | Days in accounts receivable | Time to get paid | Protects cash flow |
 | Claim denial rate | Claims rejected first time | Exposes billing problems |
 | New patient growth | New patients per month | Measures practice growth |
 | Patient satisfaction | Survey scores and reviews | Drives retention and referrals |
 
-**Example scenario:** A multi-provider clinic struggled with cash flow despite a busy schedule. Tracking no-shows and claim denials showed both were higher than the team realised. They added reminders, fixed common billing errors, and reviewed both numbers every week.
+**Example scenario:** A multi-provider clinic struggled with cash flow despite a busy schedule. Tracking no-shows and claim denials showed both were higher than the team realized. They added reminders, fixed common billing errors, and reviewed both numbers every week.
 
 *\[Note: the demo and app never collect patient data. These KPIs use summary numbers only.\]*
 
@@ -646,6 +646,6 @@ Cards linking to each industry page: Construction & trades · Home services · P
 
 **Example scenario:** A holding company owned several businesses, each with its own accounting and CRM. Monthly roll-ups took days and the numbers never quite matched. With shared KPI definitions, each company kept its own dashboard while leadership saw one group scorecard. They spotted an underperforming company early and tracked referrals between businesses for the first time.
 
-**How DataDashOS helps:** Each company keeps a private dashboard. The group sees an authorised shared view on the same definitions, without replacing anyone's software.
+**How DataDashOS helps:** Each company keeps a private dashboard. The group sees an authorized shared view on the same definitions, without replacing anyone's software.
 
 **CTA:** See your portfolio KPIs → *\[links to Enterprise early access\]*
