@@ -214,7 +214,7 @@ export function cspFor(page, { forHeader = false } = {}) {
     "object-src 'none'",
     "base-uri 'self'",
     `form-action 'self' ${endpointOrigin}`.trim(),
-    // Only honoured as an HTTP header, not in a <meta> tag.
+    // Only honored as an HTTP header, not in a <meta> tag.
     ...(forHeader ? ["frame-ancestors 'none'", "upgrade-insecure-requests"] : []),
   ].join("; ");
 }

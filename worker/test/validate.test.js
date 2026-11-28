@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { validateLead, emailType, normalisePhone } from "../src/validate.js";
+import { validateLead, emailType, normalizePhone } from "../src/validate.js";
 import { verifyTwilioSignature, unsubscribeToken, verifyUnsubscribeToken } from "../src/crypto.js";
 
 const base = {
@@ -52,11 +52,11 @@ test("personal email domains are tagged, not blocked", () => {
   assert.equal(validateLead({ ...base, email: "x@yahoo.com" }).data.email_type, "personal");
 });
 
-test("phone normalisation", () => {
-  assert.equal(normalisePhone(""), "");
-  assert.equal(normalisePhone("+44 20 7946 0958"), "+442079460958");
-  assert.equal(normalisePhone("12"), null);
-  assert.equal(normalisePhone("call me"), null);
+test("phone normalization", () => {
+  assert.equal(normalizePhone(""), "");
+  assert.equal(normalizePhone("+44 20 7946 0958"), "+442079460958");
+  assert.equal(normalizePhone("12"), null);
+  assert.equal(normalizePhone("call me"), null);
 });
 
 test("unsubscribe tokens verify and resist tampering", async () => {

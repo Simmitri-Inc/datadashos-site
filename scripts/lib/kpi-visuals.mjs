@@ -115,7 +115,7 @@ const marker = (id, color) =>
 
 const ROLLUP_TITLE = "Portfolio roll-up: each company keeps a private dashboard; shared KPI definitions feed one group scorecard";
 const ROLLUP_DESC =
-  "Company A, Company B and Company C each keep their own software and a private dashboard. All three use the same shared KPI definitions, which roll up into one group scorecard, an authorised shared view for leadership.";
+  "Company A, Company B and Company C each keep their own software and a private dashboard. All three use the same shared KPI definitions, which roll up into one group scorecard, an authorized shared view for leadership.";
 
 export function rollupDiagram() {
   const companies = ["Company A", "Company B", "Company C"];
@@ -139,7 +139,7 @@ ${companies
             ${line(200, 312, 200, 372, C.blue, "ru-s-b")}
             ${rect(50, 376, 300, 130, C.gold)}
             ${t(200, 432, "Group scorecard", { size: 20 })}
-            ${t(200, 460, "Authorised shared view", { size: 14, weight: 600, fill: C.muted })}
+            ${t(200, 460, "Authorized shared view", { size: 14, weight: 600, fill: C.muted })}
           </svg>`;
   return `<figure class="rollup-figure">
           ${stacked}

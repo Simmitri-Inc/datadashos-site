@@ -73,7 +73,7 @@ Shows which crews protect your margin
 Change-order capture rate
 Extra work billed vs. performed
 Money left on the table
-Crew utilisation
+Crew utilization
 Billable crew hours vs. paid hours
 Idle time quietly kills margin
 Revenue earned per finished job
@@ -130,7 +130,7 @@ Slow schedules lose jobs to competitors
 Revenue per truck per day
 Daily revenue each truck generates
 Core field productivity
-Technician utilisation
+Technician utilization
 Wrench time vs. paid time
 Shows drive and idle time
 Comfort advisor close rate
@@ -159,10 +159,10 @@ Why KPIs matter: In a services firm, time is the product. KPIs show where hours 
 KPI
 What it tells you
 Why it matters
-Billable utilisation
+Billable utilization
 Share of hours billed to clients
 Core driver of profit
-Realisation rate
+Realization rate
 Billed value actually collected
 Exposes write-offs and discounts
 Revenue per employee
@@ -177,7 +177,7 @@ Predicts future workload
 Client retention
 Clients who renew or return
 Measures relationship strength
-Example scenario: A 15-person consulting firm felt overworked but under-earning. Tracking utilisation and client profitability showed two large clients consumed far more hours than they paid for. The firm renegotiated scope and freed capacity for better-paying work.
+Example scenario: A 15-person consulting firm felt overworked but under-earning. Tracking utilization and client profitability showed two large clients consumed far more hours than they paid for. The firm renegotiated scope and freed capacity for better-paying work.
 Operational KPIs most professional services firms miss:
 KPI
 What it tells you
@@ -272,7 +272,7 @@ Why KPIs matter: Practices balance patient care, scheduling and billing. KPIs sh
 KPI
 What it tells you
 Why it matters
-Appointment utilisation
+Appointment utilization
 Booked slots out of available slots
 Shows capacity use
 No-show rate
@@ -290,7 +290,7 @@ Measures practice growth
 Patient satisfaction
 Survey scores and reviews
 Drives retention and referrals
-Example scenario: A multi-provider clinic struggled with cash flow despite a busy schedule. Tracking no-shows and claim denials showed both were higher than the team realised. They added reminders, fixed common billing errors, and reviewed both numbers every week.
+Example scenario: A multi-provider clinic struggled with cash flow despite a busy schedule. Tracking no-shows and claim denials showed both were higher than the team realized. They added reminders, fixed common billing errors, and reviewed both numbers every week.
 [Note: the demo and app never collect patient data. These KPIs use summary numbers only.]
 Operational KPIs most practices miss:
 KPI
@@ -366,9 +366,9 @@ Equipment reliability
 Mean time to repair
 Average time to fix a breakdown
 Maintenance responsiveness
-Throughput per labour hour
+Throughput per labor hour
 Units made per hour worked
-Labour productivity
+Labor productivity
 Supplier on-time and in-full
 Supplier deliveries complete and on time
 Upstream reliability
@@ -466,7 +466,7 @@ KPI health score
 How many KPIs each company is hitting
 A quick signal for leadership
 Example scenario: A holding company owned several businesses, each with its own accounting and CRM. Monthly roll-ups took days and the numbers never quite matched. With shared KPI definitions, each company kept its own dashboard while leadership saw one group scorecard. They spotted an underperforming company early and tracked referrals between businesses for the first time.
-How DataDashOS helps: Each company keeps a private dashboard. The group sees an authorised shared view on the same definitions, without replacing anyone's software.
+How DataDashOS helps: Each company keeps a private dashboard. The group sees an authorized shared view on the same definitions, without replacing anyone's software.
 Operational KPIs most portfolios miss:
 KPI
 What it tells you
