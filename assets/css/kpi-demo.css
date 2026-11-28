@@ -371,3 +371,50 @@
   background: rgba(15, 32, 54, 0.75);
   border-color: rgba(255, 255, 255, 0.1);
 }
+
+/* Light conversion: demo sits on light panels */
+.navy-panel .kpi-demo {
+  background: #f7f8fa !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: none !important;
+  color: var(--text) !important;
+}
+.navy-panel .kpi-demo legend,
+.navy-panel .kpi-results-title,
+.navy-panel .kpi-card-name {
+  color: var(--text) !important;
+}
+.navy-panel .kpi-q-num {
+  color: #070f1c !important;
+  background: var(--gold) !important;
+  box-shadow: none !important;
+}
+.navy-panel .kpi-results-summary,
+.navy-panel .kpi-results-context,
+.navy-panel .kpi-results-disclaimer,
+.navy-panel .kpi-card-def,
+.navy-panel .kpi-card-meta,
+.navy-panel .kpi-card-target-label,
+.navy-panel .kpi-card-target-src {
+  color: var(--muted) !important;
+}
+.navy-panel .kpi-card-rank {
+  color: var(--gold) !important;
+}
+.navy-panel .kpi-card-target strong {
+  color: var(--text) !important;
+}
+.navy-panel .kpi-option label {
+  background: #fff !important;
+  border-color: rgba(10, 18, 32, 0.14) !important;
+  color: var(--text) !important;
+}
+.navy-panel .kpi-option input:checked + label {
+  border-color: var(--gold) !important;
+  background: var(--gold) !important;
+  color: #070f1c !important;
+}
+.navy-panel .kpi-card {
+  background: #fff !important;
+  border-color: var(--line) !important;
+}
