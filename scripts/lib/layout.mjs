@@ -74,7 +74,7 @@ const footer = (P, page) => `
       </div>
     </div>
   </footer>
-  <div class="mobile-cta"><a class="btn" href="${page.waitlistHref}">Join the waitlist</a></div>`;
+  ${page.hideMobileCta ? "" : `<div class="mobile-cta"><a class="btn" href="${page.waitlistHref}">Join the waitlist</a></div>`}`;
 
 export const breadcrumbJsonLd = (crumbs) => ({
   "@type": "BreadcrumbList",
@@ -113,7 +113,7 @@ export function renderPage(page) {
   const ctx = {
     P,
     page,
-    waitlistHref: page.out === "index.html" ? "#waitlist" : `${P}#waitlist`,
+    waitlistHref: page.embedWaitlist || page.out === "index.html" ? "#waitlist" : `${P}#waitlist`,
   };
   page.waitlistHref = ctx.waitlistHref;
   const body = page.body(ctx);

@@ -98,7 +98,7 @@
         <a href="./enterprise.html">Enterprise</a>
         <a href="./faq.html">FAQ</a>
         <a href="./about.html">About</a>
-        <a class="btn" href="./#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn" href="#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>
@@ -111,7 +111,7 @@
         <h1 id="product-title" class="page-title">One system. Four steps. A business that runs on what matters.</h1>
         <p class="hero-lede">DataDashOS gives every business the operating rhythm great companies share: know your numbers, review them every week, act, and improve.</p>
         <div class="cta-group">
-          <a class="btn" href="./#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn" href="#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
         </div>
         <figure class="illus-block reveal">
           <img src="./assets/img/illustrations/kpi-operating-rhythm.svg" width="1120" height="280" alt="Illustration of Define, Track, Manage, Adapt — the KPI-first operating rhythm" loading="lazy" decoding="async">
@@ -277,12 +277,101 @@
       </div>
     </section>
 
-    <section class="section-last" aria-labelledby="ready-title">
+    <section id="waitlist" class="section-last" aria-labelledby="ready-title" tabindex="-1">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2 id="ready-title">Ready to run your business KPI-first?</h2>
           <p>Join the waitlist and be among the first to get access.</p>
-          <p><a class="btn" href="./#waitlist">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a></p>
+          <form class="lead-form" id="waitlist-form" novalidate data-form-type="waitlist" data-analytics-name="Waitlist" data-success-url="./thank-you.html?status=pending">
+            <div class="hp" aria-hidden="true">
+              <label for="waitlist-website">Website</label>
+              <input id="waitlist-website" type="text" name="website" tabindex="-1" autocomplete="off">
+            </div>
+            <input type="hidden" name="started_at" value="">
+            <input type="hidden" id="demo-industry" name="demo_industry" value="">
+            <input type="hidden" id="demo-employees" name="demo_employees" value="">
+            <input type="hidden" id="demo-goal" name="demo_goal" value="">
+            <div class="field">
+              <input id="waitlist-name" name="name" type="text" required maxlength="120" placeholder=" " autocomplete="name">
+              <label for="waitlist-name">Full name</label>
+              <div class="error">Please enter your name.</div>
+            </div>
+            <div class="field">
+              <input id="waitlist-email" name="email" type="email" required maxlength="200" placeholder=" " autocomplete="email">
+              <label for="waitlist-email">Work email</label>
+              <div class="error">Enter a valid email.</div>
+            </div>
+            <div class="field">
+              <input id="waitlist-company" name="company" type="text" required maxlength="160" placeholder=" " autocomplete="organization">
+              <label for="waitlist-company">Company name</label>
+              <div class="error">Please enter your company name.</div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <select id="waitlist-industry" name="industry" required>
+                  <option value="">Select industry</option>
+                  <option value="construction_trades">Construction &amp; trades</option>
+                  <option value="home_services">Home services</option>
+                  <option value="professional_services">Professional services</option>
+                  <option value="retail_ecommerce">Retail &amp; e-commerce</option>
+                  <option value="healthcare">Healthcare</option>
+                  <option value="manufacturing">Manufacturing</option>
+                  <option value="technology">Technology</option>
+                  <option value="building_supply_distribution">Building supply &amp; distribution</option>
+                  <option value="other">Other</option>
+                </select>
+                <label for="waitlist-industry">Industry</label>
+                <div class="error">Choose an industry.</div>
+              </div>
+              <div class="field">
+                <select id="waitlist-employees" name="employees" required>
+                  <option value="">Select size</option>
+                  <option value="1-10">1–10</option>
+                  <option value="11-50">11–50</option>
+                  <option value="51-200">51–200</option>
+                  <option value="201-500">201–500</option>
+                  <option value="500+">500+</option>
+                </select>
+                <label for="waitlist-employees">Number of employees</label>
+                <div class="error">Choose a team size.</div>
+              </div>
+            </div>
+            <div class="field">
+              <select id="waitlist-revenue" name="revenue">
+                  <option value="">Select (optional)</option>
+                  <option value="under_1m">Under $1M</option>
+                  <option value="1m_5m">$1M–$5M</option>
+                  <option value="5m_20m">$5M–$20M</option>
+                  <option value="20m_plus">$20M+</option>
+              </select>
+              <label for="waitlist-revenue">Annual revenue (optional)</label>
+            </div>
+            <div class="field">
+              <input id="waitlist-phone" name="phone" type="tel" maxlength="20" placeholder=" " autocomplete="tel" inputmode="tel" aria-describedby="waitlist-phone-error">
+              <label for="waitlist-phone">Mobile number (optional)</label>
+              <div class="error" id="waitlist-phone-error">Enter a valid mobile number, or leave it blank.</div>
+            </div>
+            <div class="check-wrap">
+              <label class="check">
+                <input type="checkbox" name="email_consent" value="yes" required aria-describedby="waitlist-email-consent-error">
+                <span>I agree to receive emails from DataDashOS about early access. I can unsubscribe at any time. <a href="./privacy.html">Privacy Policy</a></span>
+              </label>
+              <div class="error" id="waitlist-email-consent-error">Please tick this box so we can email you about early access.</div>
+            </div>
+            <div class="check-wrap">
+              <label class="check">
+                <input type="checkbox" name="sms_consent" value="yes" aria-describedby="waitlist-sms-consent-error">
+                <span>I agree to receive text messages from DataDashOS about early access and my account. Message frequency varies. Message and data rates may apply. Reply STOP to opt out, HELP for help. Consent is not a condition of signing up.</span>
+              </label>
+              <div class="error" id="waitlist-sms-consent-error">Add your mobile number above to get texts, or untick this box.</div>
+            </div>
+            <div class="turnstile-slot" data-turnstile></div>
+            <button class="btn btn-block" type="submit">Join the waitlist <span class="arrow" aria-hidden="true">→</span></button>
+            <p class="form-note">No spam. We'll reach out when your spot opens.</p>
+            <p class="form-legal">We'll only use this to contact you about early access. <a href="./privacy.html">Privacy Policy</a></p>
+            <div class="form-status" role="status" aria-live="polite" hidden></div>
+            <div class="form-error" role="alert" hidden></div>
+          </form>
         </div>
       </div>
     </section>
@@ -304,7 +393,7 @@
           <a href="./kpi-library/">KPI Library</a>
           <a href="./kpi-library/building-supply-distribution/">Building supply &amp; distribution</a>
           <a href="./enterprise.html">Enterprise</a>
-          <a href="./#waitlist">Join the waitlist</a>
+          <a href="#waitlist">Join the waitlist</a>
         </nav>
         <nav class="footer-col" aria-labelledby="footer-company">
           <h2 id="footer-company">Company</h2>
@@ -322,11 +411,12 @@
       </div>
     </div>
   </footer>
-  <div class="mobile-cta"><a class="btn" href="./#waitlist">Join the waitlist</a></div>
+  <div class="mobile-cta"><a class="btn" href="#waitlist">Join the waitlist</a></div>
 
   <script src="./assets/js/config.js" defer></script>
   <script src="./assets/js/analytics.js" defer></script>
   <script src="./assets/js/main.js" defer></script>
+  <script src="./assets/js/forms.js" defer></script>
   <script defer data-domain="datadashos.com" src="https://plausible.io/js/script.js"></script>
 </body>
 </html>

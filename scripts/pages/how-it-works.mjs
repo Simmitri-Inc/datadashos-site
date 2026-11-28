@@ -1,4 +1,5 @@
 import { shot, placeholderShot, arrow } from "../lib/components.mjs";
+import { waitlistForm } from "../lib/forms.mjs";
 
 const step = ({ id, n, name, headline, intro, bullets, media, reverse }) => `
     <section id="step-${n}" aria-labelledby="step${n}-title">
@@ -20,6 +21,8 @@ ${bullets.map((b) => `              <li>${b}</li>`).join("\n")}
 export default {
   out: "how-it-works.html",
   nav: "how",
+  embedWaitlist: true,
+  scripts: ["assets/js/forms.js"],
   title: "How DataDashOS Works — Define, Track, Manage, Adapt",
   description: "See how DataDashOS defines your KPIs, tracks them in one scorecard, turns weekly reviews into action, and adapts your KPIs as you grow.",
   breadcrumbs: [
@@ -138,12 +141,12 @@ ${step({
       </div>
     </section>
 
-    <section class="section-last" aria-labelledby="ready-title">
+    <section id="waitlist" class="section-last" aria-labelledby="ready-title" tabindex="-1">
       <div class="wrap">
         <div class="cta-band reveal">
           <h2 id="ready-title">Ready to run your business KPI-first?</h2>
           <p>Join the waitlist and be among the first to get access.</p>
-          <p><a class="btn" href="${waitlistHref}">Join the waitlist ${arrow}</a></p>
+          ${waitlistForm(P)}
         </div>
       </div>
     </section>`,
