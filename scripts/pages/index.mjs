@@ -72,7 +72,6 @@ export default {
           </p>
           <h1 id="hero-title">KPIs first. <span class="gold-word">Everything else follows.</span></h1>
           <p class="hero-lede">DataDashOS defines the KPIs your business should run on, tracks them, helps you hit them, and adapts them as you grow.</p>
-          <p class="hook-line">Hard work without a scorecard is just a hamster wheel.</p>
           <div class="cta-group">
             <a class="btn" href="#kpi-demo" data-scroll-demo>Build my KPI scorecard ${arrow}</a>
             <a class="btn btn-ghost" href="${P}how-it-works.html">See how it works</a>
@@ -94,11 +93,8 @@ export default {
             <p class="eyebrow">The problem</p>
             <h2 id="problem-title">You can't improve what you never defined.</h2>
             <p>Most businesses never sit down and decide which few numbers define success. So everyone works hard, and no one agrees on what winning looks like.</p>
+            <p class="hook-line">Hard work without a scorecard is just a hamster wheel.</p>
           </div>
-          <p class="problem-head">
-            <span>Sound familiar?</span>
-            <span>What it's costing you</span>
-          </p>
           <div class="tile-grid tile-grid-3">
             <article class="tile navy-tile">
               <div class="tile-icon" aria-hidden="true">${icon.drift}</div>

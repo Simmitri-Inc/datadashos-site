@@ -14,8 +14,6 @@ Homepage copy for all businesses. Product screens show sample data; claims stay 
 
 **Subheadline:** DataDashOS defines the KPIs your business should run on, tracks them, helps you hit them, and adapts them as you grow.
 
-**Hook line:** Hard work without a scorecard is just a hamster wheel.
-
 **Primary CTA:** Build my KPI scorecard **Secondary CTA:** See how it works
 
 ## The Problem
@@ -24,7 +22,9 @@ Homepage copy for all businesses. Product screens show sample data; claims stay 
 
 Most businesses never sit down and decide which few numbers define success. So everyone works hard, and no one agrees on what winning looks like.
 
-| Sound familiar? | What it's costing you |
+**Hook line:** Hard work without a scorecard is just a hamster wheel.
+
+| Problem | Cost |
 | --- | --- |
 | **Definitions drift** | Teams disagree on what a lead, a sale or a margin means, so no report is trusted. |
 | **Data is scattered** | Accounting, CRM, marketing and spreadsheets each hold part of the truth. Nobody sees the whole scorecard. |
@@ -380,7 +380,7 @@ Role-based access, human approval for key decisions, escalation paths and perman
 | --- | --- |
 | Customer records and contact details | KPI summaries (for example, "close rate: 31%") |
 | Financial and bank data | Rounded totals and trends |
-| Employee and payroll data | Anonymised performance patterns |
+| Employee and payroll data | Anonymized performance patterns |
 | Raw files, emails and documents | Nothing else |
 
 You decide what's shared, and you can turn outside AI off entirely.

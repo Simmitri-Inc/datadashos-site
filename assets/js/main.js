@@ -8,10 +8,14 @@
     }
   }
 
+  document.documentElement.classList.add("js-ready");
+
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".nav");
+  const mobileCta = document.querySelector(".mobile-cta");
   const yearEls = document.querySelectorAll("[data-year]");
+  const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   const cfg = window.DATADASHOS_CONFIG || {};
   const contactEmail = (cfg.contactEmail || "hello@datadashos.com").trim();
@@ -69,21 +73,65 @@
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 
+  const setNavOpen = (open) => {
+    if (!toggle || !nav) return;
+    nav.classList.toggle("is-open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  };
+
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
-      const open = nav.classList.toggle("is-open");
-      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      setNavOpen(!nav.classList.contains("is-open"));
     });
     nav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("is-open");
-        toggle.setAttribute("aria-expanded", "false");
-      });
+      link.addEventListener("click", () => setNavOpen(false));
     });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") setNavOpen(false);
+    });
+    document.addEventListener("pointerdown", (e) => {
+      if (!nav.classList.contains("is-open")) return;
+      if (nav.contains(e.target) || toggle.contains(e.target)) return;
+      setNavOpen(false);
+    });
+  }
+
+  // Hide sticky mobile CTA when a lead form is in view or focused (so submit isn't covered).
+  if (mobileCta && "IntersectionObserver" in window) {
+    const formZones = document.querySelectorAll("#waitlist, #early-access, form[data-form-type]");
+    let formInView = false;
+    let formFocused = false;
+    const syncMobileCta = () => {
+      mobileCta.classList.toggle("is-hidden", formInView || formFocused);
+    };
+    if (formZones.length) {
+      const fio = new IntersectionObserver(
+        (entries) => {
+          formInView = entries.some((e) => e.isIntersecting);
+          syncMobileCta();
+        },
+        { threshold: 0.12 }
+      );
+      formZones.forEach((el) => fio.observe(el));
+      document.querySelectorAll("form[data-form-type]").forEach((form) => {
+        form.addEventListener("focusin", () => {
+          formFocused = true;
+          syncMobileCta();
+        });
+        form.addEventListener("focusout", () => {
+          requestAnimationFrame(() => {
+            formFocused = Boolean(form.querySelector(":focus"));
+            syncMobileCta();
+          });
+        });
+      });
+    }
   }
 
   document.querySelectorAll(".tile").forEach((tile) => {
     tile.addEventListener("pointermove", (e) => {
+      if (prefersReducedMotion()) return;
       const rect = tile.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
