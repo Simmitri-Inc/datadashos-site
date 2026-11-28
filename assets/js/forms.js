@@ -147,7 +147,12 @@
         page_url: window.location.origin + window.location.pathname,
       };
 
-      if (submitBtn) submitBtn.disabled = true;
+      const submitLabel = submitBtn ? submitBtn.innerHTML : "";
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.setAttribute("aria-busy", "true");
+        submitBtn.textContent = "Sending…";
+      }
       try {
         const res = await fetch(`${endpoint}/api/lead`, {
           method: "POST",
@@ -196,7 +201,11 @@
       } catch (_) {
         showError(`Something went wrong — please try again, or email ${contactEmail}.`);
       } finally {
-        if (submitBtn) submitBtn.disabled = false;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.removeAttribute("aria-busy");
+          submitBtn.innerHTML = submitLabel;
+        }
         if (window.turnstile && widgetId !== null) window.turnstile.reset(widgetId);
       }
     });

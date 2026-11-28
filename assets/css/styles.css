@@ -1316,22 +1316,37 @@ section {
   backdrop-filter: blur(12px);
   border-top: 1px solid var(--line);
   box-shadow: 0 -10px 30px rgba(11, 27, 51, 0.08);
+  transition: transform 0.28s var(--ease), opacity 0.28s var(--ease);
 }
 
 .mobile-cta .btn {
   width: 100%;
 }
 
-/* Reveal on scroll */
+/* Reveal on scroll — visible by default so content never vanishes without JS */
 .reveal {
+  opacity: 1;
+  transform: none;
+}
+
+html.js-ready .reveal:not(.is-in) {
   opacity: 0;
   transform: translateY(28px);
+}
+
+html.js-ready .reveal {
   transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
 }
 
 .reveal.is-in {
   opacity: 1;
   transform: none;
+}
+
+.mobile-cta.is-hidden {
+  transform: translateY(110%);
+  pointer-events: none;
+  opacity: 0;
 }
 
 .reveal-delay-1 { transition-delay: 0.08s; }
@@ -1429,9 +1444,10 @@ section {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal {
-    opacity: 1;
-    transform: none;
+  .reveal,
+  html.js-ready .reveal:not(.is-in) {
+    opacity: 1 !important;
+    transform: none !important;
   }
   .mask-reveal::after {
     display: none !important;
@@ -3875,4 +3891,13 @@ section:not(.page-hero-section) .legal-prose h2 {
   color: var(--text);
   font-weight: 550;
   letter-spacing: -0.03em;
+}
+
+.navy-panel .section-head .hook-line {
+  margin-top: 18px;
+  margin-bottom: 0;
+  max-width: 36ch;
+  color: rgba(232, 238, 248, 0.55);
+  font-size: 1.02rem;
+  font-weight: 500;
 }

@@ -44,7 +44,7 @@ export function placeholderShot(id, label) {
               <strong>Screenshot coming soon</strong>
               <span>${esc(label)}</span>
             </div>
-            <figcaption class="shot-caption caption-sample">Sample data</figcaption>
+            <figcaption class="shot-caption">Coming soon</figcaption>
           </figure>`;
 }
 
