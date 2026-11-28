@@ -52,7 +52,7 @@
     const ensureWidget = async () => {
       const ts = await loadTurnstile();
       if (!ts || !slot || widgetId !== null) return;
-      widgetId = ts.render(slot, { sitekey: siteKey, theme: "dark", size: "flexible", action: formType });
+      widgetId = ts.render(slot, { sitekey: siteKey, theme: "light", size: "flexible", action: formType });
     };
 
     if ("IntersectionObserver" in window) {
