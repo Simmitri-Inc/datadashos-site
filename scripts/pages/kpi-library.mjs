@@ -56,7 +56,7 @@ ${INDUSTRIES.map(
       <div class="wrap mid">
         <div class="cta-band reveal">
           <p class="cta-band-line">Not sure where to start?</p>
-          <a class="btn btn-shimmer" href="${P}#kpi-demo">See your KPIs in 30 seconds ${arrow}</a>
+          <a class="btn" href="${P}#kpi-demo">See your KPIs in 30 seconds ${arrow}</a>
         </div>
       </div>
     </section>`,
@@ -124,7 +124,7 @@ function industryPage(ind, index) {
             <h1 id="kpi-title" class="page-title">${esc(ind.headline)}</h1>
             <p class="hero-lede">${esc(ind.pain)}</p>
             <div class="cta-group">
-              <a class="btn btn-shimmer" href="${ctaHref(P)}">${esc(ind.cta)} ${arrow}</a>
+              <a class="btn" href="${ctaHref(P)}">${esc(ind.cta)} ${arrow}</a>
             </div>
           </div>
           <div class="kpi-hero-visual">
@@ -195,7 +195,7 @@ ${
 ${STEPS.map(([name, sub]) => `            <li><strong>${name}</strong> — ${sub}</li>`).join("\n")}
           </ul>`
 }
-          <p class="panel-cta"><a class="btn btn-shimmer" href="${ctaHref(P)}">${esc(ind.cta)} ${arrow}</a></p>
+          <p class="panel-cta"><a class="btn" href="${ctaHref(P)}">${esc(ind.cta)} ${arrow}</a></p>
         </div>
       </div>
     </section>

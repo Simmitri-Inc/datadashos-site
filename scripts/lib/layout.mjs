@@ -34,7 +34,7 @@ ${NAV.map(
   (n) =>
     `        <a href="${P}${n.href}"${page.nav === n.key ? ' aria-current="page"' : ""}>${n.label}</a>`
 ).join("\n")}
-        <a class="btn btn-shimmer" href="${page.waitlistHref}">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
+        <a class="btn" href="${page.waitlistHref}">Join the waitlist <span class="arrow" aria-hidden="true">→</span></a>
       </nav>
     </div>
   </header>`;
@@ -74,7 +74,7 @@ const footer = (P, page) => `
       </div>
     </div>
   </footer>
-  <div class="mobile-cta"><a class="btn btn-shimmer" href="${page.waitlistHref}">Join the waitlist</a></div>`;
+  <div class="mobile-cta"><a class="btn" href="${page.waitlistHref}">Join the waitlist</a></div>`;
 
 export const breadcrumbJsonLd = (crumbs) => ({
   "@type": "BreadcrumbList",
@@ -153,7 +153,7 @@ ${JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 2)
   <title>${esc(page.title)}</title>
   <meta name="description" content="${esc(page.description)}">
   <meta name="robots" content="${robots}">
-  <meta name="theme-color" content="#0B1B33">
+  <meta name="theme-color" content="#070f1c">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 ${page.csp === false ? "" : `  <meta http-equiv="Content-Security-Policy" content="${esc(cspFor(page))}">\n`}${page.baseHref ? `  <base href="${esc(page.baseHref)}">\n` : ""}  <link rel="canonical" href="${canonical}">
 

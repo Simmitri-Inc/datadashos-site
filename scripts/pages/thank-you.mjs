@@ -42,7 +42,7 @@ export default {
           <a class="btn btn-ghost" href="https://www.linkedin.com/sharing/share-offsite/?url=${share}" rel="noopener" target="_blank">LinkedIn</a>
           <a class="btn btn-ghost" href="mailto:?subject=DataDashOS%20%E2%80%94%20the%20KPI-first%20operating%20system&amp;body=${share}">Email</a>
         </div>
-        <p class="reveal spaced"><a class="btn btn-shimmer" href="${P}how-it-works.html">See how DataDashOS works ${arrow}</a></p>
+        <p class="reveal spaced"><a class="btn" href="${P}how-it-works.html">See how DataDashOS works ${arrow}</a></p>
       </div>
     </section>`,
 };

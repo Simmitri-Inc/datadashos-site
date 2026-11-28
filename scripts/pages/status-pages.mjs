@@ -31,13 +31,13 @@ export default [
           "ok",
           "You're confirmed",
           "Thanks for confirming your email. We'll only use it to contact you about early access.",
-          `<div class="cta-group"><a class="btn btn-shimmer" href="${P}kpi-library/">Explore the KPI Library ${arrow}</a></div>`
+          `<div class="cta-group"><a class="btn" href="${P}kpi-library/">Explore the KPI Library ${arrow}</a></div>`
         ) +
           view(
             "expired",
             "This link has expired",
             `Confirmation links work once and expire after ${config.forms.confirmLinkHours} hours. Sign up again and we'll send you a new one.`,
-            `<div class="cta-group"><a class="btn btn-shimmer" href="${P}#waitlist">Join the waitlist ${arrow}</a></div>`,
+            `<div class="cta-group"><a class="btn" href="${P}#waitlist">Join the waitlist ${arrow}</a></div>`,
             true
           ) +
           view(

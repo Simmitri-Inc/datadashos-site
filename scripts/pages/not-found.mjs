@@ -16,7 +16,7 @@ export default {
         <h1 class="page-title">We couldn't find that page.</h1>
         <p class="hero-lede">It may have moved. Try the KPI demo, or browse the KPI Library.</p>
         <div class="cta-group">
-          <a class="btn btn-shimmer" href="${P}#kpi-demo">Build my KPI scorecard ${arrow}</a>
+          <a class="btn" href="${P}#kpi-demo">Build my KPI scorecard ${arrow}</a>
           <a class="btn btn-ghost" href="${P}kpi-library/">Browse the KPI Library</a>
         </div>
       </div>

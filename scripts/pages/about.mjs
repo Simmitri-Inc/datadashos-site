@@ -57,7 +57,7 @@ export default {
         <div class="cta-band reveal">
           <h2 id="talk-title">Talk With Us</h2>
           <p>Want to see DataDashOS in action or share what your business needs? Join the waitlist or email us at <a data-contact-mailto data-contact-email href="mailto:${config.contactEmail}">${config.contactEmail}</a>.</p>
-          <p><a class="btn btn-shimmer" href="${waitlistHref}">Join the waitlist ${arrow}</a></p>
+          <p><a class="btn" href="${waitlistHref}">Join the waitlist ${arrow}</a></p>
         </div>
       </div>
     </section>`,
